@@ -7,5 +7,27 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
  */
 package Sekolah1;
 public class guru {
+    private String nama, kode_guru;
+    private int nip;
+    //private Nilai nilai;
+    
+    public void setNamaGuru(String a){
+        this.nama = a;
+    }
+    public void setNIP(int a){
+        this.nip = a;
+    }
+    public void setKodeGuru(String a){
+        this.kode_guru = a;
+    }
+    public String getNamaGuru(){
+        return nama;
+    }
+    public int getNIP(){
+        return nip;
+    }
+    public String getKodeGuru(){
+        return kode_guru;
+    }
     
 }

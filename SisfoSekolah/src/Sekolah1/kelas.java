@@ -8,5 +8,11 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
 package Sekolah1;
 
 public class kelas {
-    
+    private String nama_kelas;
+    public void setNamaKelas(String a){
+        this.nama_kelas = a;
+    }
+    public String getNamaKelas(){
+        return nama_kelas;
+    }
 }
