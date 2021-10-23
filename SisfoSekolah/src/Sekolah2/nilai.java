@@ -7,6 +7,27 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
  */
 package Sekolah2;
 
+import Sekolah3.matapelajaran;
+
 public class nilai {
+    private tugas task;
+    private ujian exam;
+    private int skor;
+    private matapelajaran mapel;
     
+    public void setTask(tugas a){
+        this.task = a;
+    }
+    public void setExam(ujian a){
+        this.exam = a;
+    }
+    public tugas getTask(){
+        return task;
+    }
+    public ujian getExam(){
+        return exam;
+    }
+   // public int hitungNilai(){
+        
+    //}
 }
