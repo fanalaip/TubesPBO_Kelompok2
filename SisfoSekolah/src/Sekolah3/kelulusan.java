@@ -7,45 +7,27 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
  */
 package Sekolah3;
 
-import Sekolah1.siswa;
-import Sekolah2.task;
-
 public class kelulusan {
     private int semester;
-    private float nilai_akhir;
-    private boolean status_lulus;
-    private matapelajaran course;
-    private siswa student;
-    private task score;
+    private float nilaiSemester;
+    private String status_lulus;
     
     public void setSemester(int a){
         this.semester = a;
     }
-    public void setNilaiAkhir(float a){
-        this.nilai_akhir = a;
+    public void setNilaiSemester(float a){
+        this.nilaiSemester = a;
     }
-    public void setStatusKelulusan(boolean a){
+    public void setStatusKelulusan(String a){
         this.status_lulus = a;
-    }
-    public void setCourse(matapelajaran a){
-        this.course = a;
-    }
-    public void setStudent(siswa a){
-        this.student = a;
     }
     public int getSemester(){
         return semester;
     }
     public float getNilaiAkhir(){
-        return nilai_akhir;
+        return nilaiSemester;
     }
-    public boolean getStatusKelulusan(){
+    public String getStatusKelulusan(){
         return status_lulus;
-    }
-    public matapelajaran getCourse(){
-        return course;
-    }
-    public siswa getStudent(){
-        return student;
     }
 }
