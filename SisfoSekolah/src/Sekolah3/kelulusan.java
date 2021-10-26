@@ -8,7 +8,7 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
 package Sekolah3;
 
 import Sekolah1.siswa;
-import Sekolah2.nilai;
+import Sekolah2.task;
 
 public class kelulusan {
     private int semester;
@@ -16,7 +16,7 @@ public class kelulusan {
     private boolean status_lulus;
     private matapelajaran course;
     private siswa student;
-    private nilai score;
+    private task score;
     
     public void setSemester(int a){
         this.semester = a;
