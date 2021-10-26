@@ -7,9 +7,8 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
  */
 package Sekolah1;
 public class guru {
-    private String nama, kode_guru;
+    private String nama, kode_guru, mapelAjar;
     private int nip;
-    //private Nilai nilai;
     
     public void setNamaGuru(String a){
         this.nama = a;
@@ -29,5 +28,7 @@ public class guru {
     public String getKodeGuru(){
         return kode_guru;
     }
-    
+    public String displayGuru(){
+        return mapelAjar;
+    }
 }

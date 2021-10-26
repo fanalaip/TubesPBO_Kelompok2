@@ -9,7 +9,10 @@ package Sekolah1;
 public class siswa {
     private String nama_siswa;
     private int nis;
-    
+    public siswa(String nama_siswa, int nis){
+        this.nama_siswa = nama_siswa;
+        this.nis = nis;
+    }
     public void setNamaSiswa(String a){
         this.nama_siswa = a;
     }

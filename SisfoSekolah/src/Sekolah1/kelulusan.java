@@ -5,13 +5,16 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
           Igga Febrian Virgiani (1301194283)
           Manuel Benedict (1301194182)
  */
-package Sekolah3;
+package Sekolah1;
 
-public class kelulusan {
+import Sekolah1.siswa;
+
+public class kelulusan{
     private int semester;
     private float nilaiSemester;
     private String status_lulus;
     
+
     public void setSemester(int a){
         this.semester = a;
     }

@@ -5,9 +5,9 @@ Anggota : Balqis Sayyidahtul Atikah (1301193480)
           Igga Febrian Virgiani (1301194283)
           Manuel Benedict (1301194182)
  */
-package Sekolah2;
+package Sekolah1;
 
-import Sekolah3.matapelajaran;
+import Sekolah1.matapelajaran;
 
 public class task {
     private float nilai ;
