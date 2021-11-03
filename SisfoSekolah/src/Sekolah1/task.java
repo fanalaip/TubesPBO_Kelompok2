@@ -29,6 +29,4 @@ public class task {
     // public float hitungNilai(){
         
     //}
-    
-    //--komen--
 }

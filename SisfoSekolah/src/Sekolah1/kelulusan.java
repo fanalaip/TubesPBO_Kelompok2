@@ -31,5 +31,4 @@ public class kelulusan{
     public String getStatusKelulusan(){
         return status_lulus;
     }
-    
 }
