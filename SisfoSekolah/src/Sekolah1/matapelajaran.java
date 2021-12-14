@@ -12,6 +12,12 @@ public class matapelajaran {
    private float kkm;
    private float bobotNilai;
    
+   public matapelajaran(String nama_mapel, float kkm, float bobotNilai) {
+       this.nama_mapel = nama_mapel ;
+       this.kkm =kkm ;
+       this.bobotNilai = bobotNilai ;
+   }
+   
    public void setMataPelajaran(String a){
        this.nama_mapel = a;
    }
@@ -29,5 +35,8 @@ public class matapelajaran {
    }
    public float getBobotNilai(){
        return bobotNilai;
+   }
+   public void listMapel() {
+       
    }
 }

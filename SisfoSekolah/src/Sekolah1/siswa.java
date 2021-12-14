@@ -9,10 +9,12 @@ package Sekolah1;
 public class siswa {
     private String nama_siswa;
     private int nis;
+    
     public siswa(String nama_siswa, int nis){
         this.nama_siswa = nama_siswa;
         this.nis = nis;
     }
+    
     public void setNamaSiswa(String a){
         this.nama_siswa = a;
     }
@@ -25,6 +27,19 @@ public class siswa {
     public int getNIS(){
         return nis;
     }
-    //public int getAngkatan(){}
-    //public Nilai displayNilai(){}
+    public int getAngkatan(){
+        return 0 ;
+    }
+    public void displayNilai(task score){
+        
+    }
+    public void pinjamBuku(String buku) {
+        
+    }
+    public void kembalikanBuku(String buku) {
+        
+    }
+    public void displayPinjam(String buku) {
+        
+    }
 }

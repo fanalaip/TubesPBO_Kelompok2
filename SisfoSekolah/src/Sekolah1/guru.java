@@ -7,11 +7,18 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Sekolah1;
 public class guru {
-    private String nama, kode_guru, mapelAjar;
+    private String nama_guru, kode_guru, mapelAjar;
     private int nip;
     
+    public guru (String nama_guru, String kode_guru, String mapelAjar, int nip) {
+        this.nama_guru = nama_guru ;
+        this.kode_guru = kode_guru ;
+        this.mapelAjar = mapelAjar ;
+        this.nip = nip ;
+    }
+    
     public void setNamaGuru(String a){
-        this.nama = a;
+        this.nama_guru = a;
     }
     public void setNIP(int a){
         this.nip = a;
@@ -20,7 +27,7 @@ public class guru {
         this.kode_guru = a;
     }
     public String getNamaGuru(){
-        return nama;
+        return nama_guru;
     }
     public int getNIP(){
         return nip;
@@ -28,7 +35,16 @@ public class guru {
     public String getKodeGuru(){
         return kode_guru;
     }
-    public String displayGuru(){
-        return mapelAjar;
+    public void displayGuru(){
+        
+    }
+    public void pinjamBuku(String buku) {
+        
+    }
+    public void kembalikanBuku(String buku) {
+        
+    }
+    public void displayPinjam(String buku) {
+        
     }
 }

@@ -7,12 +7,17 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Sekolah1;
 
-public class kelulusan{
+public class kelulusan extends task {
     private int semester;
     private float nilaiSemester;
     private String status_lulus;
     
-
+    public kelulusan (int semester, float nilaiSemester, String status_lulus, float nilai, String aktivitas, String nama_mapel, float kkm, float bobotNilai) {
+        super(aktivitas, nilai, nama_mapel, kkm, bobotNilai) ;
+        this.semester = semester ;
+        this.nilaiSemester = nilaiSemester ;
+        this.status_lulus = status_lulus ;
+    }
     public void setSemester(int a){
         this.semester = a;
     }
@@ -25,7 +30,7 @@ public class kelulusan{
     public int getSemester(){
         return semester;
     }
-    public float getNilaiAkhir(){
+    public float getNilaiSemester(){
         return nilaiSemester;
     }
     public String getStatusKelulusan(){

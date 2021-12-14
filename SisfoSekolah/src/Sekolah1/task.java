@@ -9,10 +9,15 @@ package Sekolah1;
 
 import Sekolah1.matapelajaran;
 
-public class task {
-    private float nilai ;
+public class task extends matapelajaran {
     private String aktivitas ;
-    
+    private float nilai ;
+
+    public task (String aktivitas, float nilai, String nama_mapel, float kkm, float bobotNilai) {
+        super(nama_mapel, kkm, bobotNilai) ;
+        this.aktivitas = aktivitas ;
+        this.nilai = nilai ;
+    }
     
     public void setNilai(float a){
         this.nilai = a;
@@ -26,7 +31,10 @@ public class task {
     public String getAktivitas(){
         return aktivitas;
     }
-    // public float hitungNilai(){
+    public void inputNilai(float nilai) {
         
-    //}
+    }
+    public void hitungNilai(float nilai){
+        
+    }
 }
