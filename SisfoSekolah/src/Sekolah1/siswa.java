@@ -31,7 +31,9 @@ public class siswa {
         /*
             Asumsikan NIS pada suatu sekolah terdiri dari 5 digit.
             Dua digit pertama adalah angkatan siswa tersebut masuk.
-            Contoh: 192013 (angkatan 2019)
+            Asumsikan satu angkatan kurang dari 999 siswa.
+            Asumsikan sekolah ini berdiri tahun 2010.
+            Contoh: 192013 (angkatan 2019) 19000 19999
                     205001 (angkatan 2020)
                     214444 (angkatan 2021)
         */
