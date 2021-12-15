@@ -28,7 +28,15 @@ public class siswa {
         return nis;
     }
     public int getAngkatan(){
-        return 0 ;
+        /*
+            Asumsikan NIS pada suatu sekolah terdiri dari 5 digit.
+            Dua digit pertama adalah angkatan siswa tersebut masuk.
+            Contoh: 192013 (angkatan 2019)
+                    205001 (angkatan 2020)
+                    214444 (angkatan 2021)
+        */
+        int angkatan = Integer.parseInt(Integer.toString(nis).substring(0,1)) ;
+        return 2000+angkatan ;
     }
     public void displayNilai(task score){
         
