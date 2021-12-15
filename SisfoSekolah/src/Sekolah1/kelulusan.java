@@ -31,9 +31,16 @@ public class kelulusan extends task {
         return semester;
     }
     public float getNilaiSemester(){
+        /*
+            Bobot nilai (berlaku untuk semua mapel)
+            Tugas: 40%, UTS: 30%, UAS: 30% 
+        */
         return nilaiSemester;
     }
     public String getStatusKelulusan(){
+        /*
+            Siswa harus mengembalikan semua buku perpustakaan (buku yang dipinjam 0 buah.
+        */
         return status_lulus;
     }
 }

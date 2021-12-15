@@ -39,7 +39,9 @@ public class guru {
         
     }
     public void pinjamBuku(String buku) {
-        
+        /*
+            Guru dapat meminjam maksimal 5 buku dalam rentang waktu dua minggu.
+        */
     }
     public void kembalikanBuku(String buku) {
         

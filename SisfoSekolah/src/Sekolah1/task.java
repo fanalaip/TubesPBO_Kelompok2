@@ -32,9 +32,18 @@ public class task extends matapelajaran {
         return aktivitas;
     }
     public void inputNilai(float nilai) {
-        
+        /*
+            PROSEDUR INI BERFUNGSI UNTUK MEMASUKKAN NILAI-NILAI KOMPONEN TASK SISWA.
+            Ada 3 jenis aktivitas: Tugas, UTS, UAS.
+            Komponen nilai akan disimpan pada variabel nilai.
+        */
     }
     public void hitungNilai(float nilai){
-        
+        /*
+            PROSEDUR INI BERFUNGSI UNTUK MENGHITUNG TOTAL NILAI PER KOMPONEN.
+            Nilai akan dihitung berdasarkan komponen yang sudah diinput oleh guru.
+            Tugas       : total nilai tugas / banyak tugas (semua tugas memiliki bobot yang sama)
+            UTS & UAS   : nilai murni
+        */
     }
 }

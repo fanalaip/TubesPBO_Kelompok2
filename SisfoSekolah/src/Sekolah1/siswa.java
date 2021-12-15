@@ -29,6 +29,7 @@ public class siswa {
     }
     public int getAngkatan(){
         /*
+            FUNGSI INI BERFUNGSI UNTUK MENGETAHUI ANGKATAN DARI NIS PESERTA DIDIK
             Asumsikan NIS pada suatu sekolah terdiri dari 5 digit.
             Dua digit pertama adalah angkatan siswa tersebut masuk.
             Asumsikan satu angkatan kurang dari 999 siswa.
@@ -44,7 +45,10 @@ public class siswa {
         
     }
     public void pinjamBuku(String buku) {
-        
+        /*
+            Buku diluar matapelajaran.
+            Siswa dapat meminjam maksimal 3 buku dalam rentang waktu dua minggu.
+        */
     }
     public void kembalikanBuku(String buku) {
         
