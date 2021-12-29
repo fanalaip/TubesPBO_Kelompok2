@@ -7,8 +7,6 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-public interface perpustakaan {
-    void pinjamBuku(String buku) ;
-    void kembalikanBuku(String buku) ;
-    void displayPinjam(String buku) ;
+public interface Identity {
+    void getAngkatan() ;
 }
