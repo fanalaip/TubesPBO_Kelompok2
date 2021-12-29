@@ -5,9 +5,9 @@ Anggota : Arpriansah Yonathan (1301194112)
           Igga Febrian Virgiani (1301194283)
           Manuel Benedict (1301194182)
  */
-package Sekolah1;
+package Model;
 
-import Sekolah1.matapelajaran;
+import Model.matapelajaran;
 
 public class task extends matapelajaran {
     private String aktivitas ;

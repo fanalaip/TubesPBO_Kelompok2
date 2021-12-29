@@ -5,7 +5,7 @@ Anggota : Arpriansah Yonathan (1301194112)
           Igga Febrian Virgiani (1301194283)
           Manuel Benedict (1301194182)
  */
-package Sekolah1;
+package Model;
 public class guru {
     private String nama_guru, kode_guru, mapelAjar;
     private int nip;
