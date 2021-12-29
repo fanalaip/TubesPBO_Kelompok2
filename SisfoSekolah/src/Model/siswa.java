@@ -41,7 +41,4 @@ public class siswa {
         int angkatan = Integer.parseInt(Integer.toString(nis).substring(0,1)) + 2 ;
         return 2000+angkatan ;
     }
-    public void displayNilai(task score){
-        
-    }
 }

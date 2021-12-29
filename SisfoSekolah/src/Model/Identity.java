@@ -8,5 +8,5 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Model;
 
 public interface Identity {
-    void getAngkatan() ;
+    int getAngkatan() ;
 }

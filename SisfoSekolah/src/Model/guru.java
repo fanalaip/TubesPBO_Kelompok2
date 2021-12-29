@@ -16,7 +16,6 @@ public class guru {
         this.mapelAjar = mapelAjar ;
         this.nid = nid ;
     }
-    
     public void setNamaGuru(String a){
         this.nama_guru = a;
     }
@@ -34,9 +33,6 @@ public class guru {
     }
     public String getKodeGuru(){
         return kode_guru;
-    }
-    public void displayGuru(){
-        
     }
     public int getAngkatan(){
     /*

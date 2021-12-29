@@ -16,13 +16,4 @@ public class kelas {
     public String getNamaKelas(){
         return nama_kelas;
     }
-    public void displaySiswa(siswa student) {
-        
-    }
-    public void displayGuru(guru teacher) {
-        
-    }
-    public void listKelas(String nama_kelas) {
-        
-    }
 }

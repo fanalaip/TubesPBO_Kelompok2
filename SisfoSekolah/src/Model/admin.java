@@ -8,5 +8,6 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Model;
 
 public class admin {
-    
+    public void addKelas(){}
+    public void deleteKelas(){}
 }
