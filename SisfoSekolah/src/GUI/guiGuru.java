@@ -39,14 +39,14 @@ public class guiGuru extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         tfNama = new javax.swing.JTextField();
-        tfNIM = new javax.swing.JTextField();
-        btnAdd = new javax.swing.JButton();
-        cbJadwal = new javax.swing.JComboBox<>();
+        tfNIS = new javax.swing.JTextField();
+        btnTambah = new javax.swing.JButton();
+        cbMapel = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jtHari = new javax.swing.JTextField();
-        cbJadwal1 = new javax.swing.JComboBox<>();
+        jtNilai = new javax.swing.JTextField();
+        cbTask = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         listMatkul = new javax.swing.JList<>();
@@ -56,7 +56,7 @@ public class guiGuru extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,41 +72,41 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
-        tfNIM.addActionListener(new java.awt.event.ActionListener() {
+        tfNIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNIMActionPerformed(evt);
+                tfNISActionPerformed(evt);
             }
         });
 
-        btnAdd.setText("Add");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnTambah.setText("Tambah");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
+                btnTambahActionPerformed(evt);
             }
         });
 
-        cbJadwal.addActionListener(new java.awt.event.ActionListener() {
+        cbMapel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbJadwalActionPerformed(evt);
+                cbMapelActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("MaPel            :");
+        jLabel2.setText("MaPel             :");
 
-        jLabel10.setText("Task             :");
+        jLabel10.setText("Task               :");
 
-        jLabel11.setText("Nilai               :");
+        jLabel11.setText("Nilai                :");
 
-        jtHari.setEditable(false);
-        jtHari.addActionListener(new java.awt.event.ActionListener() {
+        jtNilai.setEditable(false);
+        jtNilai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtHariActionPerformed(evt);
+                jtNilaiActionPerformed(evt);
             }
         });
 
-        cbJadwal1.addActionListener(new java.awt.event.ActionListener() {
+        cbTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbJadwal1ActionPerformed(evt);
+                cbTaskActionPerformed(evt);
             }
         });
 
@@ -118,32 +118,32 @@ public class guiGuru extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel11)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel11))
+                        .addGap(7, 7, 7)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(17, 17, 17)
-                                .addComponent(cbJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cbMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtHari, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbJadwal1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbTask, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfNIM, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfNama, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(109, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAdd)
+                .addComponent(btnTambah)
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
@@ -155,22 +155,22 @@ public class guiGuru extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfNIM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbMapel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(cbJadwal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbTask, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jtHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(89, 89, 89)
-                .addComponent(btnAdd)
+                .addComponent(btnTambah)
                 .addContainerGap())
         );
 
@@ -236,15 +236,15 @@ public class guiGuru extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setText("IDENTITAS");
+        jLabel1.setText("INPUT NILAI");
 
         jLabel3.setText("LIST MATKUL");
 
         jLabel4.setText("OUTPUT");
 
-        jLabel8.setText("Mahasiswa");
+        jLabel8.setText("Laman Guru");
 
-        btnBack.setText("Back");
+        btnKembali.setText("Kembali");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -266,7 +266,7 @@ public class guiGuru extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(106, 106, 106))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
+                        .addComponent(btnKembali)
                         .addGap(298, 298, 298)
                         .addComponent(jLabel8)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -277,7 +277,7 @@ public class guiGuru extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(btnBack))
+                    .addComponent(btnKembali))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -296,26 +296,26 @@ public class guiGuru extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNamaActionPerformed
 
-    private void tfNIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIMActionPerformed
+    private void tfNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNISActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNIMActionPerformed
+    }//GEN-LAST:event_tfNISActionPerformed
 
-    private void cbJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbJadwalActionPerformed
+    private void cbMapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMapelActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_cbJadwalActionPerformed
+    }//GEN-LAST:event_cbMapelActionPerformed
 
-    private void jtHariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtHariActionPerformed
+    private void jtNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNilaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtHariActionPerformed
+    }//GEN-LAST:event_jtNilaiActionPerformed
 
-    private void cbJadwal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbJadwal1ActionPerformed
+    private void cbTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTaskActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbJadwal1ActionPerformed
+    }//GEN-LAST:event_cbTaskActionPerformed
 
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddActionPerformed
+    }//GEN-LAST:event_btnTambahActionPerformed
 
     /**
      * @param args the command line arguments
@@ -356,7 +356,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
 
     public void setJtHari(String jtHari) {
-        this.jtHari.setText(jtHari);
+        this.jtNilai.setText(jtHari);
     }
 
     public void setJtMatkul(String jtMatkul) {
@@ -368,12 +368,12 @@ public class guiGuru extends javax.swing.JFrame {
     }
 
     public JComboBox<String> getCbJadwal() {
-        return cbJadwal;
+        return cbMapel;
     }
     
     public String getCbJadwalText(){
-        int i = cbJadwal.getSelectedIndex();
-        return cbJadwal.getItemAt(i);
+        int i = cbMapel.getSelectedIndex();
+        return cbMapel.getItemAt(i);
     }
     
     public String getNama(){
@@ -385,15 +385,15 @@ public class guiGuru extends javax.swing.JFrame {
     } 
     
     public String getTfNIM() {
-        return tfNIM.getText();
+        return tfNIS.getText();
     }
     
     public JButton getBtnAdd() {
-        return btnAdd;
+        return btnTambah;
     }
 
     public JButton getBtnBack() {
-        return btnBack;
+        return btnKembali;
     }
     
     public String getSelectedMatkul(){
@@ -426,7 +426,7 @@ public class guiGuru extends javax.swing.JFrame {
     
     public void resetView(){
         tfNama.setText("");
-        tfNIM.setText("");
+        tfNIS.setText("");
         listMatkul.clearSelection();
     }
     
@@ -435,8 +435,8 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public void addActionListener(ActionListener e){
-        btnAdd.addActionListener(e);
-        btnBack.addActionListener(e);
+        btnTambah.addActionListener(e);
+        btnKembali.addActionListener(e);
     }
     
     public void addMouseAdapter(MouseAdapter e){
@@ -444,10 +444,10 @@ public class guiGuru extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JComboBox<String> cbJadwal;
-    private javax.swing.JComboBox<String> cbJadwal1;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnTambah;
+    private javax.swing.JComboBox<String> cbMapel;
+    private javax.swing.JComboBox<String> cbTask;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -462,9 +462,9 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTableMhs;
-    private javax.swing.JTextField jtHari;
+    private javax.swing.JTextField jtNilai;
     private javax.swing.JList<String> listMatkul;
-    private javax.swing.JTextField tfNIM;
+    private javax.swing.JTextField tfNIS;
     private javax.swing.JTextField tfNama;
     // End of variables declaration//GEN-END:variables
 }
