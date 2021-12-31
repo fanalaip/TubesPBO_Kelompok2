@@ -46,8 +46,6 @@ public class guiGuru extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jtHari = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jtMatkul = new javax.swing.JTextField();
         cbJadwal1 = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -81,6 +79,11 @@ public class guiGuru extends javax.swing.JFrame {
         });
 
         btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         cbJadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,21 +95,12 @@ public class guiGuru extends javax.swing.JFrame {
 
         jLabel10.setText("Task             :");
 
-        jLabel11.setText("Hari               :");
+        jLabel11.setText("Nilai               :");
 
         jtHari.setEditable(false);
         jtHari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtHariActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setText("Matkul            :");
-
-        jtMatkul.setEditable(false);
-        jtMatkul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtMatkulActionPerformed(evt);
             }
         });
 
@@ -124,9 +118,8 @@ public class guiGuru extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(7, 7, 7)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12)
                             .addComponent(jLabel11)
                             .addComponent(jLabel10)
                             .addComponent(jLabel2))
@@ -138,7 +131,6 @@ public class guiGuru extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jtHari, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtMatkul, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cbJadwal1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -177,11 +169,7 @@ public class guiGuru extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jtHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtMatkul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addGap(54, 54, 54)
+                .addGap(89, 89, 89)
                 .addComponent(btnAdd)
                 .addContainerGap())
         );
@@ -321,13 +309,13 @@ public class guiGuru extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtHariActionPerformed
 
-    private void jtMatkulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtMatkulActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtMatkulActionPerformed
-
     private void cbJadwal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbJadwal1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbJadwal1ActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -463,7 +451,6 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -476,7 +463,6 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTableMhs;
     private javax.swing.JTextField jtHari;
-    private javax.swing.JTextField jtMatkul;
     private javax.swing.JList<String> listMatkul;
     private javax.swing.JTextField tfNIM;
     private javax.swing.JTextField tfNama;
