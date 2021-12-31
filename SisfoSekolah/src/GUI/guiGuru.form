@@ -199,7 +199,12 @@
         <Component class="javax.swing.JComboBox" name="cbMapel">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="4">
+                <StringItem index="0" value="PKN"/>
+                <StringItem index="1" value="IPA"/>
+                <StringItem index="2" value="IPS"/>
+                <StringItem index="3" value="Matematika"/>
+              </StringArray>
             </Property>
           </Properties>
           <Events>
@@ -235,7 +240,11 @@
         <Component class="javax.swing.JComboBox" name="cbTask">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="3">
+                <StringItem index="0" value="Tugas"/>
+                <StringItem index="1" value="UTS"/>
+                <StringItem index="2" value="UAS"/>
+              </StringArray>
             </Property>
           </Properties>
           <Events>

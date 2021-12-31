@@ -85,6 +85,7 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
+        cbMapel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PKN", "IPA", "IPS", "Matematika" }));
         cbMapel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbMapelActionPerformed(evt);
@@ -104,6 +105,7 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
+        cbTask.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tugas", "UTS", "UAS" }));
         cbTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbTaskActionPerformed(evt);
@@ -245,11 +247,7 @@ public class guiGuru extends javax.swing.JFrame {
 
         jLabelDaftarSiswa.setText("DAFTAR SISWA");
 
-<<<<<<< HEAD
         jLabelLamanGuru.setText("Laman Guru");
-=======
-        jLabel8.setText("Laman Guru");
->>>>>>> dc1a70af489dd58b9b6d2510351dbe987a519714
 
         btnKembali.setText("Kembali");
 
