@@ -245,7 +245,11 @@ public class guiGuru extends javax.swing.JFrame {
 
         jLabelDaftarSiswa.setText("DAFTAR SISWA");
 
+<<<<<<< HEAD
         jLabelLamanGuru.setText("Laman Guru");
+=======
+        jLabel8.setText("Laman Guru");
+>>>>>>> dc1a70af489dd58b9b6d2510351dbe987a519714
 
         btnKembali.setText("Kembali");
 
