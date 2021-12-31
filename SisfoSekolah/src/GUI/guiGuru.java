@@ -36,35 +36,35 @@ public class guiGuru extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabelNama = new javax.swing.JLabel();
+        jLabelNIS = new javax.swing.JLabel();
         tfNama = new javax.swing.JTextField();
         tfNIS = new javax.swing.JTextField();
         btnTambah = new javax.swing.JButton();
         cbMapel = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabelMapel = new javax.swing.JLabel();
+        jLabelTask = new javax.swing.JLabel();
+        jLabelNilai = new javax.swing.JLabel();
         jtNilai = new javax.swing.JTextField();
         cbTask = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        listMatkul = new javax.swing.JList<>();
+        listMaPEL = new javax.swing.JList<>();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTableMhs = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabelInputNilai = new javax.swing.JLabel();
+        jLabelListMapel = new javax.swing.JLabel();
+        jLabelDaftarSiswa = new javax.swing.JLabel();
+        jLabelLamanGuru = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel5.setText("Nama              :");
+        jLabelNama.setText("Nama              :");
 
-        jLabel6.setText("NIS                 :");
+        jLabelNIS.setText("NIS                 :");
 
         tfNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +91,11 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("MaPel             :");
+        jLabelMapel.setText("MaPel             :");
 
-        jLabel10.setText("Task               :");
+        jLabelTask.setText("Task               :");
 
-        jLabel11.setText("Nilai                :");
+        jLabelNilai.setText("Nilai                :");
 
         jtNilai.setEditable(false);
         jtNilai.addActionListener(new java.awt.event.ActionListener() {
@@ -119,28 +119,29 @@ public class guiGuru extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel11))
+                            .addComponent(jLabelTask)
+                            .addComponent(jLabelMapel)
+                            .addComponent(jLabelNilai))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(cbMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cbMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(cbTask, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cbTask, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jtNilai))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabelNIS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelNama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfNama, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addGap(109, 109, 109))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnTambah)
@@ -152,22 +153,22 @@ public class guiGuru extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabelNama))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                    .addComponent(jLabelNIS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbMapel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabelMapel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(jLabelTask)
                     .addComponent(cbTask, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(jLabelNilai)
                     .addComponent(jtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(89, 89, 89)
                 .addComponent(btnTambah)
@@ -176,7 +177,7 @@ public class guiGuru extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jScrollPane2.setViewportView(listMatkul);
+        jScrollPane2.setViewportView(listMaPEL);
 
         jTableMhs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -222,27 +223,29 @@ public class guiGuru extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        jLabel1.setText("INPUT NILAI");
+        jLabelInputNilai.setText("INPUT NILAI");
 
-        jLabel3.setText("LIST MATKUL");
+        jLabelListMapel.setText("LIST MAPEL");
 
-        jLabel4.setText("OUTPUT");
+        jLabelDaftarSiswa.setText("DAFTAR SISWA");
 
-        jLabel8.setText("Laman Guru...");
+        jLabelLamanGuru.setText("Laman Guru");
 
         btnKembali.setText("Kembali");
 
@@ -259,16 +262,16 @@ public class guiGuru extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(jLabel1)
-                        .addGap(225, 225, 225)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(106, 106, 106))
+                        .addComponent(jLabelInputNilai)
+                        .addGap(200, 200, 200)
+                        .addComponent(jLabelListMapel)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabelDaftarSiswa)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnKembali)
-                        .addGap(298, 298, 298)
-                        .addComponent(jLabel8)
+                        .addGap(294, 294, 294)
+                        .addComponent(jLabelLamanGuru)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -276,13 +279,13 @@ public class guiGuru extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(jLabelLamanGuru)
                     .addComponent(btnKembali))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabelInputNilai)
+                    .addComponent(jLabelListMapel)
+                    .addComponent(jLabelDaftarSiswa))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -397,11 +400,11 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public String getSelectedMatkul(){
-        return listMatkul.getSelectedValue();
+        return listMaPEL.getSelectedValue();
     }
     
     public void setDaftarMatkul(String[] daftarID){
-        listMatkul.setListData(daftarID);
+        listMaPEL.setListData(daftarID);
     }
     
     public JTable getjTablemhs() {
@@ -427,11 +430,11 @@ public class guiGuru extends javax.swing.JFrame {
     public void resetView(){
         tfNama.setText("");
         tfNIS.setText("");
-        listMatkul.clearSelection();
+        listMaPEL.clearSelection();
     }
     
     public JList getListMatkul() {
-        return listMatkul;
+        return listMaPEL;
     }
     
     public void addActionListener(ActionListener e){
@@ -440,7 +443,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public void addMouseAdapter(MouseAdapter e){
-        listMatkul.addMouseListener(e);
+        listMaPEL.addMouseListener(e);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -448,22 +451,22 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbMapel;
     private javax.swing.JComboBox<String> cbTask;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabelDaftarSiswa;
+    private javax.swing.JLabel jLabelInputNilai;
+    private javax.swing.JLabel jLabelLamanGuru;
+    private javax.swing.JLabel jLabelListMapel;
+    private javax.swing.JLabel jLabelMapel;
+    private javax.swing.JLabel jLabelNIS;
+    private javax.swing.JLabel jLabelNama;
+    private javax.swing.JLabel jLabelNilai;
+    private javax.swing.JLabel jLabelTask;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTableMhs;
     private javax.swing.JTextField jtNilai;
-    private javax.swing.JList<String> listMatkul;
+    private javax.swing.JList<String> listMaPEL;
     private javax.swing.JTextField tfNIS;
     private javax.swing.JTextField tfNama;
     // End of variables declaration//GEN-END:variables
