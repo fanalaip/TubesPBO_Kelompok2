@@ -389,7 +389,7 @@ public class guiGuru extends javax.swing.JFrame {
        return jtMatkul.getText();
     } 
     
-    public String getTfNIM() {
+    public String getTfNIS() {
         return tfNIS.getText();
     }
     
