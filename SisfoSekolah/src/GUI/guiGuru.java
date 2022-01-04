@@ -205,7 +205,7 @@ public class guiGuru extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Nama Mahasiswa", "Nim"
+                "Nama Siswa", "NIS"
             }
         ) {
             Class[] types = new Class [] {
