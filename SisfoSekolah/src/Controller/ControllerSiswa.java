@@ -7,6 +7,26 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Controller;
 
-public class ControllerSiswa {
+import GUI.guiSiswa;
+import Model.Database;
+import Model.siswa;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+
+public class ControllerSiswa implements ActionListener{
+    private guiSiswa viewDosen;           
+    Database db;
+    private siswa siswa;  
     
+    public ControllerSiswa(Database db) {
+        viewDosen = new guiSiswa();
+        viewDosen.setVisible(true);
+        viewDosen.addActionListener(this);    
+        this.db = db;
+    } 
 }

@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Controller.ControllerSiswa;
 import java.awt.List;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -353,4 +354,8 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNIS;
     private java.awt.List listDaftarSiswa;
     // End of variables declaration//GEN-END:variables
+
+    public void addActionListener(ControllerSiswa aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

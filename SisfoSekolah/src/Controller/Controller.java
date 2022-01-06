@@ -26,7 +26,7 @@ public class Controller implements ActionListener{
         if (source.equals(view.getBtnLogin())) {
             if (view.getUser() == "Siswa") {
                 view.dispose();
-                new ControlleSiswa(db);
+                new ControllerSiswa(db);
             }
             else if (view.getUser() == "Guru") {
                 view.dispose();
