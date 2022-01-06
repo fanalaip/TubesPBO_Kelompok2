@@ -57,6 +57,7 @@ public class guiGuru extends javax.swing.JFrame {
         jLabelDaftarSiswa = new javax.swing.JLabel();
         jLabelLamanGuru = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
+        jKelas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -251,6 +252,8 @@ public class guiGuru extends javax.swing.JFrame {
 
         btnKembali.setText("Kembali");
 
+        jKelas.setText("Kelas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -272,18 +275,30 @@ public class guiGuru extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnKembali)
-                        .addGap(294, 294, 294)
-                        .addComponent(jLabelLamanGuru)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(294, 294, 294)
+                                .addComponent(jLabelLamanGuru)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(480, 480, 480)
+                                .addComponent(jKelas)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelLamanGuru)
-                    .addComponent(btnKembali))
-                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelLamanGuru)
+                            .addComponent(btnKembali))
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jKelas)
+                        .addGap(26, 26, 26)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelInputNilai)
                     .addComponent(jLabelListMapel)
@@ -450,6 +465,7 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbMapel;
     private javax.swing.JComboBox<String> cbTask;
+    private javax.swing.JLabel jKelas;
     private javax.swing.JLabel jLabelDaftarSiswa;
     private javax.swing.JLabel jLabelInputNilai;
     private javax.swing.JLabel jLabelLamanGuru;
