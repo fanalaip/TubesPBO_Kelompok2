@@ -364,29 +364,26 @@ public class guiGuru extends javax.swing.JFrame {
         this.jtNilai.setText(jtHari);
     }
 
-    public void setJtMatkul(String jtMatkul) {
-        this.jtMatkul.setText(jtMatkul);
-    }
-
-    public void setJtRuang(String jtRuang) {
-        this.jtRuang.setText(jtRuang);
-    }
-
     public JComboBox<String> getCbJadwal() {
         return cbMapel;
     }
     
-    public String getCbJadwalText(){
+    public String getCbMapelText(){
         int i = cbMapel.getSelectedIndex();
         return cbMapel.getItemAt(i);
+    }
+    
+    public String getCbTaskText(){
+        int i = cbTask.getSelectedIndex();
+        return cbTask.getItemAt(i);
     }
     
     public String getNama(){
         return tfNama.getText();
     }
     
-    public String getTfMatkul() {
-       return jtMatkul.getText();
+    public String getTfNilai() {
+       return jtNilai.getText();
     } 
     
     public String getTfNIS() {
