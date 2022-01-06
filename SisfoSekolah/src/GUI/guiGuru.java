@@ -360,7 +360,7 @@ public class guiGuru extends javax.swing.JFrame {
         
     }
 
-    public void setJtHari(String jtHari) {
+    public void setJtNilai(String jtHari) {
         this.jtNilai.setText(jtHari);
     }
 
