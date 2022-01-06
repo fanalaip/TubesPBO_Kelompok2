@@ -5,6 +5,11 @@
  */
 package GUI;
 
+import java.awt.List;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+
 /**
  *
  * @author ASUS
@@ -27,34 +32,34 @@ public class guiSiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jTabbedPaneDaftarSiswa = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        jLDosen = new javax.swing.JLabel();
-        jLabelNID = new javax.swing.JLabel();
-        jTextFieldNID = new javax.swing.JTextField();
+        jInternalFrameNilai = new javax.swing.JInternalFrame();
+        jLSiswa = new javax.swing.JLabel();
+        jLabelNIS = new javax.swing.JLabel();
+        jTextFieldNIS = new javax.swing.JTextField();
         jBSearch = new javax.swing.JButton();
         btn_back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTabledosen = new javax.swing.JTable();
+        jTableSiswa = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jInternalFrame2 = new javax.swing.JInternalFrame();
-        jLabel4 = new javax.swing.JLabel();
-        list1 = new java.awt.List();
+        jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
+        jLabelNamaSiswa = new javax.swing.JLabel();
+        listDaftarSiswa = new java.awt.List();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jInternalFrame1.setVisible(true);
+        jInternalFrameNilai.setVisible(true);
 
-        jLDosen.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
-        jLDosen.setText("SISWA");
+        jLSiswa.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        jLSiswa.setText("SISWA");
 
-        jLabelNID.setText("NIS                   :");
+        jLabelNIS.setText("NIS                   :");
 
         jBSearch.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         jBSearch.setText("Search");
@@ -73,7 +78,7 @@ public class guiSiswa extends javax.swing.JFrame {
 
         jLabel3.setText("STATUS SISWA :");
 
-        jTabledosen.setModel(new javax.swing.table.DefaultTableModel(
+        jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -115,73 +120,73 @@ public class guiSiswa extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTabledosen.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
-        jScrollPane3.setViewportView(jTabledosen);
+        jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jScrollPane3.setViewportView(jTableSiswa);
 
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jInternalFrameNilaiLayout = new javax.swing.GroupLayout(jInternalFrameNilai.getContentPane());
+        jInternalFrameNilai.getContentPane().setLayout(jInternalFrameNilaiLayout);
+        jInternalFrameNilaiLayout.setHorizontalGroup(
+            jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
+                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
+                        .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelNID)
+                                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelNIS)
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel2)))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(btn_back)))
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                        .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                                 .addGap(13, 13, 13)
-                                .addComponent(jTextFieldNID, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jBSearch))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel5))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
                                     .addComponent(jLabel6))))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                    .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                 .addGap(210, 210, 210)
-                .addComponent(jLDosen)
+                .addComponent(jLSiswa)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+        jInternalFrameNilaiLayout.setVerticalGroup(
+            jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jLDosen)
+                .addComponent(jLSiswa)
                 .addGap(18, 18, 18)
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldNID, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelNID, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBSearch))
                 .addGap(27, 27, 27)
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
@@ -194,46 +199,46 @@ public class guiSiswa extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jInternalFrameNilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jInternalFrame1)
+            .addComponent(jInternalFrameNilai)
         );
 
-        jTabbedPane3.addTab("NILAI", jPanel1);
+        jTabbedPaneDaftarSiswa.addTab("NILAI", jPanel1);
 
-        jInternalFrame2.setVisible(true);
+        jInternalFrameDaftarSiswa.setVisible(true);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel4.setText("LIST NAMA SISWA");
+        jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
-        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
-        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
-        jInternalFrame2Layout.setHorizontalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame2Layout.createSequentialGroup()
-                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInternalFrame2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jInternalFrameDaftarSiswaLayout = new javax.swing.GroupLayout(jInternalFrameDaftarSiswa.getContentPane());
+        jInternalFrameDaftarSiswa.getContentPane().setLayout(jInternalFrameDaftarSiswaLayout);
+        jInternalFrameDaftarSiswaLayout.setHorizontalGroup(
+            jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
+                .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                         .addGap(53, 53, 53)
-                        .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                        .addComponent(listDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
-                        .addComponent(jLabel4)))
+                        .addComponent(jLabelNamaSiswa)))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
-        jInternalFrame2Layout.setVerticalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+        jInternalFrameDaftarSiswaLayout.setVerticalGroup(
+            jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jLabel4)
+                .addComponent(jLabelNamaSiswa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(listDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("DAFTAR SISWA", jInternalFrame2);
+        jTabbedPaneDaftarSiswa.addTab("DAFTAR SISWA", jInternalFrameDaftarSiswa);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -241,14 +246,14 @@ public class guiSiswa extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPaneDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 724, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPaneDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 724, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -294,26 +299,58 @@ public class guiSiswa extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public JButton getButtonBack(){
+        return btn_back;
+    }
+    
+    public JTable getjTableSiswa() {
+        return jTableSiswa;
+    }
+    
+    public List getDaftarSiswa(){
+        return listDaftarSiswa;
+    }
+    
+    public JButton getBtnCariNIS(){
+        return jBSearch;
+    }
+    
+    public JLabel getNama(){
+        return jLabel5;
+    }
+    
+    public JLabel getAngkatan(){
+        return jLabel6;
+    }
+    
+    public JLabel getStatusSiswa(){
+        return jLabel7;
+    }
+    
+    public void setNIS(){
+        this.jTextFieldNIS = jTextFieldNIS;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;
     private javax.swing.JButton jBSearch;
-    private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JInternalFrame jInternalFrame2;
-    private javax.swing.JLabel jLDosen;
+    private javax.swing.JInternalFrame jInternalFrameDaftarSiswa;
+    private javax.swing.JInternalFrame jInternalFrameNilai;
+    private javax.swing.JLabel jLSiswa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabelNID;
+    private javax.swing.JLabel jLabelNIS;
+    private javax.swing.JLabel jLabelNamaSiswa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTabledosen;
-    private javax.swing.JTextField jTextFieldNID;
-    private java.awt.List list1;
+    private javax.swing.JTabbedPane jTabbedPaneDaftarSiswa;
+    private javax.swing.JTable jTableSiswa;
+    private javax.swing.JTextField jTextFieldNIS;
+    private java.awt.List listDaftarSiswa;
     // End of variables declaration//GEN-END:variables
 }

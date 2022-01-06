@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="jTabbedPane3" min="-2" max="-2" attributes="0"/>
+              <Component id="jTabbedPaneDaftarSiswa" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="28" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -34,14 +34,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="jTabbedPane3" min="-2" pref="724" max="-2" attributes="0"/>
+              <Component id="jTabbedPaneDaftarSiswa" min="-2" pref="724" max="-2" attributes="0"/>
               <EmptySpace pref="48" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane3">
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPaneDaftarSiswa">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -58,19 +58,19 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jInternalFrame1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jInternalFrameNilai" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jInternalFrame1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jInternalFrameNilai" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
+            <Container class="javax.swing.JInternalFrame" name="jInternalFrameNilai">
               <Properties>
                 <Property name="visible" type="boolean" value="true"/>
               </Properties>
@@ -85,7 +85,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabelNID" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelNIS" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -99,7 +99,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldNID" min="-2" pref="149" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldNIS" min="-2" pref="149" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jBSearch" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -126,7 +126,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-                          <Component id="jLDosen" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLSiswa" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -137,11 +137,11 @@
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Component id="btn_back" min="-2" pref="26" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Component id="jLDosen" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLSiswa" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldNID" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jLabelNID" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="jTextFieldNIS" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jLabelNIS" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="jBSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -167,7 +167,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLDosen">
+                <Component class="javax.swing.JLabel" name="jLSiswa">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Constantia" size="24" style="1"/>
@@ -175,12 +175,12 @@
                     <Property name="text" type="java.lang.String" value="SISWA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabelNID">
+                <Component class="javax.swing.JLabel" name="jLabelNIS">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="NIS                   :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldNID">
+                <Component class="javax.swing.JTextField" name="jTextFieldNIS">
                 </Component>
                 <Component class="javax.swing.JButton" name="jBSearch">
                   <Properties>
@@ -223,7 +223,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTabledosen">
+                    <Component class="javax.swing.JTable" name="jTableSiswa">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="20">
@@ -277,7 +277,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JInternalFrame" name="jInternalFrame2">
+        <Container class="javax.swing.JInternalFrame" name="jInternalFrameDaftarSiswa">
           <Properties>
             <Property name="visible" type="boolean" value="true"/>
           </Properties>
@@ -296,11 +296,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="list1" min="-2" pref="385" max="-2" attributes="0"/>
+                              <Component id="listDaftarSiswa" min="-2" pref="385" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelNamaSiswa" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="61" max="32767" attributes="0"/>
@@ -311,16 +311,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelNamaSiswa" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="list1" min="-2" pref="542" max="-2" attributes="0"/>
+                      <Component id="listDaftarSiswa" min="-2" pref="542" max="-2" attributes="0"/>
                       <EmptySpace pref="52" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jLabelNamaSiswa">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="18" style="1"/>
@@ -328,7 +328,7 @@
                 <Property name="text" type="java.lang.String" value="LIST NAMA SISWA"/>
               </Properties>
             </Component>
-            <Component class="java.awt.List" name="list1">
+            <Component class="java.awt.List" name="listDaftarSiswa">
             </Component>
           </SubComponents>
         </Container>
