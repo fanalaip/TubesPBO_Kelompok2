@@ -13,7 +13,6 @@ public class guru {
     public guru (String nama_guru, String kode_guru, String mapelAjar, int nid) {
         this.nama_guru = nama_guru ;
         this.kode_guru = kode_guru ;
-        this.mapelAjar = mapelAjar ;
         this.nid = nid ;
     }
     public void setNamaGuru(String a){
