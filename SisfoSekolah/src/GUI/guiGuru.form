@@ -32,28 +32,26 @@
                       <Component id="jPanel4" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnKembali" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
+                      <Component id="jLabelLamanGuru" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
                       <Component id="jLabelInputNilai" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                       <Component id="jLabelListMapel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jLabelDaftarSiswa" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnKembali" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
-                              <Component id="jLabelLamanGuru" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jKelas1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jKelas2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="480" max="-2" attributes="0"/>
-                              <Component id="jKelas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabelDaftarSiswa" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -73,8 +71,11 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jKelas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jKelas2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jKelas1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -393,9 +394,14 @@
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jKelas">
+    <Component class="javax.swing.JLabel" name="jKelas2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Kelas"/>
+        <Property name="text" type="java.lang.String" value="(kelas)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jKelas1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kelas      :"/>
       </Properties>
     </Component>
   </SubComponents>
