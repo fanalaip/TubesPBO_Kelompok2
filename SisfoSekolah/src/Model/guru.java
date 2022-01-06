@@ -37,10 +37,8 @@ public class guru {
     public int getAngkatan(){
     /*
     FUNGSI INI BERFUNGSI UNTUK MENGETAHUI AWAL TAHUN GURU MENGAJAR DARI NID GURU
-            Asumsikan NID pada suatu sekolah terdiri dari 6 digit.
-            Dua digit pertama adalah tahun awal guru tersebut mengajar di sekolah.
-            Asumsikan jumlah guru di sekolah tersebut kurang dari 9999 guru.
-            Asumsikan sekolah ini berdiri tahun 2010.
+            Asumsikan NID pada suatu sekolah terdiri dari 6 digit. Dua digit pertama adalah tahun awal guru tersebut mengajar di sekolah.
+            Asumsikan jumlah guru di sekolah tersebut kurang dari 9999 guru. Asumsikan sekolah ini berdiri tahun 2010.
             Contoh: 192013 (angkatan 2019) 19000 19999
                     205001 (angkatan 2020)
                     214444 (angkatan 2021)    
