@@ -36,21 +36,22 @@ public class guiAdmin extends javax.swing.JFrame {
         jListKelas = new javax.swing.JList<>();
         jLabelAdmin = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        jLabelKelas = new javax.swing.JLabel();
+        jLabelHapusKelas = new javax.swing.JLabel();
         jLabelInputKelas = new javax.swing.JLabel();
         tfNama1 = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
         jLabelMapel = new javax.swing.JLabel();
         btnHapus = new javax.swing.JButton();
         jLabelInputNIS = new javax.swing.JLabel();
-        tfNama2 = new javax.swing.JTextField();
+        tfKelas = new javax.swing.JTextField();
         jLabelInputNama = new javax.swing.JLabel();
-        tfNama3 = new javax.swing.JTextField();
+        tfNIS = new javax.swing.JTextField();
         jCheckBoxPKn = new javax.swing.JCheckBox();
         jCheckBoxMM = new javax.swing.JCheckBox();
         jCheckBoxIPS = new javax.swing.JCheckBox();
         jCheckBoxIPA = new javax.swing.JCheckBox();
         jLabelKetHapus = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jLabel1.setText("jLabel1");
 
@@ -70,6 +71,7 @@ public class guiAdmin extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabelTambahKelas.setText("TAMBAH KELAS");
 
@@ -89,7 +91,7 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jLabelKelas.setText("KELAS");
+        jLabelHapusKelas.setText("HAPUS KELAS");
 
         jLabelInputKelas.setText("Kelas");
 
@@ -117,17 +119,17 @@ public class guiAdmin extends javax.swing.JFrame {
 
         jLabelInputNIS.setText("NIS");
 
-        tfNama2.addActionListener(new java.awt.event.ActionListener() {
+        tfKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNama2ActionPerformed(evt);
+                tfKelasActionPerformed(evt);
             }
         });
 
         jLabelInputNama.setText("Nama");
 
-        tfNama3.addActionListener(new java.awt.event.ActionListener() {
+        tfNIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNama3ActionPerformed(evt);
+                tfNISActionPerformed(evt);
             }
         });
 
@@ -161,6 +163,8 @@ public class guiAdmin extends javax.swing.JFrame {
 
         jLabelKetHapus.setText("Klik kelas yang ingin dihapus");
 
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -171,32 +175,32 @@ public class guiAdmin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAdd)
+                            .addComponent(jLabelInputKelas)
+                            .addComponent(jLabelInputNIS)
+                            .addComponent(jLabelTambahKelas)
+                            .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelInputNama)
+                            .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelInputKelas)
-                                    .addComponent(jLabelInputNIS)
-                                    .addComponent(jLabelTambahKelas)
-                                    .addComponent(tfNama2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelInputNama)
-                                    .addComponent(tfNama3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBoxPKn)
-                                            .addComponent(jCheckBoxIPS))
-                                        .addGap(28, 28, 28)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBoxMM)
-                                            .addComponent(jCheckBoxIPA))))
-                                .addGap(68, 68, 68)
+                                    .addComponent(jCheckBoxPKn)
+                                    .addComponent(jCheckBoxIPS))
+                                .addGap(28, 28, 28)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelKetHapus)
-                                    .addComponent(jLabelKelas)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnHapus))))
-                        .addGap(0, 24, Short.MAX_VALUE))
+                                    .addComponent(jCheckBoxMM)
+                                    .addComponent(jCheckBoxIPA)))
+                            .addComponent(btnAdd))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelKetHapus)
+                            .addComponent(jLabelHapusKelas)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnHapus))
+                        .addGap(0, 22, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -210,40 +214,46 @@ public class guiAdmin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(jLabelAdmin))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelTambahKelas)
+                                    .addComponent(jLabelHapusKelas))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputKelas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputNama)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputNIS)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelMapel))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelTambahKelas)
-                            .addComponent(jLabelKelas))
+                            .addComponent(jCheckBoxPKn)
+                            .addComponent(jCheckBoxIPA)
+                            .addComponent(jLabelKetHapus))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxIPS)
+                            .addComponent(jCheckBoxMM)
+                            .addComponent(btnHapus))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelInputKelas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNama2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAdd)
+                        .addGap(38, 38, 38))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelInputNama)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelInputNIS)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNama3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelMapel))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBoxPKn)
-                    .addComponent(jCheckBoxIPA)
-                    .addComponent(jLabelKetHapus))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBoxIPS)
-                    .addComponent(jCheckBoxMM)
-                    .addComponent(btnHapus))
-                .addGap(18, 18, 18)
-                .addComponent(btnAdd)
-                .addContainerGap(48, Short.MAX_VALUE))
+                        .addComponent(jSeparator1)
+                        .addContainerGap())))
         );
 
         pack();
@@ -273,13 +283,13 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHapusActionPerformed
 
-    private void tfNama2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNama2ActionPerformed
+    private void tfKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfKelasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNama2ActionPerformed
+    }//GEN-LAST:event_tfKelasActionPerformed
 
-    private void tfNama3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNama3ActionPerformed
+    private void tfNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNISActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNama3ActionPerformed
+    }//GEN-LAST:event_tfNISActionPerformed
 
     private void jCheckBoxPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPKnActionPerformed
         // TODO add your handling code here:
@@ -345,19 +355,20 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxPKn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdmin;
+    private javax.swing.JLabel jLabelHapusKelas;
     private javax.swing.JLabel jLabelInputKelas;
     private javax.swing.JLabel jLabelInputNIS;
     private javax.swing.JLabel jLabelInputNama;
-    private javax.swing.JLabel jLabelKelas;
     private javax.swing.JLabel jLabelKetHapus;
     private javax.swing.JLabel jLabelMapel;
     private javax.swing.JLabel jLabelNama;
     private javax.swing.JLabel jLabelTambahKelas;
     private javax.swing.JList<String> jListKelas;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField tfKelas;
+    private javax.swing.JTextField tfNIS;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
-    private javax.swing.JTextField tfNama2;
-    private javax.swing.JTextField tfNama3;
     // End of variables declaration//GEN-END:variables
 }
