@@ -58,45 +58,45 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnTambah3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAdd" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelNama1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelNama3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelInputNilai" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelInputKelas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelInputNIS" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelTambahKelas" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tfNama2" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
-                                  <Component id="jLabelNama4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelInputNama" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tfNama3" min="-2" pref="155" max="-2" attributes="0"/>
-                                  <Component id="jLabelNama2" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="jLabelMapel" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
                                   <Component id="tfNama1" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBoxPKn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBoxIPS" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBoxMM" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBoxIPA" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelInputNilai4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelInputNilai3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKetHapus" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKelas" min="-2" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="196" max="-2" attributes="0"/>
-                                  <Component id="btnTambah4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="24" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnTambah2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabelInputNilai1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="jLabelAdmin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -105,62 +105,56 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnTambah2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
-                      <Component id="jLabelInputNilai1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelInputNilai" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelInputNilai3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTambahKelas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelKelas" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelNama1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelInputKelas" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tfNama2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabelNama4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelInputNama" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tfNama1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelNama3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelInputNIS" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tfNama3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelNama2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelMapel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jScrollPane1" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelInputNilai4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCheckBoxPKn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCheckBoxIPA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelKetHapus" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnTambah4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCheckBoxIPS" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCheckBoxMM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnHapus" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTambah3" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="48" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabelInputNilai">
+    <Component class="javax.swing.JLabel" name="jLabelTambahKelas">
       <Properties>
         <Property name="text" type="java.lang.String" value="TAMBAH KELAS"/>
       </Properties>
@@ -172,7 +166,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JList" name="jList1">
+        <Component class="javax.swing.JList" name="jListKelas">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
               <StringArray count="5">
@@ -190,25 +184,25 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabelInputNilai1">
+    <Component class="javax.swing.JLabel" name="jLabelAdmin">
       <Properties>
         <Property name="text" type="java.lang.String" value="ADMIN SISTEM INFORMASI SEKOLAH"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTambah2">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambah2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelInputNilai3">
+    <Component class="javax.swing.JLabel" name="jLabelKelas">
       <Properties>
         <Property name="text" type="java.lang.String" value="KELAS"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelNama1">
+    <Component class="javax.swing.JLabel" name="jLabelInputKelas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kelas"/>
       </Properties>
@@ -218,28 +212,28 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNama1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTambah3">
+    <Component class="javax.swing.JButton" name="btnAdd">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tambah"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambah3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelNama2">
+    <Component class="javax.swing.JLabel" name="jLabelMapel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mata pelajaran"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTambah4">
+    <Component class="javax.swing.JButton" name="btnHapus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hapus"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambah4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHapusActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelNama3">
+    <Component class="javax.swing.JLabel" name="jLabelInputNIS">
       <Properties>
         <Property name="text" type="java.lang.String" value="NIS"/>
       </Properties>
@@ -249,7 +243,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNama2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelNama4">
+    <Component class="javax.swing.JLabel" name="jLabelInputNama">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nama"/>
       </Properties>
@@ -259,39 +253,39 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNama3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxPKn">
       <Properties>
         <Property name="text" type="java.lang.String" value="PKn"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxPKnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxMM">
       <Properties>
         <Property name="text" type="java.lang.String" value="Matematika"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMMActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxIPS">
       <Properties>
         <Property name="text" type="java.lang.String" value="IPS"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxIPSActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxIPA">
       <Properties>
         <Property name="text" type="java.lang.String" value="IPA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxIPAActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelInputNilai4">
+    <Component class="javax.swing.JLabel" name="jLabelKetHapus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Klik kelas yang ingin dihapus"/>
       </Properties>

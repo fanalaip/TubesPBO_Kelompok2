@@ -31,26 +31,26 @@ public class guiAdmin extends javax.swing.JFrame {
         btnTambah = new javax.swing.JButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jLabelInputNilai = new javax.swing.JLabel();
+        jLabelTambahKelas = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jLabelInputNilai1 = new javax.swing.JLabel();
-        btnTambah2 = new javax.swing.JButton();
-        jLabelInputNilai3 = new javax.swing.JLabel();
-        jLabelNama1 = new javax.swing.JLabel();
+        jListKelas = new javax.swing.JList<>();
+        jLabelAdmin = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        jLabelKelas = new javax.swing.JLabel();
+        jLabelInputKelas = new javax.swing.JLabel();
         tfNama1 = new javax.swing.JTextField();
-        btnTambah3 = new javax.swing.JButton();
-        jLabelNama2 = new javax.swing.JLabel();
-        btnTambah4 = new javax.swing.JButton();
-        jLabelNama3 = new javax.swing.JLabel();
+        btnAdd = new javax.swing.JButton();
+        jLabelMapel = new javax.swing.JLabel();
+        btnHapus = new javax.swing.JButton();
+        jLabelInputNIS = new javax.swing.JLabel();
         tfNama2 = new javax.swing.JTextField();
-        jLabelNama4 = new javax.swing.JLabel();
+        jLabelInputNama = new javax.swing.JLabel();
         tfNama3 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jLabelInputNilai4 = new javax.swing.JLabel();
+        jCheckBoxPKn = new javax.swing.JCheckBox();
+        jCheckBoxMM = new javax.swing.JCheckBox();
+        jCheckBoxIPS = new javax.swing.JCheckBox();
+        jCheckBoxIPA = new javax.swing.JCheckBox();
+        jLabelKetHapus = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -71,27 +71,27 @@ public class guiAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabelInputNilai.setText("TAMBAH KELAS");
+        jLabelTambahKelas.setText("TAMBAH KELAS");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(jListKelas);
 
-        jLabelInputNilai1.setText("ADMIN SISTEM INFORMASI SEKOLAH");
+        jLabelAdmin.setText("ADMIN SISTEM INFORMASI SEKOLAH");
 
-        btnTambah2.setText("Back");
-        btnTambah2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambah2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        jLabelInputNilai3.setText("KELAS");
+        jLabelKelas.setText("KELAS");
 
-        jLabelNama1.setText("Kelas");
+        jLabelInputKelas.setText("Kelas");
 
         tfNama1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,23 +99,23 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        btnTambah3.setText("Tambah");
-        btnTambah3.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setText("Tambah");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambah3ActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
-        jLabelNama2.setText("Mata pelajaran");
+        jLabelMapel.setText("Mata pelajaran");
 
-        btnTambah4.setText("Hapus");
-        btnTambah4.addActionListener(new java.awt.event.ActionListener() {
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambah4ActionPerformed(evt);
+                btnHapusActionPerformed(evt);
             }
         });
 
-        jLabelNama3.setText("NIS");
+        jLabelInputNIS.setText("NIS");
 
         tfNama2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jLabelNama4.setText("Nama");
+        jLabelInputNama.setText("Nama");
 
         tfNama3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,35 +131,35 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("PKn");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBoxPKn.setText("PKn");
+        jCheckBoxPKn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jCheckBoxPKnActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Matematika");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBoxMM.setText("Matematika");
+        jCheckBoxMM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jCheckBoxMMActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setText("IPS");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBoxIPS.setText("IPS");
+        jCheckBoxIPS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                jCheckBoxIPSActionPerformed(evt);
             }
         });
 
-        jCheckBox4.setText("IPA");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBoxIPA.setText("IPA");
+        jCheckBoxIPA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                jCheckBoxIPAActionPerformed(evt);
             }
         });
 
-        jLabelInputNilai4.setText("Klik kelas yang ingin dihapus");
+        jLabelKetHapus.setText("Klik kelas yang ingin dihapus");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,82 +171,78 @@ public class guiAdmin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnTambah3)
+                            .addComponent(btnAdd)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelNama1)
-                                    .addComponent(jLabelNama3)
-                                    .addComponent(jLabelInputNilai)
+                                    .addComponent(jLabelInputKelas)
+                                    .addComponent(jLabelInputNIS)
+                                    .addComponent(jLabelTambahKelas)
                                     .addComponent(tfNama2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelNama4)
+                                    .addComponent(jLabelInputNama)
                                     .addComponent(tfNama3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelNama2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox1)
-                                            .addComponent(jCheckBox3))
+                                            .addComponent(jCheckBoxPKn)
+                                            .addComponent(jCheckBoxIPS))
                                         .addGap(28, 28, 28)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox2)
-                                            .addComponent(jCheckBox4))))
+                                            .addComponent(jCheckBoxMM)
+                                            .addComponent(jCheckBoxIPA))))
                                 .addGap(68, 68, 68)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelInputNilai4)
-                                    .addComponent(jLabelInputNilai3)
+                                    .addComponent(jLabelKetHapus)
+                                    .addComponent(jLabelKelas)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnTambah4))))
+                                    .addComponent(btnHapus))))
                         .addGap(0, 24, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnTambah2)
+                        .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelInputNilai1)
-                        .addGap(95, 95, 95))))
+                        .addComponent(jLabelAdmin)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnTambah2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(23, Short.MAX_VALUE)
-                        .addComponent(jLabelInputNilai1)
-                        .addGap(18, 18, 18)))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack)
+                    .addComponent(jLabelAdmin))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelInputNilai)
-                            .addComponent(jLabelInputNilai3))
+                            .addComponent(jLabelTambahKelas)
+                            .addComponent(jLabelKelas))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelNama1)
+                        .addComponent(jLabelInputKelas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNama2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelNama4)
+                        .addComponent(jLabelInputNama)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelNama3)
+                        .addComponent(jLabelInputNIS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNama3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelNama2))
+                        .addComponent(jLabelMapel))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jLabelInputNilai4))
+                    .addComponent(jCheckBoxPKn)
+                    .addComponent(jCheckBoxIPA)
+                    .addComponent(jLabelKetHapus))
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox2)
-                    .addComponent(btnTambah4))
+                    .addComponent(jCheckBoxIPS)
+                    .addComponent(jCheckBoxMM)
+                    .addComponent(btnHapus))
                 .addGap(18, 18, 18)
-                .addComponent(btnTambah3)
+                .addComponent(btnAdd)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -261,21 +257,21 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahActionPerformed
 
-    private void btnTambah2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambah2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTambah2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void tfNama1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNama1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNama1ActionPerformed
 
-    private void btnTambah3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambah3ActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTambah3ActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
-    private void btnTambah4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambah4ActionPerformed
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTambah4ActionPerformed
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     private void tfNama2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNama2ActionPerformed
         // TODO add your handling code here:
@@ -285,21 +281,21 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNama3ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jCheckBoxPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPKnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jCheckBoxPKnActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void jCheckBoxMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jCheckBoxMMActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void jCheckBoxIPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_jCheckBoxIPSActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void jCheckBoxIPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    }//GEN-LAST:event_jCheckBoxIPAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -337,27 +333,27 @@ public class guiAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JButton btnTambah2;
-    private javax.swing.JButton btnTambah3;
-    private javax.swing.JButton btnTambah4;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBoxIPA;
+    private javax.swing.JCheckBox jCheckBoxIPS;
+    private javax.swing.JCheckBox jCheckBoxMM;
+    private javax.swing.JCheckBox jCheckBoxPKn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelInputNilai;
-    private javax.swing.JLabel jLabelInputNilai1;
-    private javax.swing.JLabel jLabelInputNilai3;
-    private javax.swing.JLabel jLabelInputNilai4;
+    private javax.swing.JLabel jLabelAdmin;
+    private javax.swing.JLabel jLabelInputKelas;
+    private javax.swing.JLabel jLabelInputNIS;
+    private javax.swing.JLabel jLabelInputNama;
+    private javax.swing.JLabel jLabelKelas;
+    private javax.swing.JLabel jLabelKetHapus;
+    private javax.swing.JLabel jLabelMapel;
     private javax.swing.JLabel jLabelNama;
-    private javax.swing.JLabel jLabelNama1;
-    private javax.swing.JLabel jLabelNama2;
-    private javax.swing.JLabel jLabelNama3;
-    private javax.swing.JLabel jLabelNama4;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jLabelTambahKelas;
+    private javax.swing.JList<String> jListKelas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
