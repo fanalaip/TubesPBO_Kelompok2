@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Topik   : Sekolah
+Anggota : Arpriansah Yonathan (1301194112)
+          Balqis Sayyidahtul Atikah (1301193480)
+          Igga Febrian Virgiani (1301194283)
+          Manuel Benedict (1301194182)
  */
 package GUI;
 
@@ -11,10 +13,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 
-/**
- *
- * @author ASUS
- */
 public class guiSiswa extends javax.swing.JFrame {
 
     /**

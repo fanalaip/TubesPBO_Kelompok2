@@ -6,11 +6,14 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
+
+import java.util.ArrayList;
+
 public class siswa {
-    private String nama_siswa;
-    private int nis;
+    private String nama_siswa, nis;
+    private ArrayList<siswa> listMapel;
     
-    public siswa(String nama_siswa, int nis){
+    public siswa(String nama_siswa, String nis){
         this.nama_siswa = nama_siswa;
         this.nis = nis;
     }
@@ -18,13 +21,13 @@ public class siswa {
     public void setNamaSiswa(String a){
         this.nama_siswa = a;
     }
-    public void setNIS(int a){
+    public void setNIS(String a){
         this.nis = a;
     }
     public String getNamaSiswa(){
         return nama_siswa;
     }
-    public int getNIS(){
+    public String getNIS(){
         return nis;
     }
     public int getAngkatan(){
@@ -38,7 +41,7 @@ public class siswa {
                     20500 (angkatan 2020)
                     21444 (angkatan 2021)
         */
-        int angkatan = Integer.parseInt(Integer.toString(nis).substring(0,1)) + 2 ;
+        int angkatan = Integer.parseInt(Integer.toString(Integer.valueOf(nis)).substring(0,1)) + 2 ;
         return 2000+angkatan ;
     }
 }

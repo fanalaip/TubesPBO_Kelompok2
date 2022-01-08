@@ -6,11 +6,11 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
+
 public class guru {
-    private String nama_guru, kode_guru, mapelAjar;
-    private int nid;
+    private String nama_guru, kode_guru, nid;
     
-    public guru (String nama_guru, String kode_guru, String mapelAjar, int nid) {
+    public guru (String nama_guru, String kode_guru, String mapelAjar, String nid) {
         this.nama_guru = nama_guru ;
         this.kode_guru = kode_guru ;
         this.nid = nid ;
@@ -18,7 +18,7 @@ public class guru {
     public void setNamaGuru(String a){
         this.nama_guru = a;
     }
-    public void setNID(int a){
+    public void setNID(String a){
         this.nid = a;
     }
     public void setKodeGuru(String a){
@@ -27,7 +27,7 @@ public class guru {
     public String getNamaGuru(){
         return nama_guru;
     }
-    public int getNID(){
+    public String getNID(){
         return nid;
     }
     public String getKodeGuru(){
@@ -42,7 +42,7 @@ public class guru {
                     205001 (angkatan 2020)
                     214444 (angkatan 2021)    
     */    
-        int angkatan = Integer.parseInt(Integer.toString(nid).substring(0,1));
+        int angkatan = Integer.parseInt(Integer.toString(Integer.valueOf(nid)).substring(0,1));
         return 2000+angkatan ;
     }
 }

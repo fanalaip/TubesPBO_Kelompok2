@@ -62,15 +62,15 @@ public class Database {
     public void loadSiswa() {
         try {
            connect();
-           sql = "SELECT * FROM mahasiswa";
+           sql = "SELECT * FROM siswa";
            rs = stmt.executeQuery(sql);
-           siswa m;
+           siswa student;
            while (rs.next()) {
-               m = new siswa(
+               student = new siswa(
                    rs.getString("nis"),
-                   rs.getString("nama_mhs")
+                   rs.getString("nama_siswa")
                );
-            listSiswa.add(m);
+            listSiswa.add(student);
            }
            disconnect();
        } catch (Exception e) {
@@ -81,18 +81,14 @@ public class Database {
     public void loadKelas() {
         try {
            connect();
-           sql = "SELECT * FROM ruangan"
-                   + " natural join gedung";
+           sql = "SELECT * FROM kelas" ;
            rs = stmt.executeQuery(sql);
-           kelas m;
+           kelas kls;
            while (rs.next()) {
-               m = new kelas(
-                   rs.getString("kode_gedung"),
-                   rs.getString("nama_gedung"),
-                   rs.getString("NO_Ruangan"),
-                   rs.getInt("kapasitas")
+               kls = new kelas(
+                   rs.getString("nama_kelas")
                );
-            listKelas.add(m);
+            listKelas.add(kls);
            }
            disconnect();
        } catch (Exception e) {
@@ -105,19 +101,21 @@ public class Database {
            connect();
            sql = "SELECT * FROM mata_kuliah NATURAL JOIN dosen";
            rs = stmt.executeQuery(sql);
-           matapelajaran m;
-           guru g;
+           matapelajaran course;
+           guru teacher;
            while (rs.next()) {
-                g = new guru(
-                    rs.getString("nid"), 
-                    rs.getString("nama_dosen"));
-                m = new matapelajaran(
-                    rs.getString("kode_MK"),
-                    rs.getString("nama_MK"),
-                    rs.getString("SKS"),
-                    g
+                teacher = new guru(
+                    rs.getString("nama_guru"),
+                    rs.getString("kode_guru"), 
+                    rs.getString("nid")
                 );
-                listMapel.add(m);
+                course = new matapelajaran(
+                    rs.getString("nama_mapel"),
+                    rs.getString("kkm"),
+                    rs.getString("bobotNilai"),
+                    teacher
+                );
+                listMapel.add(course);
            }
            disconnect();
        } catch (Exception e) {
@@ -125,15 +123,15 @@ public class Database {
        }
     }
 
-    public ArrayList<kelas> getListRuangan() {
+    public ArrayList<kelas> getListKelas() {
         return listKelas;
     }
 
-    public ArrayList<siswa> getListMahasiswa() {
+    public ArrayList<siswa> getListSiswa() {
         return listSiswa;
     }
 
-    public ArrayList<matapelajaran> getListMatkul() {
+    public ArrayList<matapelajaran> getListMapel() {
         return listMapel;
     }
 }
