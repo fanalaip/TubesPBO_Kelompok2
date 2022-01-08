@@ -111,11 +111,11 @@ public class Database {
                 g = new guru(
                     rs.getString("nid"), 
                     rs.getString("nama_dosen"));
-                m = new mapel(
+                m = new matapelajaran(
                     rs.getString("kode_MK"),
                     rs.getString("nama_MK"),
                     rs.getString("SKS"),
-                    d
+                    g
                 );
                 listMapel.add(m);
            }
