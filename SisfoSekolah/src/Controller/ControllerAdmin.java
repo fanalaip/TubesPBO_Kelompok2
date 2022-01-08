@@ -11,6 +11,23 @@ import GUI.guiAdmin;
 import Model.Database;
 import Model.admin;
 
-public class ControllerAdmin {
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+
+public class ControllerAdmin extends MouseAdapter implements ActionListener {
+    private guiAdmin viewAdmin;
+    private admin adminModel;
+    
+
+    public ControllerAdmin() {
+        this.viewAdmin = viewAdmin;
+        this.adminModel = adminModel;
+        
+        viewAdmin = new guiAdmin();
+        viewAdmin.addActionListener(this);
+        viewAdmin.addMouseAdapter(this);
+        
+        viewAdmin.setVisible(true);
+    }
     
 }
