@@ -7,6 +7,8 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package GUI;
 
+import Controller.ControllerAdmin;
+
 public class guiAdmin extends javax.swing.JFrame {
 
     /**
@@ -371,4 +373,12 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
     // End of variables declaration//GEN-END:variables
+
+    public void addActionListener(ControllerAdmin aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void addMouseAdapter(ControllerAdmin aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
