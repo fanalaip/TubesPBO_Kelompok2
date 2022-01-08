@@ -6,9 +6,13 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
+
+import java.util.ArrayList;
+
 public class siswa {
     private String nama_siswa;
     private int nis;
+    private ArrayList<siswa> listMapel;
     
     public siswa(String nama_siswa, int nis){
         this.nama_siswa = nama_siswa;

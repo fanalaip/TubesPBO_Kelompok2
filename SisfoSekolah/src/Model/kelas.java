@@ -7,7 +7,11 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
+import java.util.ArrayList;
+
 public class kelas {
+    
+    private ArrayList<siswa> listMapel;
     private String nama_kelas;
     
     public void setNamaKelas(String a){

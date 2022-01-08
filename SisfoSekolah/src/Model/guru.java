@@ -6,6 +6,7 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
+
 public class guru {
     private String nama_guru, kode_guru, mapelAjar;
     private int nid;
