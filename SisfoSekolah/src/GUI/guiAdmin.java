@@ -25,21 +25,287 @@ public class guiAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        tfNama = new javax.swing.JTextField();
+        jLabelNama = new javax.swing.JLabel();
+        btnTambah = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jLabelTambahKelas = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jListKelas = new javax.swing.JList<>();
+        jLabelAdmin = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        jLabelHapusKelas = new javax.swing.JLabel();
+        jLabelInputKelas = new javax.swing.JLabel();
+        tfNama1 = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
+        jLabelMapel = new javax.swing.JLabel();
+        btnHapus = new javax.swing.JButton();
+        jLabelInputNIS = new javax.swing.JLabel();
+        tfKelas = new javax.swing.JTextField();
+        jLabelInputNama = new javax.swing.JLabel();
+        tfNIS = new javax.swing.JTextField();
+        jCheckBoxPKn = new javax.swing.JCheckBox();
+        jCheckBoxMM = new javax.swing.JCheckBox();
+        jCheckBoxIPS = new javax.swing.JCheckBox();
+        jCheckBoxIPA = new javax.swing.JCheckBox();
+        jLabelKetHapus = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+
+        jLabel1.setText("jLabel1");
+
+        tfNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamaActionPerformed(evt);
+            }
+        });
+
+        jLabelNama.setText("Klik satu kelas yang akan dihapus");
+
+        btnTambah.setText("Tambah");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLabelTambahKelas.setText("TAMBAH KELAS");
+
+        jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jListKelas);
+
+        jLabelAdmin.setText("ADMIN SISTEM INFORMASI SEKOLAH");
+
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        jLabelHapusKelas.setText("HAPUS KELAS");
+
+        jLabelInputKelas.setText("Kelas");
+
+        tfNama1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNama1ActionPerformed(evt);
+            }
+        });
+
+        btnAdd.setText("Tambah");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        jLabelMapel.setText("Mata pelajaran");
+
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
+
+        jLabelInputNIS.setText("NIS");
+
+        tfKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfKelasActionPerformed(evt);
+            }
+        });
+
+        jLabelInputNama.setText("Nama");
+
+        tfNIS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNISActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxPKn.setText("PKn");
+        jCheckBoxPKn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxPKnActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxMM.setText("Matematika");
+        jCheckBoxMM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMMActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxIPS.setText("IPS");
+        jCheckBoxIPS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxIPSActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxIPA.setText("IPA");
+        jCheckBoxIPA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxIPAActionPerformed(evt);
+            }
+        });
+
+        jLabelKetHapus.setText("Klik kelas yang ingin dihapus");
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelInputKelas)
+                            .addComponent(jLabelInputNIS)
+                            .addComponent(jLabelTambahKelas)
+                            .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelInputNama)
+                            .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxPKn)
+                                    .addComponent(jCheckBoxIPS))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxMM)
+                                    .addComponent(jCheckBoxIPA)))
+                            .addComponent(btnAdd))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelKetHapus)
+                            .addComponent(jLabelHapusKelas)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnHapus))
+                        .addGap(0, 22, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelAdmin)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack)
+                    .addComponent(jLabelAdmin))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelTambahKelas)
+                                    .addComponent(jLabelHapusKelas))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputKelas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputNama)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelInputNIS)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelMapel))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxPKn)
+                            .addComponent(jCheckBoxIPA)
+                            .addComponent(jLabelKetHapus))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxIPS)
+                            .addComponent(jCheckBoxMM)
+                            .addComponent(btnHapus))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAdd)
+                        .addGap(38, 38, 38))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator1)
+                        .addContainerGap())))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tfNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNamaActionPerformed
+
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void tfNama1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNama1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNama1ActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void tfKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfKelasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfKelasActionPerformed
+
+    private void tfNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNISActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNISActionPerformed
+
+    private void jCheckBoxPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPKnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxPKnActionPerformed
+
+    private void jCheckBoxMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxMMActionPerformed
+
+    private void jCheckBoxIPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxIPSActionPerformed
+
+    private void jCheckBoxIPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxIPAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +343,32 @@ public class guiAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnTambah;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JCheckBox jCheckBoxIPA;
+    private javax.swing.JCheckBox jCheckBoxIPS;
+    private javax.swing.JCheckBox jCheckBoxMM;
+    private javax.swing.JCheckBox jCheckBoxPKn;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelAdmin;
+    private javax.swing.JLabel jLabelHapusKelas;
+    private javax.swing.JLabel jLabelInputKelas;
+    private javax.swing.JLabel jLabelInputNIS;
+    private javax.swing.JLabel jLabelInputNama;
+    private javax.swing.JLabel jLabelKetHapus;
+    private javax.swing.JLabel jLabelMapel;
+    private javax.swing.JLabel jLabelNama;
+    private javax.swing.JLabel jLabelTambahKelas;
+    private javax.swing.JList<String> jListKelas;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField tfKelas;
+    private javax.swing.JTextField tfNIS;
+    private javax.swing.JTextField tfNama;
+    private javax.swing.JTextField tfNama1;
     // End of variables declaration//GEN-END:variables
 }

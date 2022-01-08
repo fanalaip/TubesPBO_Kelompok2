@@ -7,7 +7,35 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class admin {
-    public void addKelas(){}
-    public void deleteKelas(){}
+    public void addKelas(String kelas, String nama_siswa, int nis, String[] mapel){
+        try {
+            dbsisfo.connect() ;
+            String sql = "INSERT INTO kelas VALUES ('"
+                    +nis+"','"
+                    +nama_siswa+"','"
+                    +kelas+"','"
+                    +mapel+"')";
+            dbsisfo.setRs(dbdbsisfo.getStmt().executeQuery(sql));
+            dbsisfo.disconnect();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    public void deleteKelas(){
+        try{
+            dbsisfo.connect();
+            String sql = "DELETE FROM kelas WHERE id = '" + kelas +"'";
+            dbsisfo.setRs(db.getStmt().executeQuery(sql));
+            dbsisfo.disconnect();
+        } catch (SQLException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
