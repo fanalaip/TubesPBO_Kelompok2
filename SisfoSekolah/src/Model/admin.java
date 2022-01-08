@@ -20,7 +20,7 @@ public class admin {
                     +nama_siswa+"','"
                     +kelas+"','"
                     +mapel+"')";
-            dbsisfo.setRs(dbdbsisfo.getStmt().executeQuery(sql));
+            dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             dbsisfo.disconnect();
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -30,7 +30,7 @@ public class admin {
         try{
             dbsisfo.connect();
             String sql = "DELETE FROM kelas WHERE id = '" + kelas +"'";
-            dbsisfo.setRs(db.getStmt().executeQuery(sql));
+            dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             dbsisfo.disconnect();
         } catch (SQLException ex) {
             Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
