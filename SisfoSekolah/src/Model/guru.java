@@ -7,7 +7,7 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 public class guru {
-    private String nama_guru, kode_guru, mapelAjar;
+    private String nama_guru, kode_guru;
     private int nid;
     
     public guru (String nama_guru, String kode_guru, String mapelAjar, int nid) {
