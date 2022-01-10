@@ -9,30 +9,14 @@ package Model;
 
 public class matapelajaran {
    private String nama_mapel;
-   private float kkm;
-   private float bobotNilai;
    
-   public matapelajaran(String nama_mapel, float kkm, float bobotNilai) {
+   public matapelajaran(String nama_mapel) {
        this.nama_mapel = nama_mapel ;
-       this.kkm =kkm ;
-       this.bobotNilai = bobotNilai ;
    } 
    public void setMataPelajaran(String a){
        this.nama_mapel = a;
    }
-   public void setKKM(float a){
-       this.kkm = a;
-   }
-   public void setBobotNilai(float a){
-       this.bobotNilai = a;
-   }
    public String getMataPelajaran(){
        return nama_mapel;
-   }
-   public float getKKM(){
-       return kkm;
-   }
-   public float getBobotNilai(){
-       return bobotNilai;
    }
 }

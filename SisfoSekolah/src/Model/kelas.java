@@ -11,9 +11,16 @@ import java.util.ArrayList;
 
 public class kelas {
     
-    private ArrayList<siswa> listMapel;
+    private ArrayList<matapelajaran> listMapel;
     private String nama_kelas;
-    
+
+    public kelas(String nama_kelas) {
+        this.nama_kelas = nama_kelas ;
+    }
+    public kelas(ArrayList<matapelajaran> listMapel, String nama_kelas) {
+        this.nama_kelas = nama_kelas ;
+        this.listMapel = listMapel ;
+    }
     public void setNamaKelas(String a){
         this.nama_kelas = a;
     }

@@ -10,11 +10,12 @@ package Model;
 public class guru {
     private String nama_guru, kode_guru, nid;
     
-    public guru (String nama_guru, String kode_guru, String mapelAjar, String nid) {
+    public guru (String nama_guru, String kode_guru, String nid) {
         this.nama_guru = nama_guru ;
         this.kode_guru = kode_guru ;
         this.nid = nid ;
     }
+
     public void setNamaGuru(String a){
         this.nama_guru = a;
     }

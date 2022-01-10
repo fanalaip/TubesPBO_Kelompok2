@@ -12,7 +12,7 @@ import java.util.*;
 
 public class Database {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost/dbsisfo";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/dbsisfo";
     private static final String USER = "root";
     private static final String PASS = "";
     
@@ -110,10 +110,7 @@ public class Database {
                     rs.getString("nid")
                 );
                 course = new matapelajaran(
-                    rs.getString("nama_mapel"),
-                    rs.getString("kkm"),
-                    rs.getString("bobotNilai"),
-                    teacher
+                    rs.getString("nama_mapel")
                 );
                 listMapel.add(course);
            }

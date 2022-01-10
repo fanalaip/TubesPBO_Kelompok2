@@ -28,5 +28,9 @@ public class ControllerSiswa implements ActionListener{
         viewDosen.setVisible(true);
         viewDosen.addActionListener(this);    
         this.db = db;
-    } 
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
