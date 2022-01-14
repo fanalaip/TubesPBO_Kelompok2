@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class admin {
-    public void addKelas(String kelas, String nama_siswa, int nis, String[] mapel){
+    public void addKelas(String kelas, String nama_siswa, int nis, String[] mapel, Database dbsisfo){
         try {
             dbsisfo.connect() ;
             String sql = "INSERT INTO kelas VALUES ('"
@@ -26,7 +26,7 @@ public class admin {
             ex.printStackTrace();
         }
     }
-    public void deleteKelas(){
+    public void deleteKelas(String kelas, Database dbsisfo){
         try{
             dbsisfo.connect();
             String sql = "DELETE FROM kelas WHERE id = '" + kelas +"'";
