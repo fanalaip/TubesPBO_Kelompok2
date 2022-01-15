@@ -380,10 +380,6 @@ public class guiGuru extends javax.swing.JFrame {
     public void setJtNilai(String jtHari) {
         this.tfNilai.setText(jtHari);
     }
-
-    public JComboBox<String> getCbJadwal() {
-        return cbMapel;
-    }
     
     public String getCbMapelText(){
         int i = cbMapel.getSelectedIndex();
@@ -415,25 +411,25 @@ public class guiGuru extends javax.swing.JFrame {
         return btnKembali;
     }
     
-    public String getSelectedMatkul(){
+    public String getSelectedMapel(){
         return listMaPEL.getSelectedValue();
     }
     
-    public void setDaftarMatkul(String[] daftarID){
+    public void setDaftarMapel(String[] daftarID){
         listMaPEL.setListData(daftarID);
     }
     
-    public JTable getjTablemhs() {
+    public JTable getjTableSiswa() {
         return jTableMhs;
     }
     
-    public void setjTablemhs(JTable jTableMhs) {
+    public void setjTableSiswa(JTable jTableMhs) {
         this.jTableMhs = jTableMhs;
     }
      
-    public void setTabel(String nama, String NIM,int i) {
+    public void setTabel(String nama, String nis,int i) {
         jTableMhs.setValueAt(nama, i, 0);
-        jTableMhs.setValueAt(NIM, i, 1);
+        jTableMhs.setValueAt(nis, i, 1);
     }
     
     public void resetTable() {
@@ -449,7 +445,7 @@ public class guiGuru extends javax.swing.JFrame {
         listMaPEL.clearSelection();
     }
     
-    public JList getListMatkul() {
+    public JList getListMapel() {
         return listMaPEL;
     }
     
