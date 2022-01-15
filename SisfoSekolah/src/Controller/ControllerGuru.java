@@ -58,7 +58,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             int i = getRollNum() + 1;
-                            siswa student = new siswa(nis, nama);
+                            siswa student = new siswa(nama_siswa, nis, aktivitas, nilai, nama_mapel);
                             student.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
