@@ -21,9 +21,9 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private Database db;
 
     public ControllerAdmin(Database db) {
-        //this.viewAdmin = viewAdmin;
-        //this.adminModel = adminModel;
-        //this.dbsisfo = dbsisfo;
+        this.viewAdmin = viewAdmin;
+        this.adminModel = adminModel;
+        this.db = db;
         
         viewAdmin = new guiAdmin();
         viewAdmin.addActionListener(this);

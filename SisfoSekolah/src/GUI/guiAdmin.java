@@ -387,8 +387,10 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField tfNama1;
     // End of variables declaration//GEN-END:variables
 
-    public void addActionListener(ControllerAdmin aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void addActionListener(ControllerAdmin e) {
+        btnBack.addActionListener(e);
+        btnAdd.addActionListener(e);
+        btnHapus.addActionListener(e);
     }
 
     public void addMouseAdapter(ControllerAdmin aThis) {
