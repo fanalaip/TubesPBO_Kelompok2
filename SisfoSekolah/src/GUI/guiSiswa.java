@@ -55,11 +55,15 @@ public class guiSiswa extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrameNilai.setVisible(true);
+        jInternalFrameNilai.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLSiswa.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
         jLSiswa.setText("SISWA");
+        jInternalFrameNilai.getContentPane().add(jLSiswa, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 45, -1, -1));
 
         jLabelNIS.setText("NIS                   :");
+        jInternalFrameNilai.getContentPane().add(jLabelNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 93, -1, 39));
+        jInternalFrameNilai.getContentPane().add(jTextFieldNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 97, 149, 31));
 
         jBSearch.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         jBSearch.setText("Search");
@@ -68,15 +72,20 @@ public class guiSiswa extends javax.swing.JFrame {
                 jBSearchActionPerformed(evt);
             }
         });
+        jInternalFrameNilai.getContentPane().add(jBSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 101, -1, -1));
 
         btn_back.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         btn_back.setText("Back");
+        jInternalFrameNilai.getContentPane().add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, 26));
 
         jLabel1.setText("NAMA               :");
+        jInternalFrameNilai.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 159, -1, -1));
 
         jLabel2.setText("ANGKATAN        :");
+        jInternalFrameNilai.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 188, -1, -1));
 
         jLabel3.setText("STATUS SISWA :");
+        jInternalFrameNilai.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 217, -1, -1));
 
         jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -123,76 +132,10 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jScrollPane3.setViewportView(jTableSiswa);
 
-        javax.swing.GroupLayout jInternalFrameNilaiLayout = new javax.swing.GroupLayout(jInternalFrameNilai.getContentPane());
-        jInternalFrameNilai.getContentPane().setLayout(jInternalFrameNilaiLayout);
-        jInternalFrameNilaiLayout.setHorizontalGroup(
-            jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                        .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelNIS)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)))
-                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btn_back)))
-                        .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(jTextFieldNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBSearch))
-                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
-                            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel6))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(jLSiswa)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jInternalFrameNilaiLayout.setVerticalGroup(
-            jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrameNilaiLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jLSiswa)
-                .addGap(18, 18, 18)
-                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBSearch))
-                .addGap(27, 27, 27)
-                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jInternalFrameNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
-        );
+        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 272, 475, 338));
+        jInternalFrameNilai.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 159, -1, -1));
+        jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
+        jInternalFrameNilai.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 217, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
