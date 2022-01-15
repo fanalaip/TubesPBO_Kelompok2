@@ -75,14 +75,14 @@
                           <Component id="tfNIS" min="-2" pref="155" max="-2" attributes="0"/>
                           <Component id="jLabelMapel" min="-2" pref="196" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jCheckBoxPKn" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPKn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxIPA" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbIPA" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jCheckBoxIPS" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbIPS" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxMM" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbMTK" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -136,13 +136,13 @@
                               <Component id="jLabelMapel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jCheckBoxPKn" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxIPA" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbPKn" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbIPA" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jCheckBoxIPS" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxMM" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbIPS" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbMTK" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                               <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
@@ -263,36 +263,36 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNISActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBoxPKn">
+    <Component class="javax.swing.JCheckBox" name="cbPKn">
       <Properties>
         <Property name="text" type="java.lang.String" value="PKn"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxPKnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPKnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBoxMM">
+    <Component class="javax.swing.JCheckBox" name="cbMTK">
       <Properties>
         <Property name="text" type="java.lang.String" value="Matematika"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMMActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbMTKActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBoxIPS">
+    <Component class="javax.swing.JCheckBox" name="cbIPS">
       <Properties>
         <Property name="text" type="java.lang.String" value="IPS"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxIPSActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbIPSActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBoxIPA">
+    <Component class="javax.swing.JCheckBox" name="cbIPA">
       <Properties>
         <Property name="text" type="java.lang.String" value="IPA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxIPAActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbIPAActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelKetHapus">
