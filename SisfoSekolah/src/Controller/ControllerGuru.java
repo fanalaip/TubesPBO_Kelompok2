@@ -15,17 +15,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
 public class ControllerGuru extends MouseAdapter implements ActionListener {
-    private guiGuru view;
+    private guiGuru viewGuru;
     private Database db;
     
     public ControllerGuru(Database db) {
         this.db = db;
-        view = new guiGuru();
-        view.addActionListener(this);
-        view.addMouseAdapter(this);
-        //view.setDaftarMatkul(getMatkul());
+        viewGuru = new guiGuru();
+        viewGuru.addActionListener(this);
+        viewGuru.addMouseAdapter(this);
+        //viewGuru.setDaftarMatkul(getMatkul());
         //combobox();
-        view.setVisible(true);
+        viewGuru.setVisible(true);
     }
 
     @Override

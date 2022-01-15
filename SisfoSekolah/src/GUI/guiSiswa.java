@@ -12,6 +12,7 @@ import java.awt.List;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class guiSiswa extends javax.swing.JFrame {
 
@@ -307,6 +308,10 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTableSiswa;
     }
     
+    public JTextField getjTextFieldNIS() {
+        return jTextFieldNIS;
+    }
+    
     public List getDaftarSiswa(){
         return listDaftarSiswa;
     }
@@ -355,5 +360,19 @@ public class guiSiswa extends javax.swing.JFrame {
 
     public void addActionListener(ControllerSiswa aThis) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void resetTable() {
+        int rowCount = jTableSiswa.getRowCount();
+        for (int i = rowCount - 1; i >= 0; i--) {
+            setTabel("", "", "", "", i);
+        }
+    }
+
+    public void setTabel(String nama_kelas, String nama_mapel, String aktivitas, String nis, int j){
+        jTableSiswa.setValueAt(nama_kelas, j, 0);
+        jTableSiswa.setValueAt(nama_mapel, j, 1);
+        jTableSiswa.setValueAt(aktivitas, j, 2);   
+        jTableSiswa.setValueAt(nis, j, 3);   
     }
 }

@@ -10,8 +10,8 @@ package Controller;
 import GUI.guiAdmin;
 import Model.Database;
 import Model.admin;
-import java.awt.event.ActionEvent;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
@@ -21,13 +21,13 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private Database dbsisfo;
 
     public ControllerAdmin(Database dbsisfo) {
-        this.viewAdmin = viewAdmin;
-        this.adminModel = adminModel;
-        this.dbsisfo = dbsisfo;
+        //this.viewAdmin = viewAdmin;
+        //this.adminModel = adminModel;
+        //this.dbsisfo = dbsisfo;
         
         viewAdmin = new guiAdmin();
         viewAdmin.addActionListener(this);
-        viewAdmin.addMouseAdapter(this);
+        //viewAdmin.addMouseAdapter(this);
         
         viewAdmin.setVisible(true);
     }
