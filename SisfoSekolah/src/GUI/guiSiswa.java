@@ -301,8 +301,9 @@ public class guiSiswa extends javax.swing.JFrame {
     private java.awt.List listDaftarSiswa;
     // End of variables declaration//GEN-END:variables
 
-    public void addActionListener(ControllerSiswa aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void addActionListener(ControllerSiswa e) {
+        jBSearch.addActionListener(e);
+        btn_back.addActionListener(e);
     }
 
     public void resetTable() {

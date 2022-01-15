@@ -68,8 +68,11 @@ public class Database {
            siswa student;
            while (rs.next()) {
                student = new siswa(
+                   rs.getString("nama_siswa"),
                    rs.getString("nis"),
-                   rs.getString("nama_siswa")
+                   rs.getString("aktivitas"),
+                   rs.getFloat("nilai"),
+                   rs.getString("nama_mapel")
                );
             listSiswa.add(student);
            }
