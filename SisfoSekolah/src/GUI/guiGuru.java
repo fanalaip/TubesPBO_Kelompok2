@@ -59,6 +59,7 @@ public class guiGuru extends javax.swing.JFrame {
         jKelas1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -177,6 +178,8 @@ public class guiGuru extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 115, -1, 352));
+
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jScrollPane2.setViewportView(listMaPEL);
@@ -241,75 +244,28 @@ public class guiGuru extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 115, -1, -1));
+
         jLabelInputNilai.setText("INPUT NILAI");
+        getContentPane().add(jLabelInputNilai, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 92, -1, -1));
 
         jLabelListMapel.setText("LIST MAPEL");
+        getContentPane().add(jLabelListMapel, new org.netbeans.lib.awtextra.AbsoluteConstraints(432, 92, -1, -1));
 
         jLabelDaftarSiswa.setText("DAFTAR SISWA");
+        getContentPane().add(jLabelDaftarSiswa, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 92, -1, -1));
 
         jLabelLamanGuru.setText("Laman Guru");
+        getContentPane().add(jLabelLamanGuru, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 32, -1, -1));
 
         btnKembali.setText("Kembali");
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 28, -1, -1));
 
         jKelas2.setText("(kelas)");
+        getContentPane().add(jKelas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 51, -1, -1));
 
         jKelas1.setText("Kelas      :");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnKembali)
-                        .addGap(294, 294, 294)
-                        .addComponent(jLabelLamanGuru)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jLabelInputNilai)
-                        .addGap(200, 200, 200)
-                        .addComponent(jLabelListMapel)
-                        .addGap(69, 69, 69)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jKelas1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jKelas2))
-                            .addComponent(jLabelDaftarSiswa))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelLamanGuru)
-                            .addComponent(btnKembali))
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jKelas2)
-                            .addComponent(jKelas1))
-                        .addGap(25, 25, 25)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelInputNilai)
-                    .addComponent(jLabelListMapel)
-                    .addComponent(jLabelDaftarSiswa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jKelas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 51, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

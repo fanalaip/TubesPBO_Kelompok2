@@ -74,8 +74,10 @@ public class guiAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTambahKelas.setText("TAMBAH KELAS");
+        getContentPane().add(jLabelTambahKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 67, -1, -1));
 
         jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -84,7 +86,10 @@ public class guiAdmin extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jListKelas);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 106, 196, 200));
+
         jLabelAdmin.setText("ADMIN SISTEM INFORMASI SEKOLAH");
+        getContentPane().add(jLabelAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 17, -1, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -92,16 +97,20 @@ public class guiAdmin extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
 
         jLabelHapusKelas.setText("HAPUS KELAS");
+        getContentPane().add(jLabelHapusKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 67, -1, -1));
 
         jLabelInputKelas.setText("Kelas");
+        getContentPane().add(jLabelInputKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 101, -1, -1));
 
         tfNama1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNama1ActionPerformed(evt);
             }
         });
+        getContentPane().add(tfNama1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 187, 155, -1));
 
         btnAdd.setText("Tambah");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -109,8 +118,10 @@ public class guiAdmin extends javax.swing.JFrame {
                 btnAddActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 385, -1, -1));
 
         jLabelMapel.setText("Mata pelajaran");
+        getContentPane().add(jLabelMapel, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 290, 196, -1));
 
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
@@ -118,22 +129,27 @@ public class guiAdmin extends javax.swing.JFrame {
                 btnHapusActionPerformed(evt);
             }
         });
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 342, -1, -1));
 
         jLabelInputNIS.setText("NIS");
+        getContentPane().add(jLabelInputNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 227, -1, -1));
 
         tfKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfKelasActionPerformed(evt);
             }
         });
+        getContentPane().add(tfKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 124, 155, -1));
 
         jLabelInputNama.setText("Nama");
+        getContentPane().add(jLabelInputNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 164, -1, -1));
 
         tfNIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNISActionPerformed(evt);
             }
         });
+        getContentPane().add(tfNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 250, 155, -1));
 
         jCheckBoxPKn.setText("PKn");
         jCheckBoxPKn.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +157,7 @@ public class guiAdmin extends javax.swing.JFrame {
                 jCheckBoxPKnActionPerformed(evt);
             }
         });
+        getContentPane().add(jCheckBoxPKn, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 315, -1, -1));
 
         jCheckBoxMM.setText("Matematika");
         jCheckBoxMM.addActionListener(new java.awt.event.ActionListener() {
@@ -148,6 +165,7 @@ public class guiAdmin extends javax.swing.JFrame {
                 jCheckBoxMMActionPerformed(evt);
             }
         });
+        getContentPane().add(jCheckBoxMM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 342, -1, -1));
 
         jCheckBoxIPS.setText("IPS");
         jCheckBoxIPS.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +173,7 @@ public class guiAdmin extends javax.swing.JFrame {
                 jCheckBoxIPSActionPerformed(evt);
             }
         });
+        getContentPane().add(jCheckBoxIPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 342, -1, -1));
 
         jCheckBoxIPA.setText("IPA");
         jCheckBoxIPA.addActionListener(new java.awt.event.ActionListener() {
@@ -162,101 +181,13 @@ public class guiAdmin extends javax.swing.JFrame {
                 jCheckBoxIPAActionPerformed(evt);
             }
         });
+        getContentPane().add(jCheckBoxIPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 315, -1, -1));
 
         jLabelKetHapus.setText("Klik kelas yang ingin dihapus");
+        getContentPane().add(jLabelKetHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 319, -1, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelInputKelas)
-                            .addComponent(jLabelInputNIS)
-                            .addComponent(jLabelTambahKelas)
-                            .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelInputNama)
-                            .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBoxPKn)
-                                    .addComponent(jCheckBoxIPS))
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBoxMM)
-                                    .addComponent(jCheckBoxIPA)))
-                            .addComponent(btnAdd))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelKetHapus)
-                            .addComponent(jLabelHapusKelas)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnHapus))
-                        .addGap(0, 22, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelAdmin)
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(jLabelAdmin))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelTambahKelas)
-                                    .addComponent(jLabelHapusKelas))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelInputKelas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelInputNama)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelInputNIS)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelMapel))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxPKn)
-                            .addComponent(jCheckBoxIPA)
-                            .addComponent(jLabelKetHapus))
-                        .addGap(2, 2, 2)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxIPS)
-                            .addComponent(jCheckBoxMM)
-                            .addComponent(btnHapus))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdd)
-                        .addGap(38, 38, 38))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jSeparator1)
-                        .addContainerGap())))
-        );
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 56, 22, 379));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
