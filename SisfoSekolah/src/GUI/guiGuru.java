@@ -43,8 +43,8 @@ public class guiGuru extends javax.swing.JFrame {
         jLabelMapel = new javax.swing.JLabel();
         jLabelTask = new javax.swing.JLabel();
         jLabelNilai = new javax.swing.JLabel();
-        jtNilai = new javax.swing.JTextField();
         cbTask = new javax.swing.JComboBox<>();
+        tfNilai = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         listMaPEL = new javax.swing.JList<>();
@@ -98,17 +98,16 @@ public class guiGuru extends javax.swing.JFrame {
 
         jLabelNilai.setText("Nilai                :");
 
-        jtNilai.setEditable(false);
-        jtNilai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtNilaiActionPerformed(evt);
-            }
-        });
-
         cbTask.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tugas", "UTS", "UAS" }));
         cbTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbTaskActionPerformed(evt);
+            }
+        });
+
+        tfNilai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNilaiActionPerformed(evt);
             }
         });
 
@@ -131,10 +130,11 @@ public class guiGuru extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(cbTask, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jtNilai))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(tfNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(cbTask, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabelNIS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -171,7 +171,7 @@ public class guiGuru extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNilai)
-                    .addComponent(jtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfNilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(89, 89, 89)
                 .addComponent(btnTambah)
                 .addContainerGap())
@@ -327,10 +327,6 @@ public class guiGuru extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cbMapelActionPerformed
 
-    private void jtNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNilaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtNilaiActionPerformed
-
     private void cbTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTaskActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbTaskActionPerformed
@@ -338,6 +334,10 @@ public class guiGuru extends javax.swing.JFrame {
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void tfNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNilaiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNilaiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -378,7 +378,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
 
     public void setJtNilai(String jtHari) {
-        this.jtNilai.setText(jtHari);
+        this.tfNilai.setText(jtHari);
     }
 
     public JComboBox<String> getCbJadwal() {
@@ -400,7 +400,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public String getTfNilai() {
-       return jtNilai.getText();
+       return tfNilai.getText();
     } 
     
     public String getTfNIS() {
@@ -483,9 +483,9 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTableMhs;
-    private javax.swing.JTextField jtNilai;
     private javax.swing.JList<String> listMaPEL;
     private javax.swing.JTextField tfNIS;
     private javax.swing.JTextField tfNama;
+    private javax.swing.JTextField tfNilai;
     // End of variables declaration//GEN-END:variables
 }
