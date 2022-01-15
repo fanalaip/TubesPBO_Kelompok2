@@ -391,7 +391,7 @@ public class guiGuru extends javax.swing.JFrame {
         return cbTask.getItemAt(i);
     }
     
-    public String getNama(){
+    public String getTfNama(){
         return tfNama.getText();
     }
     
