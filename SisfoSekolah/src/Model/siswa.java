@@ -9,11 +9,12 @@ package Model;
 
 import java.util.ArrayList;
 
-public class siswa {
+public class siswa extends task{
     private String nama_siswa, nis;
     private ArrayList<siswa> listMapel;
     
-    public siswa(String nama_siswa, String nis){
+    public siswa(String nama_siswa, String nis, String aktivitas, float nilai, String nama_mapel){
+        super(aktivitas, nilai, nama_mapel);
         this.nama_siswa = nama_siswa;
         this.nis = nis;
     }
@@ -44,4 +45,20 @@ public class siswa {
         int angkatan = Integer.parseInt(Integer.toString(Integer.valueOf(nis)).substring(0,1)) + 2 ;
         return 2000+angkatan ;
     }
+     public void addNilai(Database db) {
+        try {
+            db.connect();
+            String sql = "INSERT INTO nilai VALUES ('"
+                    +getNIS()+"','"
+                    +getNamaSiswa()+"','"
+                    +super.getMataPelajaran()+"','"
+                    +super.getAktivitas()+"','"
+                    +super.getNilai()+"')"
+                    ;
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }  
 }

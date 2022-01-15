@@ -12,8 +12,8 @@ public class kelulusan extends task {
     private float nilaiSemester;
     private String status_lulus;
     
-    public kelulusan (int semester, float nilaiSemester, String status_lulus, float nilai, String aktivitas, String nama_mapel, float kkm, float bobotNilai) {
-        super(aktivitas, nilai, nama_mapel, kkm, bobotNilai) ;
+    public kelulusan (int semester, float nilaiSemester, String status_lulus, float nilai, String aktivitas, String nama_mapel) {
+        super(aktivitas, nilai, nama_mapel) ;
         this.semester = semester ;
         this.nilaiSemester = nilaiSemester ;
         this.status_lulus = status_lulus ;

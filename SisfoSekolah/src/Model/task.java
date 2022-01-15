@@ -13,7 +13,7 @@ public class task extends matapelajaran {
     private String aktivitas ;
     private float nilai ;
 
-    public task (String aktivitas, float nilai, String nama_mapel, float kkm, float bobotNilai) {
+    public task (String aktivitas, float nilai, String nama_mapel) {
         super(nama_mapel) ;
         this.aktivitas = aktivitas ;
         this.nilai = nilai ;
