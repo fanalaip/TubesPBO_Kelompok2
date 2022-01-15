@@ -8,6 +8,8 @@ Anggota : Arpriansah Yonathan (1301194112)
 package GUI;
 
 import Controller.ControllerAdmin;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
 import javax.swing.JButton;
 
@@ -378,6 +380,17 @@ public class guiAdmin extends javax.swing.JFrame {
         else {
             return s;
         }
+    }
+    
+       
+    public void addActionListener(ActionListener e) {
+        btnAdd.addActionListener(e);
+        btnHapus.addActionListener(e);
+        btnBack.addActionListener(e);
+    }
+
+    public void addMouseAdapter(MouseAdapter e) {
+        listJadwal.addMouseListener(e);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
