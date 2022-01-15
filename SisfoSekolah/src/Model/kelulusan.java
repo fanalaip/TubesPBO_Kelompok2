@@ -30,4 +30,11 @@ public class kelulusan extends task {
     public int getSemester(){
         return semester;
     }
+    public float getNilaiSemester() {
+        return nilaiSemester ;
+    }
+    public String getStatusKelulusan() {
+        return status_lulus ;
+    }
+    
 }
