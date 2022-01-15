@@ -8,6 +8,9 @@ Anggota : Arpriansah Yonathan (1301194112)
 package GUI;
 
 import Controller.ControllerAdmin;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
 import javax.swing.JButton;
 
 public class guiAdmin extends javax.swing.JFrame {
@@ -49,10 +52,10 @@ public class guiAdmin extends javax.swing.JFrame {
         tfKelas = new javax.swing.JTextField();
         jLabelInputNama = new javax.swing.JLabel();
         tfNIS = new javax.swing.JTextField();
-        jCheckBoxPKn = new javax.swing.JCheckBox();
-        jCheckBoxMM = new javax.swing.JCheckBox();
-        jCheckBoxIPS = new javax.swing.JCheckBox();
-        jCheckBoxIPA = new javax.swing.JCheckBox();
+        cbPKn = new javax.swing.JCheckBox();
+        cbMTK = new javax.swing.JCheckBox();
+        cbIPS = new javax.swing.JCheckBox();
+        cbIPA = new javax.swing.JCheckBox();
         jLabelKetHapus = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
 
@@ -136,31 +139,31 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jCheckBoxPKn.setText("PKn");
-        jCheckBoxPKn.addActionListener(new java.awt.event.ActionListener() {
+        cbPKn.setText("PKn");
+        cbPKn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxPKnActionPerformed(evt);
+                cbPKnActionPerformed(evt);
             }
         });
 
-        jCheckBoxMM.setText("Matematika");
-        jCheckBoxMM.addActionListener(new java.awt.event.ActionListener() {
+        cbMTK.setText("Matematika");
+        cbMTK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxMMActionPerformed(evt);
+                cbMTKActionPerformed(evt);
             }
         });
 
-        jCheckBoxIPS.setText("IPS");
-        jCheckBoxIPS.addActionListener(new java.awt.event.ActionListener() {
+        cbIPS.setText("IPS");
+        cbIPS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxIPSActionPerformed(evt);
+                cbIPSActionPerformed(evt);
             }
         });
 
-        jCheckBoxIPA.setText("IPA");
-        jCheckBoxIPA.addActionListener(new java.awt.event.ActionListener() {
+        cbIPA.setText("IPA");
+        cbIPA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxIPAActionPerformed(evt);
+                cbIPAActionPerformed(evt);
             }
         });
 
@@ -191,13 +194,13 @@ public class guiAdmin extends javax.swing.JFrame {
                             .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBoxPKn)
+                                .addComponent(cbPKn)
                                 .addGap(28, 28, 28)
-                                .addComponent(jCheckBoxIPA))
+                                .addComponent(cbIPA))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBoxIPS)
+                                .addComponent(cbIPS)
                                 .addGap(30, 30, 30)
-                                .addComponent(jCheckBoxMM))
+                                .addComponent(cbMTK))
                             .addComponent(btnAdd))
                         .addGap(32, 32, 32)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -242,12 +245,12 @@ public class guiAdmin extends javax.swing.JFrame {
                                 .addComponent(jLabelMapel)
                                 .addGap(9, 9, 9)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBoxPKn)
-                                    .addComponent(jCheckBoxIPA))
+                                    .addComponent(cbPKn)
+                                    .addComponent(cbIPA))
                                 .addGap(2, 2, 2)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBoxIPS)
-                                    .addComponent(jCheckBoxMM))
+                                    .addComponent(cbIPS)
+                                    .addComponent(cbMTK))
                                 .addGap(18, 18, 18)
                                 .addComponent(btnAdd))
                             .addGroup(layout.createSequentialGroup()
@@ -295,21 +298,21 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNISActionPerformed
 
-    private void jCheckBoxPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPKnActionPerformed
+    private void cbPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPKnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxPKnActionPerformed
+    }//GEN-LAST:event_cbPKnActionPerformed
 
-    private void jCheckBoxMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMMActionPerformed
+    private void cbMTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMTKActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxMMActionPerformed
+    }//GEN-LAST:event_cbMTKActionPerformed
 
-    private void jCheckBoxIPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPSActionPerformed
+    private void cbIPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIPSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxIPSActionPerformed
+    }//GEN-LAST:event_cbIPSActionPerformed
 
-    private void jCheckBoxIPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxIPAActionPerformed
+    private void cbIPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIPAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxIPAActionPerformed
+    }//GEN-LAST:event_cbIPAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -356,6 +359,39 @@ public class guiAdmin extends javax.swing.JFrame {
     public JButton getBtnBack() {
         return btnBack;
     }
+    
+    public ArrayList<String> getMapel() {
+        ArrayList<String> s = new ArrayList();
+        if (cbMTK.isSelected()) {
+            s.add(cbMTK.getText());
+        }
+        if (cbIPA.isSelected()) {
+            s.add(cbIPA.getText());
+        }
+        if (cbIPS.isSelected()) {
+            s.add(cbIPS.getText());
+        }
+        if (cbPKn.isSelected()) {
+            s.add(cbPKn.getText());
+        }
+        if (s.isEmpty()){
+            return null;
+        }
+        else {
+            return s;
+        }
+    }
+    
+       
+    public void addActionListener(ActionListener e) {
+        btnAdd.addActionListener(e);
+        btnHapus.addActionListener(e);
+        btnBack.addActionListener(e);
+    }
+
+    public void addMouseAdapter(MouseAdapter e) {
+        listJadwal.addMouseListener(e);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
@@ -364,10 +400,10 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JCheckBox jCheckBoxIPA;
-    private javax.swing.JCheckBox jCheckBoxIPS;
-    private javax.swing.JCheckBox jCheckBoxMM;
-    private javax.swing.JCheckBox jCheckBoxPKn;
+    private javax.swing.JCheckBox cbIPA;
+    private javax.swing.JCheckBox cbIPS;
+    private javax.swing.JCheckBox cbMTK;
+    private javax.swing.JCheckBox cbPKn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdmin;
     private javax.swing.JLabel jLabelHapusKelas;
