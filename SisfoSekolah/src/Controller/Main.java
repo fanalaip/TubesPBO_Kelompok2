@@ -11,9 +11,10 @@ import GUI.login;
 public class Main {
 
     public static void main(String[] args) {
-        login start = new login();
-        start.setVisible(true);
-        start.pack();
+        new Controller() ;
+        //login start = new login();
+        //start.setVisible(true);
+        //start.pack();
 
     }
 }
