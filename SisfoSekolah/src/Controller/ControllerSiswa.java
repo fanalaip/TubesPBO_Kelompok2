@@ -20,14 +20,14 @@ import java.awt.event.ActionListener;
 
 public class ControllerSiswa implements ActionListener{
     private guiSiswa viewSiswa;           
-    Database dbsisfo;
+    Database db;
     private siswa siswa;  
     
-    public ControllerSiswa(Database dbsisfo) {
+    public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
         viewSiswa.setVisible(true);
         viewSiswa.addActionListener(this);    
-        this.dbsisfo = dbsisfo;
+        this.db = db;
         //combobox();        
     }
     @Override
@@ -45,7 +45,7 @@ public class ControllerSiswa implements ActionListener{
                         } else {
                             String NIS = viewSiswa.getjTextFieldNIS().getText();
                             viewSiswa.resetTable();
-                            lihatNilai(NIS, dbsisfo);
+                            lihatNilai(NIS, db);
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());

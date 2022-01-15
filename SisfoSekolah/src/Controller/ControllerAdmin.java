@@ -18,9 +18,9 @@ import java.awt.event.MouseAdapter;
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private guiAdmin viewAdmin;
     private admin adminModel;
-    private Database dbsisfo;
+    private Database db;
 
-    public ControllerAdmin(Database dbsisfo) {
+    public ControllerAdmin(Database db) {
         //this.viewAdmin = viewAdmin;
         //this.adminModel = adminModel;
         //this.dbsisfo = dbsisfo;
