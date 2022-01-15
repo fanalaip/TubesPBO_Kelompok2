@@ -51,14 +51,14 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
             } 
             else if (source.equals(viewGuru.getBtnAdd())) {
                 try {
-                        String nama = viewGuru.getNama();
+                        String nama = viewGuru.getTfNama();
                         String nis = viewGuru.getTfNIS();
                         String id_mapel = viewGuru.getCbMapelText();
                         if (nama == null || nis == null || id_mapel == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             int i = getRollNum() + 1;
-                            siswa student = new siswa(nis, nama_siswa);
+                            siswa student = new siswa(nis, nama);
                             student.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
