@@ -7,6 +7,7 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
+import Model.siswa ;
 import java.sql.*;
 import java.util.*;
 
