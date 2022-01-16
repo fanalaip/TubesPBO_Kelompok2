@@ -50,7 +50,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         if (kelas==null || nama==null || nis==null || mapel==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            view.resetView();
+                            viewAdmin.resetView();
                         }
 
                     } catch (Exception es) {
@@ -58,7 +58,15 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
                     }
                 }
-                else if 
+                else if (source.equals(viewAdmin.getBtnDelete())) {
+                    String kelas = viewAdmin.getSelectedKelas() ;
+                    if (kelas == "") {
+                        JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
+                    } else {
+                        adminModel.deleteKelas(kelas, db);
+                    }
+                    viewAdmin.resetView();
+                }
             } catch (Exception ef) {
                 JOptionPane.showMessageDialog(null, "Data siswa berhasil di update");
             }

@@ -367,6 +367,14 @@ public class guiAdmin extends javax.swing.JFrame {
         return btnBack;
     }
     
+    public void setListKelas(String[] jListKelas) {
+        this.jListKelas.setListData(jListKelas);
+    }
+    
+    public String getSelectedKelas() {
+        return jListKelas.getSelectedValue() ;
+    }
+    
     public ArrayList<String> getMapel() {
         ArrayList<String> s = new ArrayList();
         if (cbMTK.isSelected()) {

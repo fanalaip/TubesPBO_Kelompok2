@@ -31,11 +31,4 @@ public class task extends matapelajaran {
     public String getAktivitas(){
         return aktivitas;
     }
-    public void inputNilai(float nilai) {
-        /*
-            PROSEDUR INI BERFUNGSI UNTUK MEMASUKKAN NILAI-NILAI KOMPONEN TASK SISWA.
-            Ada 3 jenis aktivitas: Tugas, UTS, UAS.
-            Komponen nilai akan disimpan pada variabel nilai.
-        */
-    }
 }
