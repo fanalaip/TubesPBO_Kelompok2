@@ -10,6 +10,10 @@ package Model;
 import Model.siswa ;
 import java.sql.*;
 import java.util.*;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.DriverManager;
 
 public class Database {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -31,7 +35,8 @@ public class Database {
         loadMapel();
         loadKelas();
     }
-
+    
+    
     public void connect() throws SQLException, ClassNotFoundException{
         Class.forName(JDBC_DRIVER);
         conn = DriverManager.getConnection(DB_URL,USER,PASS);
