@@ -389,7 +389,16 @@ public class guiAdmin extends javax.swing.JFrame {
         }
     }
     
-       
+    public void resetView(){
+        cbPKn.setSelected(false);
+        cbIPS.setSelected(false);
+        cbIPA.setSelected(false);
+        cbMTK.setSelected(false);
+        //listJadwal.clearSelection();
+        //listRuangan.clearSelection();
+        //txJadwal.setText("");
+    }
+    
     public void addActionListener(ActionListener e) {
         btnAdd.addActionListener(e);
         btnHapus.addActionListener(e);

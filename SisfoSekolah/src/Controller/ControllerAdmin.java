@@ -50,18 +50,17 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         if (kelas==null || nama==null || nis==null || mapel==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            admin.addKelas(kelas, nama, nis, mapel, db) ;
-                            
-                            //String NIS = viewAdmin.getTfNIS();
-                            //lihatNilai(NIS, db);
-                            }
+                            view.resetView();
+                        }
+
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
-                        JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+                        JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
                     }
                 }
+                else if 
             } catch (Exception ef) {
-                JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+                JOptionPane.showMessageDialog(null, "Data siswa berhasil di update");
             }
     }
 }
