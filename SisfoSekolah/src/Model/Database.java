@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
+import GUI.guiSiswa;
 
 public class Database {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -29,6 +30,7 @@ public class Database {
     private ArrayList<kelas> listKelas = new ArrayList();
     private ArrayList<siswa> listSiswa = new ArrayList();
     private ArrayList<matapelajaran> listMapel = new ArrayList();
+    private guiSiswa viewSiswa;
     
     public Database() {
         loadSiswa();
@@ -68,7 +70,7 @@ public class Database {
     public void loadSiswa() {
         try {
             connect();
-            sql = "SELECT * FROM siswa";
+            sql = "SELECT * FROM siswa ";
             rs = stmt.executeQuery(sql);
             String [] namasiswa = new String[rs.getRow()];
             int i=0;
@@ -86,7 +88,7 @@ public class Database {
                 i++;
             }
             disconnect();
-            
+            viewSiswa.getDaftarSiswa();
         } catch (Exception e) {
             e.printStackTrace();
         }
