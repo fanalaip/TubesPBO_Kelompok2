@@ -14,6 +14,7 @@ import Model.admin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
@@ -45,12 +46,15 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         String kelas = viewAdmin.getTfKelas() ;
                         String nama = viewAdmin.getTfNama() ;
                         String nis = viewAdmin.getTfNIS() ;
-                        if (kelas==null || nama==null || nis==null){
+                        ArrayList<String> mapel = viewAdmin.getMapel() ;
+                        if (kelas==null || nama==null || nis==null || mapel==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            String NIS = viewAdmin.getTfNIS();
-                            lihatNilai(NIS, db);
-                        }
+                            admin.addKelas(kelas, nama, nis, mapel, db) ;
+                            
+                            //String NIS = viewAdmin.getTfNIS();
+                            //lihatNilai(NIS, db);
+                            }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
                         JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
