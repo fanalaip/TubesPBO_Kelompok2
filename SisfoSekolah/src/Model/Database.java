@@ -86,6 +86,7 @@ public class Database {
                 i++;
             }
             disconnect();
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

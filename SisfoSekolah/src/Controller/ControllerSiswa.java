@@ -79,6 +79,7 @@ public class ControllerSiswa implements ActionListener{
                 j++;
             }
             dbsisfo.disconnect();
+            viewSiswa.getjTableSiswa();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "NIS tidak ditemukan di database.");
             ex.printStackTrace();
