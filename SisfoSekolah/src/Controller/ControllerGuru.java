@@ -19,6 +19,11 @@ import javax.swing.JOptionPane;
 public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;
+    private String namasiswa;
+    private String Nis;
+    private String aktivitas;
+    private float nilai;
+    private String nama_mapel;
     
     public ControllerGuru(Database db) {
         this.db = db;
@@ -58,7 +63,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             int i = getRollNum() + 1;
-                            siswa siswa = new siswa();
+                            siswa siswa = new siswa(namasiswa, Nis, aktivitas, nilai, nama_mapel);
                             siswa.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
