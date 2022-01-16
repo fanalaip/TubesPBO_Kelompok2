@@ -40,13 +40,14 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     new Controller();
                     viewAdmin.dispose();
                 }
-                else if (source.equals(viewAdmin.getBtnCariNIS())) {
+                else if (source.equals(viewAdmin.getBtnAdd())) {
                     try {
-                        if (viewSiswa.getjTextFieldNIS().getText().equals("")){
-                            JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
+                        String kelas = 
+                        if (viewAdmin.getjTextFieldNIS().getText().equals("")){
+                            JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            String NIS = viewSiswa.getjTextFieldNIS().getText();
-                            viewSiswa.resetTable();
+                            String NIS = viewAdmin.getjTextFieldNIS().getText();
+                            viewAdmin.resetTable();
                             lihatNilai(NIS, db);
                         }
                     } catch (Exception es) {
