@@ -49,7 +49,7 @@ public class guiGuru extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         listMaPEL = new javax.swing.JList<>();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTableMhs = new javax.swing.JTable();
+        jTableSiswa = new javax.swing.JTable();
         jLabelInputNilai = new javax.swing.JLabel();
         jLabelListMapel = new javax.swing.JLabel();
         jLabelDaftarSiswa = new javax.swing.JLabel();
@@ -181,7 +181,7 @@ public class guiGuru extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(listMaPEL);
 
-        jTableMhs.setModel(new javax.swing.table.DefaultTableModel(
+        jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -211,12 +211,20 @@ public class guiGuru extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPane4.setViewportView(jTableMhs);
+        jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jScrollPane4.setViewportView(jTableSiswa);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -416,20 +424,20 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public JTable getjTableSiswa() {
-        return jTableMhs;
+        return jTableSiswa;
     }
     
     public void setjTableSiswa(JTable jTableMhs) {
-        this.jTableMhs = jTableMhs;
+        this.jTableSiswa = jTableMhs;
     }
      
     public void setTabel(String nama, String nis,int i) {
-        jTableMhs.setValueAt(nama, i, 0);
-        jTableMhs.setValueAt(nis, i, 1);
+        jTableSiswa.setValueAt(nama, i, 0);
+        jTableSiswa.setValueAt(nis, i, 1);
     }
     
     public void resetTable() {
-        int rowCount = jTableMhs.getRowCount();
+        int rowCount = jTableSiswa.getRowCount();
         for (int i = rowCount - 1; i >= 0; i--) {
             setTabel("", "", i);
         }
@@ -454,6 +462,7 @@ public class guiGuru extends javax.swing.JFrame {
         listMaPEL.addMouseListener(e);
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnTambah;
@@ -474,7 +483,7 @@ public class guiGuru extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTableMhs;
+    private javax.swing.JTable jTableSiswa;
     private javax.swing.JList<String> listMaPEL;
     private javax.swing.JTextField tfNIS;
     private javax.swing.JTextField tfNama;
