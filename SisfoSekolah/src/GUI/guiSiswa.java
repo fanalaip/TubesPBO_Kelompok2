@@ -14,6 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import Model.Database;
+import javax.swing.JList;
+import javax.swing.event.ListSelectionEvent;
 
 public class guiSiswa extends javax.swing.JFrame {
 
@@ -51,7 +53,8 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
         jLabelNamaSiswa = new javax.swing.JLabel();
-        listDaftarSiswa = new java.awt.List();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,6 +161,8 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
+        jScrollPane1.setViewportView(jList1);
+
         javax.swing.GroupLayout jInternalFrameDaftarSiswaLayout = new javax.swing.GroupLayout(jInternalFrameDaftarSiswa.getContentPane());
         jInternalFrameDaftarSiswa.getContentPane().setLayout(jInternalFrameDaftarSiswaLayout);
         jInternalFrameDaftarSiswaLayout.setHorizontalGroup(
@@ -165,21 +170,21 @@ public class guiSiswa extends javax.swing.JFrame {
             .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                 .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(listDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
-                        .addComponent(jLabelNamaSiswa)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                        .addComponent(jLabelNamaSiswa))
+                    .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         jInternalFrameDaftarSiswaLayout.setVerticalGroup(
             jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabelNamaSiswa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(listDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         jTabbedPaneDaftarSiswa.addTab("DAFTAR SISWA", jInternalFrameDaftarSiswa);
@@ -191,7 +196,7 @@ public class guiSiswa extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jTabbedPaneDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,8 +261,12 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTextFieldNIS;
     }
     
-    public List getDaftarSiswa(){
-        return listDaftarSiswa;
+    public JList getDaftarSiswa(){
+        return jList1;
+    }
+    
+    public JList daftarsiswa(){
+        return jList1;
     }
     
     public JButton getBtnCariNIS(){
@@ -294,12 +303,13 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPaneDaftarSiswa;
     private javax.swing.JTable jTableSiswa;
     private javax.swing.JTextField jTextFieldNIS;
-    private java.awt.List listDaftarSiswa;
     // End of variables declaration//GEN-END:variables
 
     public void addActionListener(ControllerSiswa e) {
@@ -313,11 +323,14 @@ public class guiSiswa extends javax.swing.JFrame {
             setTabel("", "", "", "", i);
         }
     }
-
+    
+    
     public void setTabel(String nama_kelas, String nama_mapel, String aktivitas, String nis, int j){
         jTableSiswa.setValueAt(nama_kelas, j, 0);
         jTableSiswa.setValueAt(nama_mapel, j, 1);
         jTableSiswa.setValueAt(aktivitas, j, 2);   
         jTableSiswa.setValueAt(nis, j, 3);   
     }
+    
+
 }
