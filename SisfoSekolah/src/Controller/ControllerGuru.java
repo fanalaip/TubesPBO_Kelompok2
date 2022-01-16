@@ -22,7 +22,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
     private String namasiswa;
     private String Nis;
     private String aktivitas;
-    private float nilai;
+    private float Nilai;
     private String nama_mapel;
     
     public ControllerGuru(Database db) {
@@ -60,12 +60,13 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         String nis = viewGuru.getTfNIS();
                         String id_mapel = viewGuru.getCbMapelText();
                         String task = viewGuru.getCbTaskText();
-                        String nilai = viewGuru.getTfNilai();
-                        if (nama_siswa == null || nis == null || nilai == null) {
+                        String f = viewGuru.getTfNilai();
+                        float nilai = Float.parseFloat(f);
+                        if (nama_siswa == null || nis == null || f == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             int i = getRollNum() + 1;
-                            siswa siswa = new siswa(namasiswa, Nis, aktivitas, nilai, nama_mapel);
+                            siswa siswa = new siswa(namasiswa, Nis, aktivitas, Nilai, nama_mapel);
                             siswa.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
