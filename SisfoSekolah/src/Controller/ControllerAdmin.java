@@ -14,6 +14,7 @@ import Model.admin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import javax.swing.JOptionPane;
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private guiAdmin viewAdmin;
@@ -35,9 +36,26 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
             try {
-                if (source.equals(viewSiswa.getButtonBack())) {
+                if (source.equals(viewAdmin.getBtnBack())) {
                     new Controller();
-                    viewSiswa.dispose();
-                } 
+                    viewAdmin.dispose();
+                }
+                else if (source.equals(viewSiswa.getBtnCariNIS())) {
+                    try {
+                        if (viewSiswa.getjTextFieldNIS().getText().equals("")){
+                            JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
+                        } else {
+                            String NIS = viewSiswa.getjTextFieldNIS().getText();
+                            viewSiswa.resetTable();
+                            lihatNilai(NIS, db);
+                        }
+                    } catch (Exception es) {
+                        System.out.println("Error 404 "+ es.getMessage());
+                        JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+                    }
+                }
+            } catch (Exception ef) {
+                JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+            }
     }
 }
