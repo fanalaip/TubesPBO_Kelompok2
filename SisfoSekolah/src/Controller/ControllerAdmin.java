@@ -40,7 +40,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     new Controller();
                     viewAdmin.dispose();
                 }
-                else if (source.equals(viewSiswa.getBtnCariNIS())) {
+                else if (source.equals(viewAdmin.getBtnCariNIS())) {
                     try {
                         if (viewSiswa.getjTextFieldNIS().getText().equals("")){
                             JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
