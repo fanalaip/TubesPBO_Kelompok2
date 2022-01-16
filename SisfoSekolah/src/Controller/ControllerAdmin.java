@@ -53,11 +53,11 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
-                        JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+                        JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
                     }
                 }
             } catch (Exception ef) {
-                JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
+                JOptionPane.showMessageDialog(null, "Data siswa berhasil di update");
             }
     }
 }
