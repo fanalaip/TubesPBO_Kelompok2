@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import Model.Database;
 
 public class guiSiswa extends javax.swing.JFrame {
 
