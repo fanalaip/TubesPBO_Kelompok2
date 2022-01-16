@@ -381,8 +381,8 @@ public class guiGuru extends javax.swing.JFrame {
         
     }
 
-    public void setJtNilai(String jtHari) {
-        this.tfNilai.setText(jtHari);
+    public void setJtNilai(String tfNilai) {
+        this.tfNilai.setText(tfNilai);
     }
     
     public String getCbMapelText(){
