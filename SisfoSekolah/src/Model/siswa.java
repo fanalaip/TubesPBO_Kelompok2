@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class siswa extends task{
     private String nama_siswa, nis;
-    private ArrayList<siswa> listMapel;
+    private ArrayList<siswa> listMapel; 
     
     public siswa(String nama_siswa, String nis, String aktivitas, float nilai, String nama_mapel){
         super(aktivitas, nilai, nama_mapel);
