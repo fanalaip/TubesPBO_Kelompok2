@@ -43,7 +43,6 @@ public class guiSiswa extends javax.swing.JFrame {
         btn_back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableSiswa = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
@@ -84,9 +83,6 @@ public class guiSiswa extends javax.swing.JFrame {
 
         jLabel2.setText("ANGKATAN        :");
         jInternalFrameNilai.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 188, -1, -1));
-
-        jLabel3.setText("STATUS SISWA :");
-        jInternalFrameNilai.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 217, -1, -1));
 
         jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -288,7 +284,6 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLSiswa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
