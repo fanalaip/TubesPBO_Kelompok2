@@ -348,8 +348,20 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
     }
-     public JButton getBtnAdd() {
-        return btnAdd;
+    public String getTfKelas(){
+        return tfKelas.getText();
+    }
+    
+    public String getTfNama() {
+       return tfNama1.getText();
+    } 
+    
+    public String getTfNIS() {
+        return tfNIS.getText();
+    }
+    
+    public JButton getBtnAdd() {
+        return btnTambah;
     }
 
     public JButton getBtnDelete() {
