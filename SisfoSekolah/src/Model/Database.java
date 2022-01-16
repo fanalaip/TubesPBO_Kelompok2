@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
+import javax.swing.JList;
 import GUI.guiSiswa;
 
 public class Database {
@@ -88,7 +89,7 @@ public class Database {
                 i++;
             }
             disconnect();
-            viewSiswa.getDaftarSiswa();
+            viewSiswa.daftarsiswa().setListData(namasiswa);
         } catch (Exception e) {
             e.printStackTrace();
         }
