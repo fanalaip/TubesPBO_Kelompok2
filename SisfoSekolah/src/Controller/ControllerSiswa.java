@@ -67,7 +67,7 @@ public class ControllerSiswa implements ActionListener{
         try {
             int j = 0 ;
             dbsisfo.connect() ;
-            String sql = "SELECT * FROM mata_kuliah NATURAL JOIN jadwal NATURAL JOIN enroll WHERE NID = '" + NIS +"'";
+            String sql = "SELECT * FROM mata_kuliah NATURAL JOIN jadwal NATURAL JOIN enroll WHERE NIS = '" + NIS +"'";
             dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             while(dbsisfo.getRs().next()){
                 viewSiswa.setTabel(
