@@ -67,24 +67,28 @@ public class Database {
 
     public void loadSiswa() {
         try {
-           connect();
-           sql = "SELECT * FROM siswa";
-           rs = stmt.executeQuery(sql);
-           siswa student;
-           while (rs.next()) {
-               student = new siswa(
-                   rs.getString("nama_siswa"),
-                   rs.getString("nis"),
-                   rs.getString("aktivitas"),
-                   rs.getFloat("nilai"),
-                   rs.getString("nama_mapel")
-               );
-            listSiswa.add(student);
-           }
-           disconnect();
-       } catch (Exception e) {
-           e.printStackTrace();
-       }
+            connect();
+            sql = "SELECT * FROM siswa";
+            rs = stmt.executeQuery(sql);
+            String [] namasiswa = new String[rs.getRow()];
+            int i=0;
+            while (rs.next()) {
+                siswa student;
+                namasiswa[i] = rs.getString("nama_siswa");
+                student = new siswa(
+                    rs.getString("nama_siswa"),
+                    rs.getString("nis"),
+                    rs.getString("aktivitas"),
+                    rs.getFloat("nilai"),
+                    rs.getString("nama_mapel")
+                );
+                listSiswa.add(student);
+                i++;
+            }
+            disconnect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void loadKelas() {
