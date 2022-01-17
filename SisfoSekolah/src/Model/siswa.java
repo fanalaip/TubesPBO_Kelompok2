@@ -13,7 +13,7 @@ public class siswa extends Identity{
     private String nis;
     private ArrayList<siswa> listMapel; 
     
-    public siswa(String nisl){
+    public siswa(String nama, String nis){
         super(nama);
         this.nis = nis;
     }   
@@ -42,10 +42,10 @@ public class siswa extends Identity{
             db.connect();
             String sql = "INSERT INTO nilai VALUES ('"
                     +getNIS()+"','"
-                    +getNamaSiswa()+"','"
-                    +super.getMataPelajaran()+"','"
-                    +super.getAktivitas()+"','"
-                    +super.getNilai()+"')"
+                    +getNama()+"','"
+                    +task.getMataPelajaran()+"','"
+                    +task.getAktivitas()+"','"
+                    +task.getNilai()+"')"
                     ;
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
