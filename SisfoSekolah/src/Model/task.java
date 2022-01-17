@@ -11,21 +11,21 @@ import Model.matapelajaran;
 
 public class task extends matapelajaran {
     private String aktivitas ;
-    private float nilai ;
+    private int nilai ;
 
-    public task (String aktivitas, float nilai, String nama_mapel) {
+    public task (String aktivitas, INT nilai, String nama_mapel) {
         super(nama_mapel) ;
         this.aktivitas = aktivitas ;
         this.nilai = nilai ;
     }
     
-    public void setNilai(float a){
+    public void setNilai(int a){
         this.nilai = a;
     }
     public void setAktivitas(String a){
         this.aktivitas = a;
     }
-    public float getNilai(){
+    public int getNilai(){
         return nilai;
     }
     public String getAktivitas(){
