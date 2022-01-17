@@ -282,7 +282,7 @@ public class guiAdmin extends javax.swing.JFrame {
     } 
     
     public String getTfNIS() {
-        return tfWaliKelas.getText();
+        return tfNIS1.getText();
     }
     
     public JButton getBtnAdd() {
