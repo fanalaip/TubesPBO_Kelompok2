@@ -13,7 +13,7 @@ public class siswa extends Identity{
     private String nis;
     private ArrayList<siswa> listMapel; 
     
-    public siswa(String nisl){
+    public siswa(String nis, String nama){
         super(nama);
         this.nis = nis;
     }   
