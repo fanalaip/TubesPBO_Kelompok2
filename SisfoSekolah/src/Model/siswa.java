@@ -37,6 +37,8 @@ public class siswa extends Identity{
         int angkatan = Integer.parseInt(Integer.toString(Integer.valueOf(nis)).substring(0,1)) + 2 ;
         return 2000+angkatan ;
     }
+/**
+ * Masih error bagian get mapel, aktivitas, nilai
      public void addNilai(Database db) {
         try {
             db.connect();
@@ -53,4 +55,5 @@ public class siswa extends Identity{
             ex.printStackTrace();
         }
     }  
+**/
 }
