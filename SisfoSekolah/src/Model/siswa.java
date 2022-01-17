@@ -42,10 +42,10 @@ public class siswa extends Identity{
             db.connect();
             String sql = "INSERT INTO nilai VALUES ('"
                     +getNIS()+"','"
-                    +getNamaSiswa()+"','"
-                    +super.getMataPelajaran()+"','"
-                    +super.getAktivitas()+"','"
-                    +super.getNilai()+"')"
+                    +getNama()+"','"
+                    +getMataPelajaran()+"','"
+                    +getAktivitas()+"','"
+                    +getNilai()+"')"
                     ;
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
