@@ -323,40 +323,7 @@ public class guiAdmin extends javax.swing.JFrame {
     
     public String getSelectedKelas() {
         return jListKelas.getSelectedValue() ;
-    }
-    
-    public ArrayList<String> getMapel() {
-        ArrayList<String> s = new ArrayList();
-        if (cbMTK.isSelected()) {
-            s.add(cbMTK.getText());
-        }
-        if (cbIPA.isSelected()) {
-            s.add(cbIPA.getText());
-        }
-        if (cbIPS.isSelected()) {
-            s.add(cbIPS.getText());
-        }
-        if (cbPKn.isSelected()) {
-            s.add(cbPKn.getText());
-        }
-        if (s.isEmpty()){
-            return null;
-        }
-        else {
-            return s;
-        }
-    }
-    
-    public void resetView(){
-        cbPKn.setSelected(false);
-        cbIPS.setSelected(false);
-        cbIPA.setSelected(false);
-        cbMTK.setSelected(false);
-        //listJadwal.clearSelection();
-        //listRuangan.clearSelection();
-        //txJadwal.setText("");
-    }
-    
+    } 
     public void addActionListener(ActionListener e) {
         btnAdd.addActionListener(e);
         btnHapus.addActionListener(e);

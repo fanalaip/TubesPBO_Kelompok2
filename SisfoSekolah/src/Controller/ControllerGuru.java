@@ -29,9 +29,6 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         this.db = db;
         viewGuru = new guiGuru();
         viewGuru.addActionListener(this);
-        viewGuru.addMouseAdapter(this);
-        //viewGuru.setDaftarMatkul(getMatkul());
-        //combobox();
         viewGuru.setVisible(true);
     }
     public String[] getMatkul() {
@@ -67,9 +64,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         }else{
                             int i = getRollNum() + 1;
                             siswa siswa = new siswa(namasiswa, nis);
-                            siswa.addNilai(db);
-                            //mhs.addJadwal(id_jadwal, i, db);
-                            //mhs.addMatkul(id_jadwal, db);
+                            //siswa.addNilai(db);
                             viewGuru.resetView();  
                         }
                                      
