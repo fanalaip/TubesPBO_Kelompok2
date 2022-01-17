@@ -213,7 +213,8 @@ public class guiAdmin extends javax.swing.JFrame {
                                 .addGap(13, 13, 13)
                                 .addComponent(jLabelKetHapus)
                                 .addGap(7, 7, 7)
-                                .addComponent(btnHapus))))))
+                                .addComponent(btnHapus)))))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
