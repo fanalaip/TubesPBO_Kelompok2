@@ -11,7 +11,10 @@ import Controller.ControllerAdmin;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
+import static java.util.Collections.list;
 import javax.swing.JButton;
+import javax.swing.event.ListSelectionEvent;
+import java.awt.List;
 
 public class guiAdmin extends javax.swing.JFrame {
 
@@ -77,6 +80,11 @@ public class guiAdmin extends javax.swing.JFrame {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+        });
+        jListKelas.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jListKelasValueChanged(evt);
+            }
         });
         jScrollPane1.setViewportView(jListKelas);
 
@@ -239,6 +247,12 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNIS1ActionPerformed
 
+    private void jListKelasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListKelasValueChanged
+        // TODO add your handling code here:
+        jLabelWali.setText(list.get(jListKelas.getSelectedIndex()).getItem(0));
+        jLabelKelas.setText(list.get(jListKelas.getSelectedIndex()).getItem(1));
+    }//GEN-LAST:event_jListKelasValueChanged
+
     /**
      * @param args the command line arguments
      */
@@ -314,6 +328,8 @@ public class guiAdmin extends javax.swing.JFrame {
     public void addMouseAdapter(MouseAdapter e) {
         jListKelas.addMouseListener(e);
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
