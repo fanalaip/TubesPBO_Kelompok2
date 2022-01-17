@@ -41,18 +41,15 @@ public class guiAdmin extends javax.swing.JFrame {
         jLabelInputKelas = new javax.swing.JLabel();
         tfNama1 = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
-        jLabelMapel = new javax.swing.JLabel();
+        jLabelWaliKelas = new javax.swing.JLabel();
         btnHapus = new javax.swing.JButton();
         jLabelInputNIS = new javax.swing.JLabel();
         tfKelas = new javax.swing.JTextField();
         jLabelInputNama = new javax.swing.JLabel();
-        tfNIS = new javax.swing.JTextField();
-        cbPKn = new javax.swing.JCheckBox();
-        cbMTK = new javax.swing.JCheckBox();
-        cbIPS = new javax.swing.JCheckBox();
-        cbIPA = new javax.swing.JCheckBox();
+        tfWaliKelas = new javax.swing.JTextField();
         jLabelKetHapus = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        tfNIS1 = new javax.swing.JTextField();
 
         jLabel1.setText("jLabel1");
 
@@ -104,7 +101,7 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jLabelMapel.setText("Mata pelajaran");
+        jLabelWaliKelas.setText("Wali kelas");
 
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
@@ -123,43 +120,21 @@ public class guiAdmin extends javax.swing.JFrame {
 
         jLabelInputNama.setText("Nama");
 
-        tfNIS.addActionListener(new java.awt.event.ActionListener() {
+        tfWaliKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNISActionPerformed(evt);
-            }
-        });
-
-        cbPKn.setText("PKn");
-        cbPKn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbPKnActionPerformed(evt);
-            }
-        });
-
-        cbMTK.setText("Matematika");
-        cbMTK.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbMTKActionPerformed(evt);
-            }
-        });
-
-        cbIPS.setText("IPS");
-        cbIPS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbIPSActionPerformed(evt);
-            }
-        });
-
-        cbIPA.setText("IPA");
-        cbIPA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbIPAActionPerformed(evt);
+                tfWaliKelasActionPerformed(evt);
             }
         });
 
         jLabelKetHapus.setText("Klik kelas yang ingin dihapus");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        tfNIS1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNIS1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,17 +156,10 @@ public class guiAdmin extends javax.swing.JFrame {
                             .addComponent(jLabelInputNama)
                             .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelInputNIS)
-                            .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbPKn)
-                                .addGap(28, 28, 28)
-                                .addComponent(cbIPA))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbIPS)
-                                .addGap(30, 30, 30)
-                                .addComponent(cbMTK))
-                            .addComponent(btnAdd))
+                            .addComponent(tfWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdd)
+                            .addComponent(tfNIS1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -229,19 +197,13 @@ public class guiAdmin extends javax.swing.JFrame {
                                 .addComponent(tfNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabelInputNIS)
-                                .addGap(7, 7, 7)
-                                .addComponent(tfNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfNIS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabelMapel)
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbPKn)
-                                    .addComponent(cbIPA))
-                                .addGap(2, 2, 2)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbIPS)
-                                    .addComponent(cbMTK))
-                                .addGap(18, 18, 18)
+                                .addComponent(jLabelWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)
                                 .addComponent(btnAdd))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabelHapusKelas)
@@ -284,25 +246,13 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfKelasActionPerformed
 
-    private void tfNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNISActionPerformed
+    private void tfWaliKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfWaliKelasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNISActionPerformed
+    }//GEN-LAST:event_tfWaliKelasActionPerformed
 
-    private void cbPKnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPKnActionPerformed
+    private void tfNIS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIS1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbPKnActionPerformed
-
-    private void cbMTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMTKActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbMTKActionPerformed
-
-    private void cbIPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIPSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbIPSActionPerformed
-
-    private void cbIPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIPAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbIPAActionPerformed
+    }//GEN-LAST:event_tfNIS1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -347,7 +297,7 @@ public class guiAdmin extends javax.swing.JFrame {
     } 
     
     public String getTfNIS() {
-        return tfNIS.getText();
+        return tfWaliKelas.getText();
     }
     
     public JButton getBtnAdd() {
@@ -419,10 +369,6 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JCheckBox cbIPA;
-    private javax.swing.JCheckBox cbIPS;
-    private javax.swing.JCheckBox cbMTK;
-    private javax.swing.JCheckBox cbPKn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdmin;
     private javax.swing.JLabel jLabelHapusKelas;
@@ -430,16 +376,17 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelInputNIS;
     private javax.swing.JLabel jLabelInputNama;
     private javax.swing.JLabel jLabelKetHapus;
-    private javax.swing.JLabel jLabelMapel;
     private javax.swing.JLabel jLabelNama;
     private javax.swing.JLabel jLabelTambahKelas;
+    private javax.swing.JLabel jLabelWaliKelas;
     private javax.swing.JList<String> jListKelas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField tfKelas;
-    private javax.swing.JTextField tfNIS;
+    private javax.swing.JTextField tfNIS1;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
+    private javax.swing.JTextField tfWaliKelas;
     // End of variables declaration//GEN-END:variables
 
     public void addActionListener(ControllerAdmin e) {

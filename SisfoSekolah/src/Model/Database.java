@@ -80,10 +80,7 @@ public class Database {
                 namasiswa[i] = rs.getString("nama_siswa");
                 student = new siswa(
                     rs.getString("nama_siswa"),
-                    rs.getString("nis"),
-                    rs.getString("aktivitas"),
-                    rs.getFloat("nilai"),
-                    rs.getString("nama_mapel")
+                    rs.getString("nis")
                 );
                 listSiswa.add(student);
                 i++;
