@@ -43,15 +43,9 @@ public class siswa extends Identity{
             String sql = "INSERT INTO nilai VALUES ('"
                     +getNIS()+"','"
                     +getNama()+"','"
-<<<<<<< HEAD
                     +getMataPelajaran()+"','"
                     +getAktivitas()+"','"
                     +getNilai()+"')"
-=======
-                    +task.getMataPelajaran()+"','"
-                    +task.getAktivitas()+"','"
-                    +task.getNilai()+"')"
->>>>>>> 3ebd476f45d20fff488e5daf67c6b285a5503306
                     ;
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
