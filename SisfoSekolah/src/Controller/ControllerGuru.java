@@ -29,7 +29,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         this.db = db;
         viewGuru = new guiGuru();
         viewGuru.addActionListener(this);
-        viewGuru.addMouseAdapter(this);
+        //viewGuru.addMouseAdapter(this);
         //viewGuru.setDaftarMatkul(getMatkul());
         //combobox();
         viewGuru.setVisible(true);
@@ -56,18 +56,17 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
             } 
             else if (source.equals(viewGuru.getBtnAdd())) {
                 try {
-                        String nama_siswa = viewGuru.getTfNama();
                         String nis = viewGuru.getTfNIS();
                         String id_mapel = viewGuru.getCbMapelText();
                         String task = viewGuru.getCbTaskText();
                         String f = viewGuru.getTfNilai();
                         float nilai = Float.parseFloat(f);
-                        if (nama_siswa == null || nis == null || f == null) {
+                        if (nis == null || f == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             int i = getRollNum() + 1;
                             siswa siswa = new siswa(namasiswa, nis);
-                            siswa.addNilai(db);
+                           //siswa.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
                             viewGuru.resetView();  

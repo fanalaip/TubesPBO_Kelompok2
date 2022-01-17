@@ -398,11 +398,7 @@ public class guiGuru extends javax.swing.JFrame {
         int i = cbTask.getSelectedIndex();
         return cbTask.getItemAt(i);
     }
-    
-    public String getTfNama(){
-        return tfNama.getText();
-    }
-    
+     
     public String getTfNilai() {
        return tfNilai.getText();
     } 
@@ -417,14 +413,6 @@ public class guiGuru extends javax.swing.JFrame {
 
     public JButton getBtnBack() {
         return btnKembali;
-    }
-    
-    public String getSelectedMapel(){
-        return listMaPEL.getSelectedValue();
-    }
-    
-    public void setDaftarMapel(String[] daftarID){
-        listMaPEL.setListData(daftarID);
     }
     
     public JTable getjTableSiswa() {
@@ -447,25 +435,14 @@ public class guiGuru extends javax.swing.JFrame {
         }
     }
     
-    public void resetView(){
-        tfNama.setText("");
+    public void resetView(){;
         tfNIS.setText("");
-        listMaPEL.clearSelection();
-    }
-    
-    public JList getListMapel() {
-        return listMaPEL;
     }
     
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
         btnKembali.addActionListener(e);
     }
-    
-    public void addMouseAdapter(MouseAdapter e){
-        listMaPEL.addMouseListener(e);
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
