@@ -86,6 +86,11 @@ public class guiGuru extends javax.swing.JFrame {
         });
 
         cbMapel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PKN", "IPA", "IPS", "Matematika" }));
+        cbMapel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbMapelMouseClicked(evt);
+            }
+        });
         cbMapel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbMapelActionPerformed(evt);
@@ -99,6 +104,12 @@ public class guiGuru extends javax.swing.JFrame {
         jLabelNilai.setText("Nilai                :");
 
         cbTask.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tugas", "UTS", "UAS" }));
+        cbTask.setSelectedItem(cbTask);
+        cbTask.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbTaskMouseClicked(evt);
+            }
+        });
         cbTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbTaskActionPerformed(evt);
@@ -342,6 +353,14 @@ public class guiGuru extends javax.swing.JFrame {
     private void tfNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNilaiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNilaiActionPerformed
+
+    private void cbMapelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbMapelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbMapelMouseClicked
+
+    private void cbTaskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbTaskMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbTaskMouseClicked
 
     /**
      * @param args the command line arguments
