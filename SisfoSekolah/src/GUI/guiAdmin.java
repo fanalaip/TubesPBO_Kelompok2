@@ -41,7 +41,7 @@ public class guiAdmin extends javax.swing.JFrame {
         jLabelInputKelas = new javax.swing.JLabel();
         tfNama1 = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
-        jLabelWaliKelas = new javax.swing.JLabel();
+        jWaliKelas = new javax.swing.JLabel();
         btnHapus = new javax.swing.JButton();
         jLabelInputNIS = new javax.swing.JLabel();
         jLabelInputNama = new javax.swing.JLabel();
@@ -106,7 +106,7 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
 
-        jLabelWaliKelas.setText("Wali kelas");
+        jWaliKelas.setText("Wali kelas");
 
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +150,7 @@ public class guiAdmin extends javax.swing.JFrame {
                             .addComponent(jLabelInputNIS)
                             .addComponent(btnAdd)
                             .addComponent(tfNIS1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelKelas)
                             .addComponent(jLabelWali))
                         .addGap(32, 32, 32)
@@ -185,7 +185,7 @@ public class guiAdmin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelKelas)
                                 .addGap(33, 33, 33)
-                                .addComponent(jLabelWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jWaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelWali)
                                 .addGap(30, 30, 30)
@@ -333,10 +333,10 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNama;
     private javax.swing.JLabel jLabelTambahKelas;
     private javax.swing.JLabel jLabelWali;
-    private javax.swing.JLabel jLabelWaliKelas;
     private javax.swing.JList<String> jListKelas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jWaliKelas;
     private javax.swing.JTextField tfNIS1;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;

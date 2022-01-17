@@ -73,7 +73,7 @@
                           <Component id="jLabelInputNIS" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                           <Component id="tfNIS1" min="-2" pref="155" max="-2" attributes="0"/>
-                          <Component id="jLabelWaliKelas" min="-2" pref="196" max="-2" attributes="0"/>
+                          <Component id="jWaliKelas" min="-2" pref="196" max="-2" attributes="0"/>
                           <Component id="jLabelKelas" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelWali" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -116,7 +116,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabelKelas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jLabelWaliKelas" min="-2" pref="16" max="-2" attributes="0"/>
+                              <Component id="jWaliKelas" min="-2" pref="16" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabelWali" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -213,7 +213,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelWaliKelas">
+    <Component class="javax.swing.JLabel" name="jWaliKelas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Wali kelas"/>
       </Properties>
