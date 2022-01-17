@@ -68,20 +68,20 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabelTambahKelas" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelInputKelas" min="-2" max="-2" attributes="0"/>
-                          <Component id="tfKelas" min="-2" pref="155" max="-2" attributes="0"/>
                           <Component id="jLabelInputNama" min="-2" max="-2" attributes="0"/>
                           <Component id="tfNama1" min="-2" pref="155" max="-2" attributes="0"/>
                           <Component id="jLabelInputNIS" min="-2" max="-2" attributes="0"/>
-                          <Component id="tfWaliKelas" min="-2" pref="155" max="-2" attributes="0"/>
-                          <Component id="jLabelWaliKelas" min="-2" pref="196" max="-2" attributes="0"/>
                           <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                           <Component id="tfNIS1" min="-2" pref="155" max="-2" attributes="0"/>
+                          <Component id="jLabelWaliKelas" min="-2" pref="196" max="-2" attributes="0"/>
+                          <Component id="jLabelKelas" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelWali" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelHapusKelas" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelListKelas" min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="196" max="-2" attributes="0"/>
                           <Component id="jLabelKetHapus" min="-2" max="-2" attributes="0"/>
                           <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
@@ -113,25 +113,25 @@
                               <Component id="jLabelTambahKelas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                               <Component id="jLabelInputKelas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                              <Component id="tfKelas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelKelas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="jLabelWaliKelas" min="-2" pref="16" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelWali" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabelInputNama" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="tfNama1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabelInputNIS" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="tfNIS1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jLabelWaliKelas" min="-2" pref="16" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tfWaliKelas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                               <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabelHapusKelas" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelListKelas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" min="-2" pref="200" max="-2" attributes="0"/>
                               <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
@@ -149,7 +149,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelTambahKelas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="TAMBAH KELAS"/>
+        <Property name="text" type="java.lang.String" value="TAMBAH SISWA"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -190,9 +190,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelHapusKelas">
+    <Component class="javax.swing.JLabel" name="jLabelListKelas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HAPUS KELAS"/>
+        <Property name="text" type="java.lang.String" value="LIST KELAS"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelInputKelas">
@@ -231,20 +231,10 @@
         <Property name="text" type="java.lang.String" value="NIS"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfKelas">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfKelasActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabelInputNama">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nama"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfWaliKelas">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfWaliKelasActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelKetHapus">
       <Properties>
@@ -260,6 +250,10 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNIS1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelKelas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWali">
     </Component>
   </SubComponents>
 </Form>
