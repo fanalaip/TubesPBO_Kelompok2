@@ -10,7 +10,11 @@ package Model;
 public class guru extends Identity{
     private String kode_guru, nid;
     
+<<<<<<< HEAD
     public guru (String nama, String kode_guru, String nid) {
+=======
+    public guru (String kode_guru, String nid, String nama) {
+>>>>>>> 21fa328fc5736dd97419a41ce0578cf7eb5e8327
         super(nama);
         this.kode_guru = kode_guru ;
         this.nid = nid ;

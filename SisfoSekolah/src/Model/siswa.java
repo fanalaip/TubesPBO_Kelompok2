@@ -13,7 +13,11 @@ public class siswa extends Identity{
     private String nis;
     private ArrayList<siswa> listMapel; 
     
+<<<<<<< HEAD
     public siswa(String nama, String nis){
+=======
+    public siswa(String nis, String nama){
+>>>>>>> 21fa328fc5736dd97419a41ce0578cf7eb5e8327
         super(nama);
         this.nis = nis;
     }   
