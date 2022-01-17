@@ -17,6 +17,7 @@ public class siswa extends Identity{
         super(nama);
         this.nis = nis;
     }   
+
     public void setNIS(String a){
         this.nis = a;
     }
