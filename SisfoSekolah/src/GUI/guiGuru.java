@@ -76,6 +76,11 @@ public class guiGuru extends javax.swing.JFrame {
         });
 
         btnTambah.setText("Tambah");
+        btnTambah.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTambahMouseClicked(evt);
+            }
+        });
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTambahActionPerformed(evt);
@@ -359,6 +364,10 @@ public class guiGuru extends javax.swing.JFrame {
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnKembaliActionPerformed
+
+    private void btnTambahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTambahMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTambahMouseClicked
 
     /**
      * @param args the command line arguments
