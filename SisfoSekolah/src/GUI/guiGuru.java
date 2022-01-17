@@ -268,7 +268,13 @@ public class guiGuru extends javax.swing.JFrame {
 
         jLabelLamanGuru.setText("Laman Guru");
 
-        btnKembali.setText("Kembali");
+        btnKembali.setText(btnKembali.getActionCommand());
+        btnKembali.setActionCommand(btnKembali.getActionCommand());
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
 
         jKelas2.setText("(kelas)");
 
@@ -361,6 +367,10 @@ public class guiGuru extends javax.swing.JFrame {
     private void cbTaskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbTaskMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_cbTaskMouseClicked
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**
      * @param args the command line arguments
