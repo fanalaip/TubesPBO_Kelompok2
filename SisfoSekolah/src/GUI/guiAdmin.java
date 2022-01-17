@@ -73,11 +73,6 @@ public class guiAdmin extends javax.swing.JFrame {
 
         jLabelTambahKelas.setText("TAMBAH KELAS");
 
-        jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(jListKelas);
 
         jLabelAdmin.setText("ADMIN SISTEM INFORMASI SEKOLAH");
