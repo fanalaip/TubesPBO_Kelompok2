@@ -15,6 +15,7 @@ import static java.util.Collections.list;
 import javax.swing.JButton;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.List;
+import static java.util.Collections.list;
 
 public class guiAdmin extends javax.swing.JFrame {
 
@@ -255,7 +256,7 @@ public class guiAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jListKelasValueChanged
 
     /**
-     * @param args the command line arguments
+    Itu list harusnya arraylist buat nyimpen kelas 
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -288,10 +289,6 @@ public class guiAdmin extends javax.swing.JFrame {
             }
         });
     }
-    public String getTfKelas(){
-        return tfKelas.getText();
-    }
-    
     public String getTfNama() {
        return tfNama1.getText();
     } 
