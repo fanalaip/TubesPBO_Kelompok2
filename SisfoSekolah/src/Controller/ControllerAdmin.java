@@ -46,11 +46,10 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         String kelas = viewAdmin.getTfKelas() ;
                         String nama = viewAdmin.getTfNama() ;
                         String nis = viewAdmin.getTfNIS() ;
-                        ArrayList<String> mapel = viewAdmin.getMapel() ;
-                        if (kelas==null || nama==null || nis==null || mapel==null){
+                        if (kelas==null || nama==null || nis==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            viewAdmin.resetView();
+                            
                         }
 
                     } catch (Exception es) {
@@ -65,7 +64,6 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     } else {
                         adminModel.deleteKelas(kelas, db);
                     }
-                    viewAdmin.resetView();
                 }
             } catch (Exception ef) {
                 JOptionPane.showMessageDialog(null, "Data siswa berhasil di update");
