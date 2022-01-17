@@ -7,26 +7,19 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-public class guru {
-    private String nama_guru, kode_guru, nid;
+public class guru extends Identity{
+    private String kode_guru, nid;
     
-    public guru (String nama_guru, String kode_guru, String nid) {
-        this.nama_guru = nama_guru ;
+    public guru (String kode_guru, String nid) {
+        super(nama);
         this.kode_guru = kode_guru ;
         this.nid = nid ;
-    }
-
-    public void setNamaGuru(String a){
-        this.nama_guru = a;
     }
     public void setNID(String a){
         this.nid = a;
     }
     public void setKodeGuru(String a){
         this.kode_guru = a;
-    }
-    public String getNamaGuru(){
-        return nama_guru;
     }
     public String getNID(){
         return nid;

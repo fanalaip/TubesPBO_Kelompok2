@@ -7,6 +7,16 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-public interface Identity {
-    int getAngkatan() ;
+public abstract class Identity {
+    private String nama;
+
+    public Identity(String nama) {
+        this.nama = nama;
+    }
+    public String getNama() {
+        return nama;
+    }
+    public void setNama(String nama) {
+        this.nama = nama;
+    }  
 }

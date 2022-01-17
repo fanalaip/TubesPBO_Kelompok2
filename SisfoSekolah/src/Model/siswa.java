@@ -9,24 +9,16 @@ package Model;
 
 import java.util.ArrayList;
 
-public class siswa extends task{
-    private String nama_siswa, nis;
+public class siswa extends Identity{
+    private String nis;
     private ArrayList<siswa> listMapel; 
     
-    public siswa(String nama_siswa, String nis, String aktivitas, float nilai, String nama_mapel){
-        super(aktivitas, nilai, nama_mapel);
-        this.nama_siswa = nama_siswa;
+    public siswa(String nisl){
+        super(nama);
         this.nis = nis;
-    }
-    
-    public void setNamaSiswa(String a){
-        this.nama_siswa = a;
-    }
+    }   
     public void setNIS(String a){
         this.nis = a;
-    }
-    public String getNamaSiswa(){
-        return nama_siswa;
     }
     public String getNIS(){
         return nis;
