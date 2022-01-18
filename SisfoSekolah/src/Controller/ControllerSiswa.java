@@ -10,6 +10,7 @@ package Controller;
 import GUI.guiSiswa;
 import Model.Database;
 import Model.siswa;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -22,6 +23,7 @@ public class ControllerSiswa implements ActionListener{
     private guiSiswa viewSiswa;           
     Database db;
     private siswa siswa;  
+    ArrayList<List> list = new ArrayList();
     
     public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
@@ -83,6 +85,14 @@ public class ControllerSiswa implements ActionListener{
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "NIS tidak ditemukan di database.");
             ex.printStackTrace();
+        }
+    }
+    
+    private void listSiswa(Database db, String nama_siswa){
+        try{
+            siswa.lihatSiswa(db, nama_siswa);
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 }
