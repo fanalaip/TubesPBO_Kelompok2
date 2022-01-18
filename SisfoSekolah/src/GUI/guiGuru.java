@@ -422,8 +422,11 @@ public class guiGuru extends javax.swing.JFrame {
        return tfNilai.getText();
     }
     
-    public void setTfNIS() {
-        
+    public void setTfNIS(String tfNIS) {
+        this.tfNIS.setText(tfNIS) ;
+    }
+    public void tfNilai(String tfNilai) {
+        this.tfNilai.setText(tfNilai) ;
     }
     
     public JButton getBtnBack() {
@@ -436,29 +439,11 @@ public class guiGuru extends javax.swing.JFrame {
         return jTableSiswa;
     }
     
-    public void setJtNilai(String tfNilai) {
-        this.tfNilai.setText(tfNilai);
-    }
-    
-    
-    
-    
-     
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
     public void setjTableSiswa(JTable jTableMhs) {
         this.jTableSiswa = jTableMhs;
     }
      
-    public void setTabel(String nama, String nis,int i) {
+    public void setTabel(String nama, String nis, int i) {
         jTableSiswa.setValueAt(nama, i, 0);
         jTableSiswa.setValueAt(nis, i, 1);
     }
@@ -469,11 +454,9 @@ public class guiGuru extends javax.swing.JFrame {
             setTabel("", "", i);
         }
     }
-    
     public void resetView(){;
         tfNIS.setText("");
     }
-    
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
         btnKembali.addActionListener(e);
