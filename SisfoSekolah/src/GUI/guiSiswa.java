@@ -41,7 +41,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jLSiswa = new javax.swing.JLabel();
         jLabelNIS = new javax.swing.JLabel();
         jTextFieldNIS = new javax.swing.JTextField();
-        jBSearch = new javax.swing.JButton();
+        btnSearch = new javax.swing.JButton();
         btn_back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabelWaliKelas = new javax.swing.JLabel();
@@ -69,14 +69,14 @@ public class guiSiswa extends javax.swing.JFrame {
         jInternalFrameNilai.getContentPane().add(jLabelNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 93, -1, 39));
         jInternalFrameNilai.getContentPane().add(jTextFieldNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 97, 149, 31));
 
-        jBSearch.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        jBSearch.setText("Search");
-        jBSearch.addActionListener(new java.awt.event.ActionListener() {
+        btnSearch.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSearchActionPerformed(evt);
+                btnSearchActionPerformed(evt);
             }
         });
-        jInternalFrameNilai.getContentPane().add(jBSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 101, -1, -1));
+        jInternalFrameNilai.getContentPane().add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 101, -1, -1));
 
         btn_back.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         btn_back.setText("Back");
@@ -209,9 +209,9 @@ public class guiSiswa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSearchActionPerformed
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBSearchActionPerformed
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,7 +270,7 @@ public class guiSiswa extends javax.swing.JFrame {
     }
     
     public JButton getBtnCariNIS(){
-        return jBSearch;
+        return btnSearch;
     }
     
     public JLabel getNama(){
@@ -290,8 +290,8 @@ public class guiSiswa extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSearch;
     private javax.swing.JButton btn_back;
-    private javax.swing.JButton jBSearch;
     private javax.swing.JInternalFrame jInternalFrameDaftarSiswa;
     private javax.swing.JInternalFrame jInternalFrameNilai;
     private javax.swing.JLabel jLSiswa;
@@ -313,7 +313,7 @@ public class guiSiswa extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void addActionListener(ControllerSiswa e) {
-        jBSearch.addActionListener(e);
+        btnSearch.addActionListener(e);
         btn_back.addActionListener(e);
     }
 
