@@ -6,8 +6,7 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
-import Model.task ;
-import Model.matapelajaran ;
+
 import java.util.ArrayList;
 
 public class siswa extends Identity {
@@ -31,7 +30,7 @@ public class siswa extends Identity {
         try {
             db.connect();
             
-            String sql = "INSERT INTO kelas VALUES ('"
+            String sql = "INSERT INTO nilai VALUES ('"
                     +getNIS()+"','"
                     +getNama()+"','"
                     +getMataPelajaran()+"','"
