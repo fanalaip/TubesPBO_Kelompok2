@@ -29,7 +29,7 @@ public class siswa extends Identity {
         try {
             db.connect();
             
-            String sql = "INSERT INTO kelas VALUES ('"
+            String sql = "INSERT INTO nilai VALUES ('"
                     +nis+"','"
                     +nama_siswa+"','"
                     +mapel+"','"
