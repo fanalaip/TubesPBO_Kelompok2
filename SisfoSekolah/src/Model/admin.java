@@ -40,4 +40,16 @@ public class admin {
             Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public void updateKelas(String kelas, Database dbsisfo){
+        try{
+            dbsisfo.connect();
+            String sql = "UPDATE FROM kelas WHERE id = '" + kelas +"'";
+            dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
+            dbsisfo.disconnect();
+        } catch (SQLException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
