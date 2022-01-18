@@ -80,6 +80,11 @@ public class guiSiswa extends javax.swing.JFrame {
 
         btn_back.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         btn_back.setText("Back");
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_backActionPerformed(evt);
+            }
+        });
         jInternalFrameNilai.getContentPane().add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, 26));
 
         jLabel1.setText("NAMA                :");
@@ -161,6 +166,11 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
+        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList1ValueChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(jList1);
 
         javax.swing.GroupLayout jInternalFrameDaftarSiswaLayout = new javax.swing.GroupLayout(jInternalFrameDaftarSiswa.getContentPane());
@@ -213,6 +223,14 @@ public class guiSiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSearchActionPerformed
 
+    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jList1ValueChanged
+
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_backActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,19 +274,11 @@ public class guiSiswa extends javax.swing.JFrame {
     public JTable getjTableSiswa() {
         return jTableSiswa;
     }
-    
-    public JTextField getjTextFieldNIS() {
-        return jTextFieldNIS;
-    }
-    
+      
     public JList getDaftarSiswa(){
         return jList1;
     }
-    
-    public JList daftarsiswa(){
-        return jList1;
-    }
-    
+      
     public JButton getBtnCariNIS(){
         return btnSearch;
     }
@@ -277,17 +287,23 @@ public class guiSiswa extends javax.swing.JFrame {
         return jLabel5;
     }
     
-    public JLabel getAngkatan(){
+    public JLabel getKelas(){
         return jLabel6;
     }
     
-    public JLabel getStatusSiswa(){
+    public JLabel getWaliKelas(){
         return jLabel7;
     }
     
     public void setNIS(){
         this.jTextFieldNIS = jTextFieldNIS;
     }
+    
+    public JTextField getNIS(){
+        return jTextFieldNIS;
+    }
+    
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSearch;
@@ -325,11 +341,10 @@ public class guiSiswa extends javax.swing.JFrame {
     }
     
     
-    public void setTabel(String nama_kelas, String nama_mapel, String aktivitas, String nis, int j){
-        jTableSiswa.setValueAt(nama_kelas, j, 0);
+    public void setTabel(String nama_kelas, String nama_mapel, String aktivitas, String nilai, int j){
         jTableSiswa.setValueAt(nama_mapel, j, 1);
         jTableSiswa.setValueAt(aktivitas, j, 2);   
-        jTableSiswa.setValueAt(nis, j, 3);   
+        jTableSiswa.setValueAt(nilai, j, 3);   
     }
     
 
