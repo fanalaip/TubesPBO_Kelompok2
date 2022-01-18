@@ -426,7 +426,7 @@ public class guiGuru extends javax.swing.JFrame {
         int i = cbTask.getSelectedIndex();
         return cbTask.getItemAt(i);
     }
-    public String getTfNilaiText() {
+    public String getTfNilai() {
        return tfNilai.getText();
     }
     

@@ -29,7 +29,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
         
         viewAdmin = new guiAdmin();
         viewAdmin.addActionListener(this);
-        //viewAdmin.addMouseAdapter(this);
+        viewAdmin.addMouseAdapter(this);
         
         viewAdmin.setVisible(true);
     }
@@ -63,6 +63,14 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                     } else {
                         adminModel.deleteKelas(kelas, db);
+                    }
+                }
+                else if (source.equals(viewAdmin.getBtnUpdate())){
+                    String kelas = viewAdmin.getSelectedKelas() ;
+                    if (kelas == "") {
+                        JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
+                    } else {
+                        adminModel.updateKelas(kelas, db);
                     }
                 }
             } catch (Exception ef) {
