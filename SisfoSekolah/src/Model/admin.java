@@ -14,13 +14,13 @@ import java.util.logging.Logger;
 
 public class admin {
 
-    public static void addKelas(String kelas, String nama_siswa, String nis, ArrayList<String> mapel, Database dbsisfo){
+    public static void addKelas(String nama_kelas, String nama_siswa, String nis, ArrayList<String> mapel, Database dbsisfo){
         try {
             dbsisfo.connect() ;
             String sql = "INSERT INTO kelas VALUES ('"
                     +nis+"','"
                     +nama_siswa+"','"
-                    +kelas+"','"
+                    +nama_kelas+"','"
                     +mapel+"')";
             dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             dbsisfo.disconnect();
