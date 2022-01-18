@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class siswa extends Identity {
     private String nis;
-    private ArrayList<siswa> listMapel; 
     
     public siswa(String nama, String nis){
         super(nama);
