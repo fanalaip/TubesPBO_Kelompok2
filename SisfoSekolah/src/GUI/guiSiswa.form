@@ -231,7 +231,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelWaliKelas1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="WALI KELAS      :"/>
+                    <Property name="text" type="java.lang.String" value="WALI KELAS       :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

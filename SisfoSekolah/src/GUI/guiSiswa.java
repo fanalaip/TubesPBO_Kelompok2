@@ -138,7 +138,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 217, -1, -1));
 
-        jLabelWaliKelas1.setText("WALI KELAS      :");
+        jLabelWaliKelas1.setText("WALI KELAS       :");
         jInternalFrameNilai.getContentPane().add(jLabelWaliKelas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

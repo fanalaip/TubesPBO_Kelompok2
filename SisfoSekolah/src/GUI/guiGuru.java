@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class guiGuru extends javax.swing.JFrame {
 
@@ -51,7 +52,7 @@ public class guiGuru extends javax.swing.JFrame {
         jLabelLamanGuru = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
         jKelas1 = new javax.swing.JLabel();
-        cbMapel1 = new javax.swing.JComboBox<>();
+        cbKelas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -227,7 +228,7 @@ public class guiGuru extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabelInputNilai.setText("INPUT NILAI");
@@ -246,15 +247,15 @@ public class guiGuru extends javax.swing.JFrame {
 
         jKelas1.setText("Kelas      :");
 
-        cbMapel1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8B", "9C" }));
-        cbMapel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        cbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8B", "9C" }));
+        cbKelas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbMapel1MouseClicked(evt);
+                cbKelasMouseClicked(evt);
             }
         });
-        cbMapel1.addActionListener(new java.awt.event.ActionListener() {
+        cbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbMapel1ActionPerformed(evt);
+                cbKelasActionPerformed(evt);
             }
         });
 
@@ -279,7 +280,7 @@ public class guiGuru extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jKelas1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cbMapel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(84, 84, 84)))
                 .addGap(0, 27, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -297,7 +298,7 @@ public class guiGuru extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jKelas1)
-                            .addComponent(cbMapel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -356,13 +357,13 @@ public class guiGuru extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahMouseClicked
 
-    private void cbMapel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbMapel1MouseClicked
+    private void cbKelasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbKelasMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbMapel1MouseClicked
+    }//GEN-LAST:event_cbKelasMouseClicked
 
-    private void cbMapel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMapel1ActionPerformed
+    private void cbKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKelasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbMapel1ActionPerformed
+    }//GEN-LAST:event_cbKelasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -401,40 +402,57 @@ public class guiGuru extends javax.swing.JFrame {
         
         
     }
-
-    public void setJtNilai(String tfNilai) {
-        this.tfNilai.setText(tfNilai);
-    }
     
+    public String getCbKelasText () {
+        int i = cbKelas.getSelectedIndex();
+        return cbKelas.getItemAt(i);
+    }
+    public String getTfNIS() {
+        return tfNIS.getText();
+    }
     public String getCbMapelText(){
         int i = cbMapel.getSelectedIndex();
         return cbMapel.getItemAt(i);
     }
-    
     public String getCbTaskText(){
         int i = cbTask.getSelectedIndex();
         return cbTask.getItemAt(i);
     }
-     
-    public String getTfNilai() {
+    public String getTfNilaiText() {
        return tfNilai.getText();
-    } 
-    
-    public String getTfNIS() {
-        return tfNIS.getText();
     }
     
-    public JButton getBtnAdd() {
-        return btnTambah;
+    public void setTfNIS() {
+        
     }
-
+    
     public JButton getBtnBack() {
         return btnKembali;
     }
-    
+    public JButton getBtnAdd() {
+        return btnTambah;
+    }
     public JTable getjTableSiswa() {
         return jTableSiswa;
     }
+    
+    public void setJtNilai(String tfNilai) {
+        this.tfNilai.setText(tfNilai);
+    }
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    
+
+    
+    
+    
     
     public void setjTableSiswa(JTable jTableMhs) {
         this.jTableSiswa = jTableMhs;
@@ -464,8 +482,8 @@ public class guiGuru extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnTambah;
+    private javax.swing.JComboBox<String> cbKelas;
     private javax.swing.JComboBox<String> cbMapel;
-    private javax.swing.JComboBox<String> cbMapel1;
     private javax.swing.JComboBox<String> cbTask;
     private javax.swing.JLabel jKelas1;
     private javax.swing.JLabel jLabelDaftarSiswa;

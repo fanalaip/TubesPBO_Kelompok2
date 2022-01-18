@@ -19,11 +19,11 @@ public class task extends matapelajaran {
         this.nilai = nilai ;
     }
     
-    public void setNilai(int a){
-        this.nilai = a;
+    public void setNilai(int nilai){
+        this.nilai = nilai;
     }
-    public void setAktivitas(String a){
-        this.aktivitas = a;
+    public void setAktivitas(String aktivitas){
+        this.aktivitas = aktivitas;
     }
     public int getNilai(){
         return nilai;
