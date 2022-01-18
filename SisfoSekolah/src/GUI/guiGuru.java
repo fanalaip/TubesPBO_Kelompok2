@@ -402,7 +402,9 @@ public class guiGuru extends javax.swing.JFrame {
         
         
     }
-    
+    public JComboBox<String> getCbKelas() {
+        return cbKelas;
+    }
     public String getCbKelasText () {
         int i = cbKelas.getSelectedIndex();
         return cbKelas.getItemAt(i);
@@ -410,9 +412,15 @@ public class guiGuru extends javax.swing.JFrame {
     public String getTfNIS() {
         return tfNIS.getText();
     }
+    public JComboBox<String> getCbMapel() {
+        return cbMapel;
+    }
     public String getCbMapelText(){
         int i = cbMapel.getSelectedIndex();
         return cbMapel.getItemAt(i);
+    }
+    public JComboBox<String> getCbTask() {
+        return cbTask;
     }
     public String getCbTaskText(){
         int i = cbTask.getSelectedIndex();
