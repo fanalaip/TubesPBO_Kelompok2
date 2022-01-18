@@ -282,8 +282,8 @@ public class guiAdmin extends javax.swing.JFrame {
 
     private void jListKelasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListKelasValueChanged
         // TODO add your handling code here:
-        jLabelWali.setText(list.get(jListKelas.getSelectedIndex()).getItem(0));
-        jLabelKelas.setText(list.get(jListKelas.getSelectedIndex()).getItem(1));
+        //jLabelWali.setText(list.get(jListKelas.getSelectedIndex()).getItem(0));
+        //jLabelKelas.setText(list.get(jListKelas.getSelectedIndex()).getItem(1));
     }//GEN-LAST:event_jListKelasValueChanged
 
     private void tfNIS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIS2ActionPerformed
@@ -298,9 +298,9 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    /**
+    /*
     Itu list harusnya arraylist buat nyimpen kelas 
-     */
+    */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -327,6 +327,7 @@ public class guiAdmin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new guiAdmin().setVisible(true);
             }
@@ -339,7 +340,9 @@ public class guiAdmin extends javax.swing.JFrame {
     public String getTfNIS() {
         return tfNIS1.getText();
     }
-    
+    public String getTfEditKelas(){
+        return tfEditKelas.getText();
+    }
     public JButton getBtnAdd() {
         return btnTambah;
     }
@@ -350,6 +353,10 @@ public class guiAdmin extends javax.swing.JFrame {
     
     public JButton getBtnBack() {
         return btnBack;
+    }
+    
+    public JButton getBtnUpdate(){
+        return btnUpdate;
     }
     
     public void setListKelas(String[] jListKelas) {
