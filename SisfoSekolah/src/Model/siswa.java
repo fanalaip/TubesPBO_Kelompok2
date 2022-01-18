@@ -24,23 +24,19 @@ public class siswa extends Identity{
     public String getNIS(){
         return nis;
     }
-/**
- * Masih error bagian get mapel, aktivitas, nilai
-     public void addNilai(Database db) {
+    public void addNilai(Database db, String nis, String nama_siswa, String mapel, String activity, String nilai) {
         try {
             db.connect();
             String sql = "INSERT INTO nilai VALUES ('"
-                    +getNIS()+"','"
-                    +getNama()+"','"
-                    +getMataPelajaran()+"','"
-                    +getAktivitas()+"','"
-                    +getNilai()+"')"
-                    ;
+                    +nis+"','"
+                    +nama_siswa+"','"
+                    +mapel+"','"
+                    +activity+"','"
+                    +nilai+"')";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }  
-**/
 }
