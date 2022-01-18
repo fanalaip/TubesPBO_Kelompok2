@@ -66,7 +66,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         }else{
                             int i = getRollNum() + 1;
                             siswa siswa = new siswa(namasiswa, nis);
-                           //siswa.addNilai(db);
+                            //siswa.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
                             viewGuru.resetView();  
