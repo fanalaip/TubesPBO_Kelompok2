@@ -6,10 +6,11 @@ Anggota : Arpriansah Yonathan (1301194112)
           Manuel Benedict (1301194182)
  */
 package Model;
-
+import Model.task ;
+import Model.matapelajaran ;
 import java.util.ArrayList;
 
-public class siswa extends Identity{
+public class siswa extends Identity {
     private String nis;
     private ArrayList<siswa> listMapel; 
     
@@ -27,16 +28,17 @@ public class siswa extends Identity{
     public void addNilai(Database db, String nis, String nama_siswa, String mapel, String activity, String nilai) {
         try {
             db.connect();
-            String sql = "INSERT INTO nilai VALUES ('"
-                    +nis+"','"
-                    +nama_siswa+"','"
-                    +mapel+"','"
-                    +activity+"','"
-                    +nilai+"')";
+            
+            String sql = "INSERT INTO kelas VALUES ('"
+                    +getNIS()+"','"
+                    +getNama()+"','"
+                    +getMataPelajaran()+"','"
+                    +getAktivitas()+"','"
+                    +getNilai()+"')";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }  
+    } 
 }
