@@ -43,7 +43,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 }
                 else if (source.equals(viewAdmin.getBtnAdd())) {
                     try {
-                        String kelas = viewAdmin.getTfKelas() ;
+                        String kelas = viewAdmin.getSelectedKelas() ;
                         String nama = viewAdmin.getTfNama() ;
                         String nis = viewAdmin.getTfNIS() ;
                         if (kelas==null || nama==null || nis==null){
