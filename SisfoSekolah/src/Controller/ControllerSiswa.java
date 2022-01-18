@@ -40,10 +40,10 @@ public class ControllerSiswa implements ActionListener{
                 } 
                 else if (source.equals(viewSiswa.getBtnCariNIS())) {
                     try {
-                        if (viewSiswa.getjTextFieldNIS().getText().equals("")){
+                        if (viewSiswa.getNIS().getText().equals("")){
                             JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
                         } else {
-                            String NIS = viewSiswa.getjTextFieldNIS().getText();
+                            String NIS = viewSiswa.getNIS().getText();
                             viewSiswa.resetTable();
                             lihatNilai(NIS, db);
                         }
