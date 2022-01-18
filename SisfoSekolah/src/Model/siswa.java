@@ -18,25 +18,11 @@ public class siswa extends Identity{
         this.nis = nis;
     }   
 
-    public void setNIS(String a){
-        this.nis = a;
+    public void setNIS(String nis){
+        this.nis = nis;
     }
     public String getNIS(){
         return nis;
-    }
-    public int getAngkatan(){
-        /*
-            FUNGSI INI BERFUNGSI UNTUK MENGETAHUI ANGKATAN DARI NIS PESERTA DIDIK
-            Asumsikan NIS pada suatu sekolah terdiri dari 5 digit.
-            Dua digit pertama adalah angkatan siswa tersebut masuk.
-            Asumsikan satu angkatan kurang dari 999 siswa.
-            Asumsikan sekolah ini berdiri tahun 2010.
-            Contoh: 19201 (angkatan 2019) 19000 19999
-                    20500 (angkatan 2020)
-                    21444 (angkatan 2021)
-        */
-        int angkatan = Integer.parseInt(Integer.toString(Integer.valueOf(nis)).substring(0,1)) + 2 ;
-        return 2000+angkatan ;
     }
 /**
  * Masih error bagian get mapel, aktivitas, nilai

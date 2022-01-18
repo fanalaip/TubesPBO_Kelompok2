@@ -13,8 +13,8 @@ public class matapelajaran {
    public matapelajaran(String nama_mapel) {
        this.nama_mapel = nama_mapel ;
    } 
-   public void setMataPelajaran(String a){
-       this.nama_mapel = a;
+   public void setMataPelajaran(String nama_mapel){
+       this.nama_mapel = nama_mapel;
    }
    public String getMataPelajaran(){
        return nama_mapel;
