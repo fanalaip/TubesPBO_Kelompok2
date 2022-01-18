@@ -9,7 +9,6 @@ package Controller;
 
 import GUI.guiGuru;
 import Model.Database;
-import Model.guru;
 import Model.siswa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +23,8 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
     private String aktivitas;
     private float nilai;
     private String nama_mapel;
+    
+    private siswa student ;
     
     public ControllerGuru(Database db) {
         this.db = db;
@@ -64,12 +65,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         if (nis == null || f == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
-                            
-                            //int i = getRollNum() + 1;
-                            siswa siswa = new siswa(namasiswa, nis);
-                            //siswa.addNilai(db);
-                            //mhs.addJadwal(id_jadwal, i, db);
-                            //mhs.addMatkul(id_jadwal, db);
+                            student.addNilai(db, nis, namasiswa, id_mapel, aktivitas, nis);
                             viewGuru.resetView();  
                         }
                                      
@@ -83,22 +79,4 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
-    
-    /*
-    public int getRollNum() {
-        int i = 0;
-        try {
-            db.connect();
-            String sql = "SELECT no_enroll FROM enroll ORDER BY no_enroll ASC";
-            db.setRs(db.getStmt().executeQuery(sql));
-            while (db.getRs().next()) {                
-                i = db.getRs().getInt("no_enroll");
-            }
-            db.disconnect();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return i;
-    }
-    */
 }

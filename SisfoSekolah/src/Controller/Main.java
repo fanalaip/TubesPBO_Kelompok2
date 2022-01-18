@@ -12,9 +12,5 @@ public class Main {
 
     public static void main(String[] args) {
         new Controller() ;
-        //login start = new login();
-        //start.setVisible(true);
-        //start.pack();
-
     }
 }
