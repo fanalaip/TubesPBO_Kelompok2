@@ -30,11 +30,11 @@ public class siswa extends Identity {
             db.connect();
             
             String sql = "INSERT INTO kelas VALUES ('"
-                    +getNIS()+"','"
-                    +getNama()+"','"
-                    +getMataPelajaran()+"','"
-                    +getAktivitas()+"','"
-                    +getNilai()+"')";
+                    +nis+"','"
+                    +nama_siswa+"','"
+                    +mapel+"','"
+                    +activity+"','"
+                    +nilai+"')";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         } catch (Exception ex) {
