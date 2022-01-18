@@ -402,7 +402,9 @@ public class guiGuru extends javax.swing.JFrame {
         
         
     }
-    
+    public JComboBox<String> getCbKelas() {
+        return cbKelas;
+    }
     public String getCbKelasText () {
         int i = cbKelas.getSelectedIndex();
         return cbKelas.getItemAt(i);
@@ -410,9 +412,15 @@ public class guiGuru extends javax.swing.JFrame {
     public String getTfNIS() {
         return tfNIS.getText();
     }
+    public JComboBox<String> getCbMapel() {
+        return cbMapel;
+    }
     public String getCbMapelText(){
         int i = cbMapel.getSelectedIndex();
         return cbMapel.getItemAt(i);
+    }
+    public JComboBox<String> getCbTask() {
+        return cbTask;
     }
     public String getCbTaskText(){
         int i = cbTask.getSelectedIndex();
@@ -425,7 +433,8 @@ public class guiGuru extends javax.swing.JFrame {
     public void setTfNIS(String tfNIS) {
         this.tfNIS.setText(tfNIS) ;
     }
-    public void tfNilai(String tfNilai) {
+    
+    public void setTfNilai(String tfNilai) {
         this.tfNilai.setText(tfNilai) ;
     }
     
@@ -442,12 +451,10 @@ public class guiGuru extends javax.swing.JFrame {
     public void setjTableSiswa(JTable jTableMhs) {
         this.jTableSiswa = jTableMhs;
     }
-     
     public void setTabel(String nama, String nis, int i) {
         jTableSiswa.setValueAt(nama, i, 0);
         jTableSiswa.setValueAt(nis, i, 1);
     }
-    
     public void resetTable() {
         int rowCount = jTableSiswa.getRowCount();
         for (int i = rowCount - 1; i >= 0; i--) {
@@ -456,6 +463,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
     public void resetView(){;
         tfNIS.setText("");
+        tfNilai.setText("");
     }
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
