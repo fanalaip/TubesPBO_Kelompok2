@@ -65,7 +65,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jLSiswa.setText("SISWA");
         jInternalFrameNilai.getContentPane().add(jLSiswa, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 45, -1, -1));
 
-        jLabelNIS.setText("NIS                   :");
+        jLabelNIS.setText("NIS                    :");
         jInternalFrameNilai.getContentPane().add(jLabelNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 93, -1, 39));
         jInternalFrameNilai.getContentPane().add(jTextFieldNIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 97, 149, 31));
 
@@ -82,10 +82,10 @@ public class guiSiswa extends javax.swing.JFrame {
         btn_back.setText("Back");
         jInternalFrameNilai.getContentPane().add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, 26));
 
-        jLabel1.setText("NAMA               :");
+        jLabel1.setText("NAMA                :");
         jInternalFrameNilai.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 159, -1, -1));
 
-        jLabelWaliKelas.setText("KELAS              :");
+        jLabelWaliKelas.setText("KELAS                :");
         jInternalFrameNilai.getContentPane().add(jLabelWaliKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
 
         jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
