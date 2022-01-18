@@ -31,7 +31,7 @@ public class admin {
     public void deleteKelas(String kelas, Database dbsisfo){
         try{
             dbsisfo.connect();
-            String sql = "DELETE FROM kelas WHERE kelas = '" + kelas +"'";
+            String sql = "DELETE FROM kelas WHERE nama_kelas = '" + kelas +"'";
             dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             dbsisfo.disconnect();
         } catch (SQLException ex) {
@@ -43,7 +43,7 @@ public class admin {
     public void updateKelas(String kelas, Database dbsisfo){
         try{
             dbsisfo.connect();
-            String sql = "UPDATE FROM kelas WHERE kelas = '" + kelas +"'";
+            String sql = "UPDATE kelas SET nama_kelas = '" + kelas +"' WHERE nama_kelas = '" + kelas +"' ";
             dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
             dbsisfo.disconnect();
         } catch (SQLException ex) {

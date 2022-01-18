@@ -51,7 +51,6 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         } else {
                             
                         }
-
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
                         JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
