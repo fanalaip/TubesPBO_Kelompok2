@@ -94,7 +94,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelNIS">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="NIS                   :"/>
+                    <Property name="text" type="java.lang.String" value="NIS                    :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -140,7 +140,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="NAMA               :"/>
+                    <Property name="text" type="java.lang.String" value="NAMA                :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -150,7 +150,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelWaliKelas">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="KELAS              :"/>
+                    <Property name="text" type="java.lang.String" value="KELAS                :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
