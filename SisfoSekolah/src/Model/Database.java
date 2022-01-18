@@ -35,7 +35,7 @@ public class Database {
     
     public Database() {
         loadSiswa();
-        loadMapel();
+        loadNilai();
         loadKelas();
     }
     
@@ -110,7 +110,7 @@ public class Database {
        }
     }
 
-    public void loadMapel() {
+    public void loadNilai() {
         try {
            connect();
            sql = "SELECT * FROM mata_kuliah NATURAL JOIN dosen";
