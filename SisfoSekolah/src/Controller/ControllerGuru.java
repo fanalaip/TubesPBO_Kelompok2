@@ -20,9 +20,9 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;
     private String namasiswa;
-    private String Nis;
+    private String nis;
     private String aktivitas;
-    private float Nilai;
+    private float nilai;
     private String nama_mapel;
     
     public ControllerGuru(Database db) {
@@ -30,11 +30,11 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         viewGuru = new guiGuru();
         viewGuru.addActionListener(this);
         //viewGuru.addMouseAdapter(this);
-        //viewGuru.setDaftarMatkul(getMatkul());
+        //viewGuru.setDaftarMatkul(getMapel());
         //combobox();
         viewGuru.setVisible(true);
     }
-    public String[] getMatkul() {
+    public String[] getMapel() {
         if (db.getListMapel().size() <= 0){
             JOptionPane.showMessageDialog(null, "Mata pelajaran Kosong");
         } else {
@@ -66,7 +66,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         }else{
                             int i = getRollNum() + 1;
                             siswa siswa = new siswa(namasiswa, nis);
-                           //siswa.addNilai(db);
+                            //siswa.addNilai(db);
                             //mhs.addJadwal(id_jadwal, i, db);
                             //mhs.addMatkul(id_jadwal, db);
                             viewGuru.resetView();  
