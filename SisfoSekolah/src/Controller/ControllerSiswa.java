@@ -88,15 +88,15 @@ public class ControllerSiswa implements ActionListener{
             ex.printStackTrace();
         }
     }
-    
+    /*
     public void listSiswa(Database db, String nama_siswa){
         try{
-            viewSiswa.lihatSiswa(db, nama_siswa);
+            kelas.lihatSiswa(db, nama_siswa);
         }catch(Exception e){
             e.printStackTrace();
         }
     }
-    
+    */
     public ControllerSiswa(){
         viewSiswa = new guiSiswa();
         viewSiswa.addActionListener(this);

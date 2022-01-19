@@ -411,18 +411,4 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setValueAt(aktivitas, j, 2);   
         jTableSiswa.setValueAt(nilai, j, 3);   
     }
-
-    public void lihatSiswa(Database db, String nama_siswa) {
-        if (getChooseKelas()=="7A") {
-            
-        } else if (getChooseKelas()=="8A") {
-            
-        } else {
-            
-        }
-    }
-
-    
-    
-
 }
