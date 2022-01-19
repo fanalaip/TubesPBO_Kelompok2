@@ -29,7 +29,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
         
         viewAdmin = new guiAdmin();
         viewAdmin.addActionListener(this);
-        viewAdmin.addMouseAdapter(this);
+        //viewAdmin.addMouseAdapter(this);
         
         viewAdmin.setVisible(true);
     }
