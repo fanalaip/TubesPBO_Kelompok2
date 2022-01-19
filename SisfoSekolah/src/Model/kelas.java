@@ -23,7 +23,7 @@ public class kelas {
     public void kelasTujuh(Database db, String nama_siswa){
         try{
             db.connect();
-            String sql = "SELECT nama_kelas FROM siswa";
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '7A'";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         }catch(Exception e){
@@ -34,7 +34,7 @@ public class kelas {
     public void kelasDelapan(Database db, String nama_siswa){
         try{
             db.connect();
-            String sql = "SELECT nama_kelas FROM siswa";
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '8A'";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         }catch(Exception e){
@@ -45,7 +45,7 @@ public class kelas {
     public void kelasSembilan(Database db, String nama_siswa){
         try{
             db.connect();
-            String sql = "SELECT nama_kelas FROM siswa";
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '9A'";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         }catch(Exception e){
