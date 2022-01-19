@@ -361,6 +361,10 @@ public class guiSiswa extends javax.swing.JFrame {
         return jcbKelas.getItemAt(i);
     }
     
+    public void reset(){
+        jcbKelas.setSelectedIndex(0);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btn_back;

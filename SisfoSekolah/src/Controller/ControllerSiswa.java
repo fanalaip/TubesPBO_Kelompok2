@@ -95,5 +95,25 @@ public class ControllerSiswa implements ActionListener{
             e.printStackTrace();
         }
     }
+    
+    public ControllerSiswa(){
+        viewSiswa = new guiSiswa();
+        viewSiswa.addActionListener(this);
+        viewSiswa.setVisible(true);
+        db = new Database();
+    }
+    
+    public void actionsPerformed(ActionEvent es){
+        Object source = es.getSource();
+        if(source.equals(viewSiswa.getBtnChoose())){
+            if(viewSiswa.getChooseKelas() == "7A"){
+                
+            }else if(viewSiswa.getChooseKelas() == "8A"){
+                
+            }else if(viewSiswa.getChooseKelas() == "9A"){
+                
+            }
+        }
+    }
 }
 
