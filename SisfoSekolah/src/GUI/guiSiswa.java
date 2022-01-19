@@ -351,7 +351,7 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTextFieldNIS;
     }
     
-    public JButton getChoose(){
+    public JButton getBtnChoose(){
         return jBtnChoose;
     }
     
