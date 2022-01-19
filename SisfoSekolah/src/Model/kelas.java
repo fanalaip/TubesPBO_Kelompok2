@@ -41,4 +41,15 @@ public class kelas {
             e.printStackTrace();
         }
     }
+    
+    public void kelasSembilan(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_kelas FROM siswa";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }
