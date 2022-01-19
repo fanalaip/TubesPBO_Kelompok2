@@ -20,10 +20,21 @@ public class kelas {
         return nama_kelas;
     }
     
-    public void lihatSiswa(Database db, String nama_siswa){
+    public void kelasTujuh(Database db, String nama_siswa){
         try{
             db.connect();
-            String sql = "SELECT nama_siswa FROM siswa";
+            String sql = "SELECT nama_kelas FROM siswa";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void kelasDelapan(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_kelas FROM siswa";
             db.setRs(db.getStmt().executeQuery(sql));
             db.disconnect();
         }catch(Exception e){

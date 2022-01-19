@@ -24,6 +24,7 @@ public class ControllerSiswa implements ActionListener{
     Database db;
     private kelas kelas;  
     ArrayList<List> list = new ArrayList();
+    private String nama_siswa;
     
     public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
@@ -107,9 +108,10 @@ public class ControllerSiswa implements ActionListener{
         Object source = es.getSource();
         if(source.equals(viewSiswa.getBtnChoose())){
             if(viewSiswa.getChooseKelas() == "7A"){
-                
+                viewSiswa.dispose();
+                kelas.kelasTujuh(db, nama_siswa);
             }else if(viewSiswa.getChooseKelas() == "8A"){
-                
+                kelas.kelasDelapan(db, nama_siswa);
             }else if(viewSiswa.getChooseKelas() == "9A"){
                 
             }
