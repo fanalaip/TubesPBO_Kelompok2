@@ -66,13 +66,13 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             student.addNilai(db, nis, namasiswa, id_mapel, aktivitas, nis);
+                            JOptionPane.showMessageDialog(viewGuru, "Nilai berhasil diinput.");
                             viewGuru.resetView();  
                         }
                                      
                 } catch (Exception es) {
                     JOptionPane.showMessageDialog(null, "input salah") ; 
-                    es.printStackTrace();
-                 
+                    //es.printStackTrace();
                 }
             }
         } catch (Exception ef) {
