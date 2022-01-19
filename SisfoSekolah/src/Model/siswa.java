@@ -38,15 +38,4 @@ public class siswa extends Identity {
             ex.printStackTrace();
         }
     } 
-    
-    public void lihatSiswa(Database db, String nama_siswa){
-        try{
-            db.connect();
-            String sql = "SELECT nama_siswa FROM siswa";
-            db.setRs(db.getStmt().executeQuery(sql));
-            db.disconnect();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
 }
