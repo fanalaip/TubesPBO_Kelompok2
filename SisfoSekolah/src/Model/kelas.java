@@ -19,4 +19,15 @@ public class kelas {
     public String getNamaKelas(){
         return nama_kelas;
     }
+    
+    public void lihatSiswa(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_siswa FROM siswa";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }

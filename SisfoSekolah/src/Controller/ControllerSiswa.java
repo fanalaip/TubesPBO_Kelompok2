@@ -9,7 +9,7 @@ package Controller;
 
 import GUI.guiSiswa;
 import Model.Database;
-import Model.siswa;
+import Model.kelas;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +22,7 @@ import java.awt.event.ActionListener;
 public class ControllerSiswa implements ActionListener{
     private guiSiswa viewSiswa;           
     Database db;
-    private siswa siswa;  
+    private kelas kelas;  
     ArrayList<List> list = new ArrayList();
     
     public ControllerSiswa(Database db) {
@@ -90,7 +90,7 @@ public class ControllerSiswa implements ActionListener{
     
     public void listSiswa(Database db, String nama_siswa){
         try{
-            siswa.lihatSiswa(db, nama_siswa);
+            kelas.lihatSiswa(db, nama_siswa);
         }catch(Exception e){
             e.printStackTrace();
         }

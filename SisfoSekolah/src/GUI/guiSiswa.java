@@ -59,8 +59,9 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcbKelas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
+        jBtnChoose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -179,9 +180,24 @@ public class guiSiswa extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8A", "9A" }));
+        jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8A", "9A" }));
+        jcbKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbKelasActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("Kelas :");
+        jLabel2.setText("KELAS :");
+
+        jBtnChoose.setBackground(new java.awt.Color(102, 102, 102));
+        jBtnChoose.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jBtnChoose.setForeground(new java.awt.Color(102, 102, 102));
+        jBtnChoose.setText("Pilih");
+        jBtnChoose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnChooseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrameDaftarSiswaLayout = new javax.swing.GroupLayout(jInternalFrameDaftarSiswa.getContentPane());
         jInternalFrameDaftarSiswa.getContentPane().setLayout(jInternalFrameDaftarSiswaLayout);
@@ -199,7 +215,9 @@ public class guiSiswa extends javax.swing.JFrame {
                             .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(jBtnChoose)))))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
         jInternalFrameDaftarSiswaLayout.setVerticalGroup(
@@ -208,9 +226,11 @@ public class guiSiswa extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jLabelNamaSiswa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
+                    .addComponent(jBtnChoose, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
@@ -249,6 +269,14 @@ public class guiSiswa extends javax.swing.JFrame {
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_backActionPerformed
+
+    private void jcbKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbKelasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbKelasActionPerformed
+
+    private void jBtnChooseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnChooseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnChooseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -322,12 +350,23 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTextFieldNIS;
     }
     
+    public JButton getChoose(){
+        return jBtnChoose;
+    }
     
+    public void addListener(ActionListener e){
+        jBtnChoose.addActionListener(e);
+    }
+    
+    public String getChooseKelas(){
+        int i = jcbKelas.getSelectedIndex();
+        return jcbKelas.getItemAt(i);
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btn_back;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jBtnChoose;
     private javax.swing.JInternalFrame jInternalFrameDaftarSiswa;
     private javax.swing.JInternalFrame jInternalFrameNilai;
     private javax.swing.JLabel jLSiswa;
@@ -347,6 +386,7 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPaneDaftarSiswa;
     private javax.swing.JTable jTableSiswa;
     private javax.swing.JTextField jTextFieldNIS;
+    private javax.swing.JComboBox<String> jcbKelas;
     // End of variables declaration//GEN-END:variables
 
     public void addActionListener(ControllerSiswa e) {
