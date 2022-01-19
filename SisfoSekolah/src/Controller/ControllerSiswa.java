@@ -113,7 +113,7 @@ public class ControllerSiswa implements ActionListener{
             }else if(viewSiswa.getChooseKelas() == "8A"){
                 kelas.kelasDelapan(db, nama_siswa);
             }else if(viewSiswa.getChooseKelas() == "9A"){
-                
+                kelas.kelasSembilan(db, nama_siswa);
             }
         }
     }
