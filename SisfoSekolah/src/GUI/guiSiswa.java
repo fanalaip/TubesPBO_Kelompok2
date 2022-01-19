@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import Model.Database;
+import Model.kelas;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import Controller.ControllerSiswa;
@@ -410,6 +411,18 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setValueAt(aktivitas, j, 2);   
         jTableSiswa.setValueAt(nilai, j, 3);   
     }
+
+    public void lihatSiswa(Database db, String nama_siswa) {
+        if (getChooseKelas()=="7A") {
+            
+        } else if (getChooseKelas()=="8A") {
+            
+        } else {
+            
+        }
+    }
+
+    
     
 
 }
