@@ -13,6 +13,10 @@ public class kelas {
     
     private String nama_kelas;
 
+    public kelas(String nama_kelas) {
+        this.nama_kelas = nama_kelas ;
+    }
+
     public void setNamaKelas(String nama_kelas){
         this.nama_kelas = nama_kelas;
     }

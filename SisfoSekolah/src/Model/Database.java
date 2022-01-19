@@ -120,8 +120,7 @@ public class Database {
            while (rs.next()) {
                 teacher = new guru(
                     rs.getString("nama_guru"),
-                    rs.getString("kode_guru"), 
-                    rs.getString("nid")
+                    rs.getString("kode_guru")
                 );
                 course = new matapelajaran(
                     rs.getString("nama_mapel")
