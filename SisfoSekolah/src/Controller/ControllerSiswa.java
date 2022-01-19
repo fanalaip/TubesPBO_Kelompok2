@@ -88,7 +88,7 @@ public class ControllerSiswa implements ActionListener{
         }
     }
     
-    private void listSiswa(Database db, String nama_siswa){
+    public void listSiswa(Database db, String nama_siswa){
         try{
             siswa.lihatSiswa(db, nama_siswa);
         }catch(Exception e){
