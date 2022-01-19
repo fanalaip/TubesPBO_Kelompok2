@@ -355,9 +355,6 @@ public class guiSiswa extends javax.swing.JFrame {
         return jBtnChoose;
     }
     
-    public void addListener(ActionListener e){
-        jBtnChoose.addActionListener(e);
-    }
     
     public String getChooseKelas(){
         int i = jcbKelas.getSelectedIndex();
@@ -393,6 +390,7 @@ public class guiSiswa extends javax.swing.JFrame {
     public void addActionListener(ControllerSiswa e) {
         btnSearch.addActionListener(e);
         btn_back.addActionListener(e);
+        jBtnChoose.addActionListener(e);
     }
 
     public void resetTable() {
