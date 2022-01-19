@@ -58,22 +58,24 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 }
                 else if (source.equals(viewAdmin.getBtnDelete())) {
                     String kelas = viewAdmin.getSelectedKelas() ;
-                    if (kelas == "") {
+                    if (kelas == null) {
                         JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                     } else {
                         adminModel.deleteKelas(kelas, db);
+                        JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
                     }
                 }
                 else if (source.equals(viewAdmin.getBtnUpdate())){
                     String kelas = viewAdmin.getSelectedKelas() ;
-                    if (kelas == "") {
+                    if (kelas == null) {
                         JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
-                    } else {
+                    }else {
                         adminModel.updateKelas(kelas, db);
+                        JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
                     }
                 }
             } catch (Exception ef) {
-                JOptionPane.showMessageDialog(null, "Data siswa berhasil di update");
+                JOptionPane.showMessageDialog(null, "Data siswa tidak berhasil di update");
             }
     }
 }
