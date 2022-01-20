@@ -77,7 +77,7 @@ public class ControllerSiswa implements ActionListener{
                         dbsisfo.getRs().getString("id"),
                         dbsisfo.getRs().getString("nis"),
                         dbsisfo.getRs().getString("nama_siswa"),
-                        dbsisfo.getRs().getString("angkatan"), 
+                        dbsisfo.getRs().getString("nama_kelas"),
                         j);
                 j++;
             }

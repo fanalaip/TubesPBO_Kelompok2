@@ -55,8 +55,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabelWaliKelas1 = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
         jLabelNamaSiswa = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -147,13 +145,9 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jScrollPane3.setViewportView(jTableSiswa);
 
-        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 272, 475, 338));
+        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 240, 480, 370));
         jInternalFrameNilai.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 159, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
-        jInternalFrameNilai.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 217, -1, -1));
-
-        jLabelWaliKelas1.setText("WALI KELAS       :");
-        jInternalFrameNilai.getContentPane().add(jLabelWaliKelas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -339,11 +333,7 @@ public class guiSiswa extends javax.swing.JFrame {
     public JLabel getKelas(){
         return jLabel6;
     }
-    
-    public JLabel getWaliKelas(){
-        return jLabel7;
-    }
-    
+        
     public void setNIS(){
         this.jTextFieldNIS = jTextFieldNIS;
     }
@@ -377,11 +367,9 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
     private javax.swing.JLabel jLabelWaliKelas;
-    private javax.swing.JLabel jLabelWaliKelas1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
