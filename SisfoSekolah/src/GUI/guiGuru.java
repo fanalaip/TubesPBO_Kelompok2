@@ -268,6 +268,11 @@ public class guiGuru extends javax.swing.JFrame {
                 jBtnCariMouseClicked(evt);
             }
         });
+        jBtnCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCariActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -304,7 +309,6 @@ public class guiGuru extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelLamanGuru)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -381,6 +385,10 @@ public class guiGuru extends javax.swing.JFrame {
     private void jBtnCariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnCariMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnCariMouseClicked
+
+    private void jBtnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCariActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCariActionPerformed
 
     /**
      * @param args the command line arguments
@@ -485,6 +493,7 @@ public class guiGuru extends javax.swing.JFrame {
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
         btnKembali.addActionListener(e);
+        jBtnCari.addActionListener(e);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
