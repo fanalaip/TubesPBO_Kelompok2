@@ -25,6 +25,7 @@ public class ControllerSiswa implements ActionListener{
     private kelas kelas;  
     ArrayList<List> list = new ArrayList();
     private String nama_siswa;
+    private String nis;
     
     public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
@@ -115,6 +116,8 @@ public class ControllerSiswa implements ActionListener{
             }else if(viewSiswa.getChooseKelas() == "9A"){
                 kelasSembilan(db, nama_siswa);
             }
+        }else if(source.equals(viewSiswa.getBtnCariNIS())){
+            lihatNilai(nis, db);
         }
     }
     
