@@ -109,12 +109,45 @@ public class ControllerSiswa implements ActionListener{
         if(source.equals(viewSiswa.getBtnChoose())){
             if(viewSiswa.getChooseKelas() == "7A"){
                 viewSiswa.dispose();
-                kelas.kelasTujuh(db, nama_siswa);
+                kelasTujuh(db, nama_siswa);
             }else if(viewSiswa.getChooseKelas() == "8A"){
-                kelas.kelasDelapan(db, nama_siswa);
+                kelasDelapan(db, nama_siswa);
             }else if(viewSiswa.getChooseKelas() == "9A"){
-                kelas.kelasSembilan(db, nama_siswa);
+                kelasSembilan(db, nama_siswa);
             }
+        }
+    }
+    
+    public void kelasTujuh(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '7A'";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void kelasDelapan(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '8A'";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void kelasSembilan(Database db, String nama_siswa){
+        try{
+            db.connect();
+            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '9A'";
+            db.setRs(db.getStmt().executeQuery(sql));
+            db.disconnect();
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 }
