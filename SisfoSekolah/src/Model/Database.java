@@ -33,11 +33,13 @@ public class Database {
     private ArrayList<matapelajaran> listMapel = new ArrayList();
     private guiSiswa viewSiswa;
     
+    /*
     public Database() {
         loadSiswa();
         loadNilai();
         loadKelas();
     }
+    */
     
     
     public void connect() throws SQLException, ClassNotFoundException{
@@ -67,7 +69,7 @@ public class Database {
         Database.rs = rs;
     }
 
-
+/*
     public void loadSiswa() {
         try {
             connect();
@@ -144,4 +146,5 @@ public class Database {
     public ArrayList<matapelajaran> getListMapel() {
         return listMapel;
     }
+*/
 }
