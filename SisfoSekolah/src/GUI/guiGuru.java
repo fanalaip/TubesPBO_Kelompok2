@@ -473,6 +473,10 @@ public class guiGuru extends javax.swing.JFrame {
         return jTableSiswa;
     }
     
+    public JButton getJBtnCari(){
+        return jBtnCari;
+    }
+    
     public void setjTableSiswa(JTable jTableMhs) {
         this.jTableSiswa = jTableMhs;
     }

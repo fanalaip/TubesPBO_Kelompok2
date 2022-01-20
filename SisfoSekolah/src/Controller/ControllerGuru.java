@@ -18,11 +18,8 @@ import javax.swing.JOptionPane;
 public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;
-    private String namasiswa;
-    private String nis;
-    private String aktivitas;
+    private String nis, nama, aktivitas, namasiswa, nama_mapel;
     private float nilai;
-    private String nama_mapel;
     
     private siswa student ;
     
@@ -74,9 +71,20 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                     JOptionPane.showMessageDialog(null, "input salah") ; 
                     //es.printStackTrace();
                 }
+            }else if(source.equals(viewGuru.getJBtnCari())){
+                lihatNisNama(db, nis, nama);
             }
         } catch (Exception ef) {
             JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
+    
+    public void lihatNisNama(Database db, String nis, String nama){
+        try{
+            db.connect();
+            
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 }
