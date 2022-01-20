@@ -86,7 +86,7 @@ public class Database {
                 i++;
             }
             disconnect();
-            viewSiswa.daftarsiswa().setListData(namasiswa);
+            //viewSiswa.daftarsiswa().setListData(namasiswa);
         } catch (Exception e) {
             e.printStackTrace();
         }
