@@ -82,7 +82,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
     public void lihatNisNama(Database db, String nis, String nama){
         try{
             db.connect();
-            
+            //////////--------////////
         }catch(Exception e){
             e.printStackTrace();
         }
