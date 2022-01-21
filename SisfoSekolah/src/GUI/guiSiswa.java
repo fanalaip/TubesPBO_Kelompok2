@@ -183,8 +183,7 @@ public class guiSiswa extends javax.swing.JFrame {
 
         jLabel2.setText("KELAS :");
 
-        jBtnChoose.setBackground(new java.awt.Color(102, 102, 102));
-        jBtnChoose.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jBtnChoose.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBtnChoose.setForeground(new java.awt.Color(102, 102, 102));
         jBtnChoose.setText("Pilih");
         jBtnChoose.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +206,7 @@ public class guiSiswa extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBtnChoose))
                     .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
@@ -219,12 +218,11 @@ public class guiSiswa extends javax.swing.JFrame {
             .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabelNamaSiswa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2))
-                    .addComponent(jBtnChoose, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jBtnChoose))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
