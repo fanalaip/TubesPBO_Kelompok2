@@ -69,21 +69,11 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                     es.printStackTrace();
                 }
             }else if(source.equals(viewGuru.getBtnCari())){
-                //lihatNisNama();
                 Display dis = new Display();
                 dis.DisplaySiswa(viewGuru.getjTableSiswa(), viewGuru.getCbKelasText());
             }
         } catch (Exception ef) {
             JOptionPane.showMessageDialog(null, "Error");
-        }
-    }
-    
-    public void lihatNisNama(){
-        try{
-            db.connect();
-            //////////--------////////
-        }catch(Exception e){
-            e.printStackTrace();
         }
     }
 }
