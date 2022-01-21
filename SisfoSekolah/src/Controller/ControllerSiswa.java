@@ -107,7 +107,7 @@ public class ControllerSiswa implements ActionListener{
     
     public void actionsPerformed(ActionEvent es){
         Object source = es.getSource();
-        if(source.equals(viewSiswa.getBtnChoose())){
+        if(source.equals(viewSiswa.getBtnPilih())){
             if(viewSiswa.getChooseKelas() == "7A"){
                 viewSiswa.dispose();
                 kelasTujuh(db, nama_siswa);

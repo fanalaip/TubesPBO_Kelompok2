@@ -71,7 +71,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                     JOptionPane.showMessageDialog(null, "input salah") ; 
                     //es.printStackTrace();
                 }
-            }else if(source.equals(viewGuru.getJBtnCari())){
+            }else if(source.equals(viewGuru.getBtnCari())){
                 lihatNisNama(db, nis, nama);
             }
         } catch (Exception ef) {
