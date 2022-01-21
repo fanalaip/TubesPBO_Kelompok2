@@ -23,12 +23,11 @@ public class siswa extends Identity {
     public String getNIS(){
         return nis;
     }
-    public void addNilai(Database db, String nis, String nama_siswa, String mapel, String activity, String nilai) {
+    public void addNilai(Database db, String nis, String mapel, String activity, String nilai) {
         try {
             db.connect();
             String sql = "INSERT INTO nilai VALUES ('"
                     +nis+"','"
-                    +nama_siswa+"','"
                     +mapel+"','"
                     +activity+"','"
                     +nilai+"')";
