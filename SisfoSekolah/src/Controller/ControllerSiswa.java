@@ -108,30 +108,16 @@ public class ControllerSiswa implements ActionListener{
     public void actionsPerformed(ActionEvent es){
         Object source = es.getSource();
         if(source.equals(viewSiswa.getBtnPilih())){
-            if(viewSiswa.getChooseKelas() == "7A"){
-                viewSiswa.dispose();
-                kelasTujuh(db, nama_siswa);
-            }else if(viewSiswa.getChooseKelas() == "8A"){
-                kelasDelapan(db, nama_siswa);
-            }else if(viewSiswa.getChooseKelas() == "9A"){
-                kelasSembilan(db, nama_siswa);
-            }
+            Display dis = new Display();
+            dis.DisplaySiswa(viewSiswa.getDaftarSiswa(), viewSiswa.getChooseKelas());
         }else if(source.equals(viewSiswa.getBtnCariNIS())){
             lihatNilai(nis, db);
         }
     }
     
+    /*
     public void kelasTujuh(JTable jtable, String nama_siswa){
-        try{
-            DefaultTableModel tblModel = (DefaultTableModel) jtable.getModel();
-            tblModel.setRowCount(0);
-            Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "SELECT * FROM data_detailbelanja WHERE id_transaksi='"+id_transaksi+"'";
-            ResultSet rs = stmt.executeQuery(sql);
-            while(rs.next()){
-                String id = String.valueOf(rs.getInt("id_barang"));
-                String nama_Produk = rs.getString("nama_Barang");
-            
+        try {
             db.connect();
             String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '7A'";
             db.setRs(db.getStmt().executeQuery(sql));
@@ -162,5 +148,7 @@ public class ControllerSiswa implements ActionListener{
             e.printStackTrace();
         }
     }
+    */
 }
+
 
