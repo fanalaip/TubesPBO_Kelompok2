@@ -53,7 +53,7 @@ public class guiGuru extends javax.swing.JFrame {
         btnKembali = new javax.swing.JButton();
         jKelas1 = new javax.swing.JLabel();
         cbKelas = new javax.swing.JComboBox<>();
-        jBtnCari = new javax.swing.JButton();
+        btnCari = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -260,16 +260,16 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
-        jBtnCari.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBtnCari.setText("Cari");
-        jBtnCari.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCari.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        btnCari.setText("Cari");
+        btnCari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jBtnCariMouseClicked(evt);
+                btnCariMouseClicked(evt);
             }
         });
-        jBtnCari.addActionListener(new java.awt.event.ActionListener() {
+        btnCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnCariActionPerformed(evt);
+                btnCariActionPerformed(evt);
             }
         });
 
@@ -295,7 +295,7 @@ public class guiGuru extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBtnCari))
+                        .addComponent(btnCari))
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 27, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -314,7 +314,7 @@ public class guiGuru extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jKelas1)
                             .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnCari))
+                            .addComponent(btnCari))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,13 +381,13 @@ public class guiGuru extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbKelasActionPerformed
 
-    private void jBtnCariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnCariMouseClicked
+    private void btnCariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCariMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnCariMouseClicked
+    }//GEN-LAST:event_btnCariMouseClicked
 
-    private void jBtnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCariActionPerformed
+    private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnCariActionPerformed
+    }//GEN-LAST:event_btnCariActionPerformed
 
     /**
      * @param args the command line arguments
@@ -473,7 +473,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
     
     public JButton getBtnCari(){
-        return jBtnCari;
+        return btnCari;
     }
     
     public void setjTableSiswa(JTable jTableMhs) {
@@ -496,16 +496,16 @@ public class guiGuru extends javax.swing.JFrame {
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
         btnKembali.addActionListener(e);
-        jBtnCari.addActionListener(e);
+        btnCari.addActionListener(e);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCari;
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbKelas;
     private javax.swing.JComboBox<String> cbMapel;
     private javax.swing.JComboBox<String> cbTask;
-    private javax.swing.JButton jBtnCari;
     private javax.swing.JLabel jKelas1;
     private javax.swing.JLabel jLabelDaftarSiswa;
     private javax.swing.JLabel jLabelInputNilai;
