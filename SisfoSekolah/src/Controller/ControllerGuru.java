@@ -63,14 +63,15 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                            student.addNilai(nis , nama_mapel, aktivitas, nilai);
                            JOptionPane.showMessageDialog(viewGuru, "Nilai berhasil diinput.");
                            viewGuru.resetView();  
-                        }
-                                     
+                        }  
                 } catch (Exception es) {
-                    JOptionPane.showMessageDialog(null, "input salah") ; 
+                    JOptionPane.showMessageDialog(null, "input salah" + es) ; 
                     es.printStackTrace();
                 }
             }else if(source.equals(viewGuru.getBtnCari())){
-                lihatNisNama();
+                //lihatNisNama();
+                Display dis = new Display();
+                dis.DisplaySiswa(viewGuru.getjTableSiswa(), viewGuru.getCbKelasText());
             }
         } catch (Exception ef) {
             JOptionPane.showMessageDialog(null, "Error");

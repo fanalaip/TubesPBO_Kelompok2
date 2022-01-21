@@ -121,8 +121,17 @@ public class ControllerSiswa implements ActionListener{
         }
     }
     
-    public void kelasTujuh(Database db, String nama_siswa){
+    public void kelasTujuh(JTable jtable, String nama_siswa){
         try{
+            DefaultTableModel tblModel = (DefaultTableModel) jtable.getModel();
+            tblModel.setRowCount(0);
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT * FROM data_detailbelanja WHERE id_transaksi='"+id_transaksi+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                String id = String.valueOf(rs.getInt("id_barang"));
+                String nama_Produk = rs.getString("nama_Barang");
+            
             db.connect();
             String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '7A'";
             db.setRs(db.getStmt().executeQuery(sql));
