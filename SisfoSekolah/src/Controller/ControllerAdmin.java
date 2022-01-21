@@ -76,7 +76,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     }
                 }
             } catch (Exception ef) {
-                JOptionPane.showMessageDialog(null, "Data siswa tidak berhasil di update");
+                JOptionPane.showMessageDialog(null, "Data kelas tidak berhasil di update");
             }
     }
 }
