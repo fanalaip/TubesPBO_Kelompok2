@@ -251,6 +251,7 @@ public class guiGuru extends javax.swing.JFrame {
         jKelas1.setText("Kelas  :");
 
         cbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8B", "9C" }));
+        cbKelas.setSelectedIndex(-1);
         cbKelas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cbKelasMouseClicked(evt);

@@ -175,6 +175,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8A", "9A" }));
+        jcbKelas.setSelectedIndex(-1);
         jcbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbKelasActionPerformed(evt);
