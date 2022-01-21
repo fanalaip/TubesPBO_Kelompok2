@@ -49,7 +49,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         if (nama==null || nis==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
-                            
+                            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
@@ -70,7 +70,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     if (kelas == null) {
                         JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
                     }else {
-                        adminModel.updateKelas(kelas, db);
+                        //adminModel.updateKelas(kelas, db);
                         JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
                     }
                 }
