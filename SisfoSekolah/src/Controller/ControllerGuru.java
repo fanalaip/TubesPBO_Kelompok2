@@ -32,6 +32,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         //combobox();
         viewGuru.setVisible(true);
     }
+    /*
     public String[] getMapel() {
         if (db.getListMapel().size() <= 0){
             JOptionPane.showMessageDialog(null, "Mata pelajaran Kosong");
@@ -43,6 +44,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         }
         return null;
     }
+    */
 
     @Override
     public void actionPerformed(ActionEvent e) {
