@@ -18,8 +18,9 @@ import javax.swing.JOptionPane;
 public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;
-    //private String nis, nama, aktivitas, namasiswa, nama_mapel;
-    private float nilai;
+
+    private String aktivitas, namasiswa;
+    private int nilai;
     
     private siswa student ;
     
