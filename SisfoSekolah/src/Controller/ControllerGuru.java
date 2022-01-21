@@ -57,7 +57,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         String nama_mapel = viewGuru.getCbMapelText();
                         String aktivitas = viewGuru.getCbTaskText();
                         String nilai = viewGuru.getTfNilai();
-                        if ((nis == null) || nama_mapel == null || aktivitas == null) {
+                        if ((nis == null) || nama_mapel == null || aktivitas == null || nilai == null ) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                            student.addNilai(db, nis , nama_mapel, aktivitas, nis);
