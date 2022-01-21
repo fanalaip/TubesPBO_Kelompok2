@@ -60,7 +60,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         String id_mapel = viewGuru.getCbMapelText();
                         String task = viewGuru.getCbTaskText();
                         String f = viewGuru.getTfNilai();
-                        float nilai = Float.parseFloat(f);
+                        int nilai = Integer.parseInt(f);
                         if (nis == null || f == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
