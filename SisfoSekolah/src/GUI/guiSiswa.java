@@ -57,11 +57,11 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
         jLabelNamaSiswa = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
         jcbKelas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         btnPilih = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jDaftarSiswa = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -167,13 +167,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
-        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jList1ValueChanged(evt);
-            }
-        });
-        jScrollPane1.setViewportView(jList1);
-
         jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8A", "9A" }));
         jcbKelas.setSelectedIndex(-1);
         jcbKelas.addActionListener(new java.awt.event.ActionListener() {
@@ -193,6 +186,48 @@ public class guiSiswa extends javax.swing.JFrame {
             }
         });
 
+        jDaftarSiswa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Nama Siswa"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jDaftarSiswa);
+
         javax.swing.GroupLayout jInternalFrameDaftarSiswaLayout = new javax.swing.GroupLayout(jInternalFrameDaftarSiswa.getContentPane());
         jInternalFrameDaftarSiswa.getContentPane().setLayout(jInternalFrameDaftarSiswaLayout);
         jInternalFrameDaftarSiswaLayout.setHorizontalGroup(
@@ -210,23 +245,23 @@ public class guiSiswa extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnPilih))
                     .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jInternalFrameDaftarSiswaLayout.setVerticalGroup(
             jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabelNamaSiswa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(btnPilih))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69))
+                .addGap(63, 63, 63)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80))
         );
 
         jTabbedPaneDaftarSiswa.addTab("DAFTAR SISWA", jInternalFrameDaftarSiswa);
@@ -254,10 +289,6 @@ public class guiSiswa extends javax.swing.JFrame {
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSearchActionPerformed
-
-    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jList1ValueChanged
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
@@ -315,8 +346,8 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTableSiswa;
     }
       
-    public JList getDaftarSiswa(){
-        return jList1;
+    public JTable getDaftarSiswa(){
+        return jDaftarSiswa;
     }
       
     public JButton getBtnCariNIS(){
@@ -357,6 +388,7 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JButton btnPilih;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btn_back;
+    private javax.swing.JTable jDaftarSiswa;
     private javax.swing.JInternalFrame jInternalFrameDaftarSiswa;
     private javax.swing.JInternalFrame jInternalFrameNilai;
     private javax.swing.JLabel jLSiswa;
@@ -367,9 +399,8 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
     private javax.swing.JLabel jLabelWaliKelas;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPaneDaftarSiswa;
     private javax.swing.JTable jTableSiswa;
