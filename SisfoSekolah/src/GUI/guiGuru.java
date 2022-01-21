@@ -80,6 +80,8 @@ public class guiGuru extends javax.swing.JFrame {
         });
 
         cbMapel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PKN", "IPA", "IPS", "Matematika" }));
+        cbMapel.setSelectedIndex(-1);
+        cbMapel.setToolTipText("");
         cbMapel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cbMapelMouseClicked(evt);
@@ -98,7 +100,7 @@ public class guiGuru extends javax.swing.JFrame {
         jLabelNilai.setText("Nilai                :");
 
         cbTask.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tugas", "UTS", "UAS" }));
-        cbTask.setSelectedItem(cbTask);
+        cbTask.setSelectedIndex(-1);
         cbTask.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cbTaskMouseClicked(evt);
