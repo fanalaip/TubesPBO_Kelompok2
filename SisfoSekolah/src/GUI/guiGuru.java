@@ -260,7 +260,6 @@ public class guiGuru extends javax.swing.JFrame {
             }
         });
 
-        jBtnCari.setBackground(new java.awt.Color(102, 102, 255));
         jBtnCari.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBtnCari.setText("Cari");
         jBtnCari.addMouseListener(new java.awt.event.MouseAdapter() {
