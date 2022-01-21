@@ -36,47 +36,47 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-            try {
-                if (source.equals(viewAdmin.getBtnBack())) {
-                    new Controller();
-                    viewAdmin.dispose();
-                }
-                else if (source.equals(viewAdmin.getBtnAdd())) {
-                    try {
-                        String kelas = viewAdmin.getSelectedKelas() ;
-                        String nama = viewAdmin.getTfNama() ;
-                        String nis = viewAdmin.getTfNIS() ;
-                        if (kelas==null || nama==null || nis==null){
-                            JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
-                        }
-                    } catch (Exception es) {
-                        System.out.println("Error 404 "+ es.getMessage());
-                        JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
-                    }
-                }
-                else if (source.equals(viewAdmin.getBtnDelete())) {
-                    String kelas = viewAdmin.getSelectedKelas() ;
-                    if (kelas == null) {
-                        JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
-                    } else {
-                        //adminModel.deleteKelas(kelas, db);
-                        JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
-                    }
-                }
-                else if (source.equals(viewAdmin.getBtnUpdate())){
-                    String kelas = viewAdmin.getSelectedKelas() ;
-                    String edit = viewAdmin.getTfEditKelas();
-                    if (kelas == null || edit == null ) {
-                        JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
-                    }else {
-                        //adminModel.updateKelas(kelas, db);
-                        JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
-                    }
-                }
-            } catch (Exception ef) {
-                JOptionPane.showMessageDialog(null, "Data kelas tidak berhasil di update");
+        try {
+            if (source.equals(viewAdmin.getBtnBack())) {
+                new Controller();
+                viewAdmin.dispose();
             }
+            else if (source.equals(viewAdmin.getBtnAdd())) {
+                try {
+                    String kelas = viewAdmin.getSelectedKelas() ;
+                    String nama = viewAdmin.getTfNama() ;
+                    String nis = viewAdmin.getTfNIS() ;
+                    if (kelas==null || nama==null || nis==null){
+                        JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
+                    }
+                } catch (Exception es) {
+                    System.out.println("Error 404 "+ es.getMessage());
+                    JOptionPane.showMessageDialog(null, "Data tidak berhasil ditambahkan");
+                }
+            }
+            else if (source.equals(viewAdmin.getBtnDelete())) {
+                String kelas = viewAdmin.getSelectedKelas() ;
+                if (kelas == null) {
+                    JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
+                } else {
+                    //adminModel.deleteKelas(kelas, db);
+                    JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
+                }
+            }
+            else if (source.equals(viewAdmin.getBtnUpdate())){
+                String kelas = viewAdmin.getSelectedKelas() ;
+                String edit = viewAdmin.getTfEditKelas();
+                if (kelas == null || edit == null ) {
+                    JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
+                }else {
+                    //adminModel.updateKelas(kelas, db);
+                    JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
+                }
+            }
+        } catch (Exception ef) {
+            JOptionPane.showMessageDialog(null, "Data kelas tidak berhasil di update");
+        }
     }
 }
