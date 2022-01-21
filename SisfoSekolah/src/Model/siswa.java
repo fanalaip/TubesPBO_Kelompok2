@@ -7,10 +7,16 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
+//import java.sql.PreparedStatement;
+//import java.util.ArrayList;
+
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class siswa extends Identity {
     private String nis;
+    Koneksi kn = new Koneksi() ;
     
     public siswa(String nama, String nis){
         super(nama);
@@ -23,16 +29,15 @@ public class siswa extends Identity {
     public String getNIS(){
         return nis;
     }
-    public void addNilai(Database db, String nis, String mapel, String activity, String nilai) {
+    public void addNilai(String nis, String mapel, String activity, String nilai) {
         try {
-            db.connect();
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
             String sql = "INSERT INTO nilai VALUES ('"
                     +nis+"','"
                     +mapel+"','"
                     +activity+"','"
                     +nilai+"')";
-            db.setRs(db.getStmt().executeQuery(sql));
-            db.disconnect();
+            stmt.executeUpdate(sql);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

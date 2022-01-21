@@ -60,7 +60,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         if ((nis == null) || nama_mapel == null || aktivitas == null || nilai == null ) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
-                           student.addNilai(db, nis , nama_mapel, aktivitas, nis);
+                           student.addNilai(nis , nama_mapel, aktivitas, nilai);
                            JOptionPane.showMessageDialog(viewGuru, "Nilai berhasil diinput.");
                            viewGuru.resetView();  
                         }

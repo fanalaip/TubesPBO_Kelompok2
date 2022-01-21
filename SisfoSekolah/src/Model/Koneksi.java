@@ -10,7 +10,7 @@ package Model;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class Connection {
+public class Koneksi {
 
     private String driver = "com.mysql.cj.jdbc.Driver";
     private String host = "jdbc:mysql://localhost:3306/dbsisfo";
