@@ -46,7 +46,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                         String kelas = viewAdmin.getSelectedKelas() ;
                         String nama = viewAdmin.getTfNama() ;
                         String nis = viewAdmin.getTfNIS() ;
-                        if (nama==null || nis==null){
+                        if (kelas==null || nama==null || nis==null){
                             JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                         } else {
                             JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
