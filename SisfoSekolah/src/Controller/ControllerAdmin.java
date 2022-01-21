@@ -61,7 +61,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     if (kelas == null) {
                         JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                     } else {
-                        adminModel.deleteKelas(kelas, db);
+                        //adminModel.deleteKelas(kelas, db);
                         JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
                     }
                 }
