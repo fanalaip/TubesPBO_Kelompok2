@@ -19,7 +19,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;
 
-    private String aktivitas, namasiswa;
+    private String nis, nama, aktivitas, namasiswa, nama_mapel;
     private int nilai;
     
     private siswa student ;
@@ -57,12 +57,12 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
             } 
             else if (source.equals(viewGuru.getBtnAdd())) {
                 try {
-                        String nis = viewGuru.getTfNIS();
-                        String id_mapel = viewGuru.getCbMapelText();
-                        String task = viewGuru.getCbTaskText();
-                        String f = viewGuru.getTfNilai();
-                        int nilai = Integer.parseInt(f);
-                        if (nis == null || f == null) {
+                        String iniNIS = viewGuru.getTfNIS();
+                        String iniMapel = viewGuru.getCbMapelText();
+                        String iniTask = viewGuru.getCbTaskText();
+                        String iniNilai = viewGuru.getTfNilai();
+                        int nilai = Integer.parseInt(iniNilai);
+                        if (nis == null || iniNilai == null) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
                             student.addNilai(db, nis, namasiswa, id_mapel, aktivitas, nis);
