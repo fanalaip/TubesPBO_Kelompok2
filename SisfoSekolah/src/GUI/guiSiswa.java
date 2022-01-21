@@ -61,7 +61,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         jcbKelas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jBtnChoose = new javax.swing.JButton();
+        btnPilih = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,12 +183,12 @@ public class guiSiswa extends javax.swing.JFrame {
 
         jLabel2.setText("KELAS :");
 
-        jBtnChoose.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBtnChoose.setForeground(new java.awt.Color(102, 102, 102));
-        jBtnChoose.setText("Pilih");
-        jBtnChoose.addActionListener(new java.awt.event.ActionListener() {
+        btnPilih.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        btnPilih.setForeground(new java.awt.Color(102, 102, 102));
+        btnPilih.setText("Pilih");
+        btnPilih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnChooseActionPerformed(evt);
+                btnPilihActionPerformed(evt);
             }
         });
 
@@ -207,7 +207,7 @@ public class guiSiswa extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBtnChoose))
+                        .addComponent(btnPilih))
                     .addGroup(jInternalFrameDaftarSiswaLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -222,7 +222,7 @@ public class guiSiswa extends javax.swing.JFrame {
                 .addGroup(jInternalFrameDaftarSiswaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jcbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jBtnChoose))
+                    .addComponent(btnPilih))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
@@ -266,9 +266,9 @@ public class guiSiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbKelasActionPerformed
 
-    private void jBtnChooseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnChooseActionPerformed
+    private void btnPilihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPilihActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnChooseActionPerformed
+    }//GEN-LAST:event_btnPilihActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,8 +338,8 @@ public class guiSiswa extends javax.swing.JFrame {
         return jTextFieldNIS;
     }
     
-    public JButton getBtnChoose(){
-        return jBtnChoose;
+    public JButton getBtnPilih(){
+        return btnPilih;
     }
     
     
@@ -353,9 +353,9 @@ public class guiSiswa extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPilih;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btn_back;
-    private javax.swing.JButton jBtnChoose;
     private javax.swing.JInternalFrame jInternalFrameDaftarSiswa;
     private javax.swing.JInternalFrame jInternalFrameNilai;
     private javax.swing.JLabel jLSiswa;
@@ -379,7 +379,7 @@ public class guiSiswa extends javax.swing.JFrame {
     public void addActionListener(ControllerSiswa e) {
         btnSearch.addActionListener(e);
         btn_back.addActionListener(e);
-        jBtnChoose.addActionListener(e);
+        btnPilih.addActionListener(e);
     }
 
     public void resetTable() {

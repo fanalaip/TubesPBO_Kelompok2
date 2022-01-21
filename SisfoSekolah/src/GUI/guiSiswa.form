@@ -253,7 +253,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jcbKelas" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jBtnChoose" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnPilih" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -273,7 +273,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jcbKelas" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnChoose" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPilih" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="458" max="-2" attributes="0"/>
@@ -335,7 +335,7 @@
                 <Property name="text" type="java.lang.String" value="KELAS :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jBtnChoose">
+            <Component class="javax.swing.JButton" name="btnPilih">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="10" style="1"/>
@@ -346,7 +346,7 @@
                 <Property name="text" type="java.lang.String" value="Pilih"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnChooseActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPilihActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

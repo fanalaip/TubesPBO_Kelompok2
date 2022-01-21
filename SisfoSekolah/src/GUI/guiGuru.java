@@ -472,7 +472,7 @@ public class guiGuru extends javax.swing.JFrame {
         return jTableSiswa;
     }
     
-    public JButton getJBtnCari(){
+    public JButton getBtnCari(){
         return jBtnCari;
     }
     
