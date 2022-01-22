@@ -167,7 +167,7 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
-        jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "8A", "9A" }));
+        jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "7B", "8A", "8B", "9A", "9B" }));
         jcbKelas.setSelectedIndex(-1);
         jcbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -7,9 +7,6 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-//import java.sql.PreparedStatement;
-//import java.util.ArrayList;
-
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;

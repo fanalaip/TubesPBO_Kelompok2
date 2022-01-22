@@ -91,6 +91,11 @@ public class guiAdmin extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jListKelas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jListKelasMouseClicked(evt);
+            }
+        });
         jListKelas.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 jListKelasValueChanged(evt);
@@ -298,6 +303,11 @@ public class guiAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateActionPerformed
 
+    private void jListKelasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListKelasMouseClicked
+        String kelas;
+        tfEditKelas.setText(jListKelas.getSelectedValue());
+    }//GEN-LAST:event_jListKelasMouseClicked
+
     /*
     Itu list harusnya arraylist buat nyimpen kelas 
     */
@@ -416,6 +426,6 @@ public class guiAdmin extends javax.swing.JFrame {
     }
 
     public void addMouseAdapter(ControllerAdmin aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 }
