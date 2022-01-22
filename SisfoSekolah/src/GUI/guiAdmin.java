@@ -87,7 +87,7 @@ public class guiAdmin extends javax.swing.JFrame {
         jLabelTambahKelas.setText("TAMBAH SISWA");
 
         jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "7A", "7B", "8A", "8B", "9A", "9B" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
