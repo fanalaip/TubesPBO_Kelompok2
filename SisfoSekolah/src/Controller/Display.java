@@ -52,6 +52,17 @@ public class Display {
             e.printStackTrace();
         }   
     }
+    
+    public void DisplayKelas(String nama, String kelas, String nis) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'";
+            stmt.executeUpdate(sql);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
+    }
 }
 
-//AAAAAHAHHAHAHAHHAHAHAHAH
+//String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";

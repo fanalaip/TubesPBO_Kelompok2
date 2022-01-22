@@ -344,11 +344,11 @@ public class guiSiswa extends javax.swing.JFrame {
     }
     
     public JLabel getNama(){
-        return jLabel5;
+        return jLabel5 ;
     }
     
     public JLabel getKelas(){
-        return jLabel6;
+        return jLabel6 ;
     }
         
     public void setNIS(){
