@@ -270,10 +270,10 @@ public class guiSiswa extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(79, Short.MAX_VALUE)
                 .addComponent(jTabbedPaneDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,8 +366,8 @@ public class guiSiswa extends javax.swing.JFrame {
         this.jTextFieldNIS = jTextFieldNIS;
     }
     
-    public JTextField getNIS(){
-        return jTextFieldNIS;
+    public String getNIS(){
+        return jTextFieldNIS.getText();
     }
     
     public JButton getBtnPilih(){
@@ -417,12 +417,12 @@ public class guiSiswa extends javax.swing.JFrame {
     public void resetTable() {
         int rowCount = jTableSiswa.getRowCount();
         for (int i = rowCount - 1; i >= 0; i--) {
-            setTabel("", "", "", "", i);
+            setTabel("", "", "", i);
         }
     }
     
     
-    public void setTabel(String nama_kelas, String nama_mapel, String aktivitas, String nilai, int j){
+    public void setTabel(String nama_mapel, String aktivitas, String nilai, int j){
         jTableSiswa.setValueAt(nama_mapel, j, 1);
         jTableSiswa.setValueAt(aktivitas, j, 2);   
         jTableSiswa.setValueAt(nilai, j, 3);   

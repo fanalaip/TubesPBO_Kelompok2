@@ -9,6 +9,7 @@ package Controller;
 
 import GUI.guiSiswa;
 import Model.Database;
+import Model.Koneksi;
 import Model.kelas;
 import java.awt.List;
 import java.awt.event.ActionEvent;
@@ -18,6 +19,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
+import java.sql.Statement;
 
 public class ControllerSiswa implements ActionListener{
     private guiSiswa viewSiswa;           
@@ -26,6 +28,8 @@ public class ControllerSiswa implements ActionListener{
     ArrayList<List> list = new ArrayList();
     private String nama_siswa;
     private String nis;
+    
+    Koneksi kn = new Koneksi() ;
     
     public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
@@ -44,12 +48,12 @@ public class ControllerSiswa implements ActionListener{
                 } 
                 else if (source.equals(viewSiswa.getBtnCariNIS())) {
                     try {
-                        if (viewSiswa.getNIS().getText().equals("")){
+                        if (viewSiswa.getNIS().equals("")){
                             JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
                         } else {
-                            String NIS = viewSiswa.getNIS().getText();
+                            String NIS = viewSiswa.getNIS();
+                            lihatNilai(NIS);
                             viewSiswa.resetTable();
-                            lihatNilai(nis, db);
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
@@ -64,22 +68,26 @@ public class ControllerSiswa implements ActionListener{
             }
     }
 
-    private void lihatNilai(String NIS, Database dbsisfo) {
+    private void lihatNilai(String nis) {
         try {
             int j = 0 ;
-            dbsisfo.connect() ;
-            String sql = "SELECT * FROM mapel NATURAL JOIN jadwal NATURAL JOIN enroll WHERE NIS = '" + NIS +"'";
-            dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
+            
+            Statement stmt = (Statement) kn.getKoneksi().createStatement() ;
+            String sql = "SELECT nilai.mapel, nilai.activity, nilai.nilai FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis WHERE NIS = '" + nis +"'";
+            ResultSet rs = stmt.executeQuery(sql) ;
+            //String sql ="SELECT nilai.mapel, nilai.activity, nilai.nilai FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis ;";
+            //String sql = "SELECT * FROM mapel NATURAL JOIN jadwal NATURAL JOIN enroll WHERE NIS = '" + NIS +"'";
+            /*
             while(dbsisfo.getRs().next()){
                 viewSiswa.setTabel(
-                        dbsisfo.getRs().getString("id"),
-                        dbsisfo.getRs().getString("nis"),
-                        dbsisfo.getRs().getString("nama_siswa"),
-                        dbsisfo.getRs().getString("nama_kelas"),
+                        dbsisfo.getRs().getString("nama_mapel"),
+                        dbsisfo.getRs().getString("aktivitas"),
+                        dbsisfo.getRs().getString("nilai"),
                         j);
                 j++;
             }
             dbsisfo.disconnect();
+            */
             viewSiswa.getjTableSiswa();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "NIS tidak ditemukan di database.");
