@@ -52,7 +52,8 @@ public class ControllerSiswa implements ActionListener{
                             JOptionPane.showMessageDialog(null, "NIS harus diisi terlebih dahulu");
                         } else {
                             String NIS = viewSiswa.getNIS();
-                            lihatNilai(NIS);
+                            Display dis = new Display() ;
+                            dis.DisplayNilai(viewSiswa.getjTableSiswa(), NIS) ;
                             viewSiswa.resetTable();
                         }
                     } catch (Exception es) {
