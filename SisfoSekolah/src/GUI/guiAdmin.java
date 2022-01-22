@@ -19,9 +19,6 @@ import static java.util.Collections.list;
 
 public class guiAdmin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form guiAdmin
-     */
     public guiAdmin() {
         initComponents();
     }
