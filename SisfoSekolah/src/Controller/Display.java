@@ -61,8 +61,17 @@ public class Display {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        
     }
+    
+    private void showActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        try{
+            ResultSet rs = stat.executeQuery("SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'");
+            jLabel1.setText(rs.getString("name"));
+            jLabel12.setText(rs.getString("e_id"));
+        } catch(Exception e) {
+            System.out.print(e);
+        }
+    }   
 }
 
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
