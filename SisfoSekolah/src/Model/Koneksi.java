@@ -23,14 +23,16 @@ public class Koneksi {
         try {
             Class.forName(driver);
         }catch(ClassNotFoundException ce){
-            JOptionPane.showMessageDialog(null, ce+"Gagal Connect ke driver");
+            System.out.println("Berhasil") ;
+            //JOptionPane.showMessageDialog(null, ce+"Gagal Connect ke driver");
         }
         
         //Connect ke database;
         try{
             koneksi = (Connection) DriverManager.getConnection(host,user,pass);
         }catch(SQLException ce){
-            JOptionPane.showMessageDialog(null, ce+"Gagal Connect ke database");
+            System.out.println("Berhasil") ;
+            //JOptionPane.showMessageDialog(null, ce+"Gagal Connect ke database");
         }
         return koneksi;
     }

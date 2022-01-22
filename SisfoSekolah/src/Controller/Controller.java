@@ -11,6 +11,10 @@ import GUI.login;
 import Model.Database;
 import Model.Koneksi;
 import java.awt.event.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 public class Controller implements ActionListener{
     private login view;
     private Database db;
@@ -28,6 +32,11 @@ public class Controller implements ActionListener{
         Object source = ae.getSource();
         
         if (source.equals(view.getBtnLogin())) {
+            String username = view.getTfUser() ;
+            String password = view.getTfPass() ;
+            String loginAs = view.getUser() ;
+            login(username, password, loginAs) ;
+            /*
             if (view.getUser() == "Siswa") {
                 view.dispose();
                 new ControllerSiswa(db);
@@ -40,23 +49,34 @@ public class Controller implements ActionListener{
                 view.dispose();
                 new ControllerAdmin(db);
             }
+            */
         }
     }
-    /*
-    public boolean login(String username, String password) {
+    
+    public boolean login(String username, String password, String loginAs) {
         try {
             Statement stmt = (Statement) kn.getKoneksi().createStatement() ;
-            String sql = "SELECT * FROM user WHERE username ='"+username+"' AND password = '"+password+"'" ;
+            String sql = "SELECT * FROM user WHERE username ='"+username+"' AND password = '"+password+"' AND enroll ='"+loginAs+"'" ;
             ResultSet rs = stmt.executeQuery(sql) ;
             if (rs.next()) {
                 if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
-                    
+                    if (loginAs == "Siswa") {
+                        view.dispose();
+                        new ControllerSiswa(db);
+                    } else if (loginAs == "Guru") {
+                        view.dispose();
+                        new ControllerGuru(db);
+                    } else if (loginAs == "Admin") {
+                        view.dispose();
+                        new ControllerAdmin(db);
+                    }
                 }
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,e.getMessage()) ;
         }
+        return false ;
     }
-    */
+    
 }
 
