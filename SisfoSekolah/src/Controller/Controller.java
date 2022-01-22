@@ -36,20 +36,6 @@ public class Controller implements ActionListener{
             String password = view.getTfPass() ;
             String loginAs = view.getUser() ;
             login(username, password, loginAs) ;
-            /*
-            if (view.getUser() == "Siswa") {
-                view.dispose();
-                new ControllerSiswa(db);
-            }
-            else if (view.getUser() == "Guru") {
-                view.dispose();
-                new ControllerGuru(db);
-            }
-            else if (view.getUser() == "Admin") {
-                view.dispose();
-                new ControllerAdmin(db);
-            }
-            */
         }
     }
     
@@ -79,6 +65,4 @@ public class Controller implements ActionListener{
         }
         return false ;
     }
-    
 }
-
