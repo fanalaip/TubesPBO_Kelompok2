@@ -12,7 +12,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class Display {
-     Koneksi kn = new Koneksi() ;
+    Koneksi kn = new Koneksi() ;
      
     public void DisplaySiswa(JTable jtable, String nama_kelas){
         try{

@@ -30,9 +30,9 @@ public class ControllerSiswa implements ActionListener{
     public ControllerSiswa(Database db) {
         viewSiswa = new guiSiswa();
         viewSiswa.setVisible(true);
-        viewSiswa.addActionListener(this);    
-        this.db = db;
-        //combobox();        
+        viewSiswa.addActionListener(this);
+        db = new Database();
+        this.db = db;       
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -49,23 +49,20 @@ public class ControllerSiswa implements ActionListener{
                         } else {
                             String NIS = viewSiswa.getNIS().getText();
                             viewSiswa.resetTable();
-                            lihatNilai(NIS, db);
+                            lihatNilai(nis, db);
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
                         JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
                     }
+                }else if(source.equals(viewSiswa.getBtnPilih())){
+                    Display dis = new Display();
+                    dis.DisplaySiswa(viewSiswa.getDaftarSiswa(), viewSiswa.getChooseKelas());
                 }
             } catch (Exception ef) {
                 JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
             }
     }
-
-    /*
-    private void combobox() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    */
 
     private void lihatNilai(String NIS, Database dbsisfo) {
         try {
@@ -98,22 +95,6 @@ public class ControllerSiswa implements ActionListener{
         }
     }
     */
-    public ControllerSiswa(){
-        viewSiswa = new guiSiswa();
-        viewSiswa.addActionListener(this);
-        viewSiswa.setVisible(true);
-        db = new Database();
-    }
-    
-    public void actionsPerformed(ActionEvent es){
-        Object source = es.getSource();
-        if(source.equals(viewSiswa.getBtnPilih())){
-            Display dis = new Display();
-            dis.DisplaySiswa(viewSiswa.getDaftarSiswa(), viewSiswa.getChooseKelas());
-        }else if(source.equals(viewSiswa.getBtnCariNIS())){
-            lihatNilai(nis, db);
-        }
-    }
     
     /*
     public void kelasTujuh(JTable jtable, String nama_siswa){
