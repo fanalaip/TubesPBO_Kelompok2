@@ -7,14 +7,10 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package GUI;
 
-import Controller.Display;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JList;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 
 public class guiGuru extends javax.swing.JFrame {
 
