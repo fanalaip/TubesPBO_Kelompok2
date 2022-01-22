@@ -39,7 +39,7 @@ public class Display {
             DefaultTableModel tblModel = (DefaultTableModel) jtable.getModel();
             tblModel.setRowCount(0);
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "SELECT nilai.mapel, nilai.activity, nilai.nilai FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis WHERE nis = '" + nis +"'";
+            String sql = "SELECT * FROM kelas WHERE nis = '" + nis +"'";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 String mapel = rs.getString("mapel");
