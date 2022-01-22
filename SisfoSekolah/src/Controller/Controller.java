@@ -9,11 +9,12 @@ package Controller;
 
 import GUI.login;
 import Model.Database;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import Model.Koneksi;
+import java.awt.event.*;
 public class Controller implements ActionListener{
     private login view;
     private Database db;
+    Koneksi kn = new Koneksi() ;
     
     public Controller() {
         view = new login();
@@ -25,6 +26,7 @@ public class Controller implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
+        
         if (source.equals(view.getBtnLogin())) {
             if (view.getUser() == "Siswa") {
                 view.dispose();
@@ -39,6 +41,22 @@ public class Controller implements ActionListener{
                 new ControllerAdmin(db);
             }
         }
-    }    
+    }
+    /*
+    public boolean login(String username, String password) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement() ;
+            String sql = "SELECT * FROM user WHERE username ='"+username+"' AND password = '"+password+"'" ;
+            ResultSet rs = stmt.executeQuery(sql) ;
+            if (rs.next()) {
+                if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
+                    
+                }
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,e.getMessage()) ;
+        }
+    }
+    */
 }
 

@@ -7,10 +7,6 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-import java.sql.Connection;
-import java.sql.Statement;
-import java.util.ArrayList;
-
 public class siswa extends Identity {
     private String nis;
     
