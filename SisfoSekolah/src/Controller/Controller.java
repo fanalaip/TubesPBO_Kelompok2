@@ -71,9 +71,11 @@ public class Controller implements ActionListener{
                         new ControllerAdmin(db);
                     }
                 }
+            }else {
+                        JOptionPane.showMessageDialog(null,"Data user tidak ditemukan") ;
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,"Data user tidak ditemukan") ;
+            JOptionPane.showMessageDialog(null,e.getMessage()) ;
         }
         return false ;
     }
