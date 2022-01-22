@@ -68,32 +68,6 @@ public class ControllerSiswa implements ActionListener{
             }
     }
 
-    private void lihatNilai(String nis) {
-        try {
-            int j = 0 ;
-            
-            Statement stmt = (Statement) kn.getKoneksi().createStatement() ;
-            String sql = "SELECT nilai.mapel, nilai.activity, nilai.nilai FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis WHERE NIS = '" + nis +"'";
-            ResultSet rs = stmt.executeQuery(sql) ;
-            //String sql ="SELECT nilai.mapel, nilai.activity, nilai.nilai FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis ;";
-            //String sql = "SELECT * FROM mapel NATURAL JOIN jadwal NATURAL JOIN enroll WHERE NIS = '" + NIS +"'";
-            /*
-            while(dbsisfo.getRs().next()){
-                viewSiswa.setTabel(
-                        dbsisfo.getRs().getString("nama_mapel"),
-                        dbsisfo.getRs().getString("aktivitas"),
-                        dbsisfo.getRs().getString("nilai"),
-                        j);
-                j++;
-            }
-            dbsisfo.disconnect();
-            */
-            viewSiswa.getjTableSiswa();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "NIS tidak ditemukan di database.");
-            ex.printStackTrace();
-        }
-    }
     /*
     public void listSiswa(Database db, String nama_siswa){
         try{
