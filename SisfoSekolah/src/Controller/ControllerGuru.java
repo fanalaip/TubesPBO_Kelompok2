@@ -9,16 +9,19 @@ package Controller;
 
 import GUI.guiGuru;
 import Model.Database;
+import Model.Koneksi;
 import Model.siswa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class ControllerGuru extends MouseAdapter implements ActionListener {
     private guiGuru viewGuru;
     private Database db;    
     private siswa student ;
+    Koneksi kn = new Koneksi() ;
     
     public ControllerGuru(Database db) {
         this.db = db;
@@ -60,7 +63,7 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
                         if ((nis == null) || nama_mapel == null || aktivitas == null || nilai == null ) {
                             JOptionPane.showMessageDialog(viewGuru, "Input Belum Benar");
                         }else{
-                           student.addNilai(nis , nama_mapel, aktivitas, nilai);
+                           addNilai(nis , nama_mapel, aktivitas, nilai);
                            JOptionPane.showMessageDialog(viewGuru, "Nilai berhasil diinput.");
                            viewGuru.resetView();  
                         }  
@@ -76,4 +79,18 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
+    
+    public void addNilai(String nis, String mapel, String activity, String nilai) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "INSERT INTO nilai VALUES ('"
+                    +nis+"','"
+                    +mapel+"','"
+                    +activity+"','"
+                    +nilai+"')";
+            stmt.executeUpdate(sql);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    } 
 }

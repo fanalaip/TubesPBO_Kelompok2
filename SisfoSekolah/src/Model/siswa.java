@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class siswa extends Identity {
     private String nis;
-    Koneksi kn = new Koneksi() ;
     
     public siswa(String nama, String nis){
         super(nama);
@@ -29,17 +28,4 @@ public class siswa extends Identity {
     public String getNIS(){
         return nis;
     }
-    public void addNilai(String nis, String mapel, String activity, String nilai) {
-        try {
-            Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "INSERT INTO nilai VALUES ('"
-                    +nis+"','"
-                    +mapel+"','"
-                    +activity+"','"
-                    +nilai+"')";
-            stmt.executeUpdate(sql);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    } 
 }
