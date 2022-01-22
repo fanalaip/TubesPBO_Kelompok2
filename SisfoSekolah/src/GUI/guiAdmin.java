@@ -306,6 +306,7 @@ public class guiAdmin extends javax.swing.JFrame {
     private void jListKelasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListKelasMouseClicked
         String kelas;
         tfEditKelas.setText(jListKelas.getSelectedValue());
+        jLabelKelas.setText(jListKelas.getSelectedValue());
     }//GEN-LAST:event_jListKelasMouseClicked
 
     /*
