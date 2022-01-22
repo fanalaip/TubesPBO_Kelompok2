@@ -44,8 +44,8 @@ public class Display {
             while(rs.next()){
                 String mapel = rs.getString("mapel");
                 String activity = rs.getString("activity");
-                String nilai = rs.getString("nilai");
-                String tbData[] = {mapel, activity, nilai };
+                //String nilai = rs.getString("nilai");
+                String tbData[] = {mapel, activity};
                 tblModel.addRow(tbData);
             }
         }catch(Exception e){
