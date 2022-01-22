@@ -382,7 +382,6 @@ public class guiAdmin extends javax.swing.JFrame {
         jListKelas.addMouseListener(e);
     }
     
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
