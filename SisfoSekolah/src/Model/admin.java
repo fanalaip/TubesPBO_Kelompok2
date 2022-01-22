@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 public class admin {
 
-    public static void addKelas(String nama_kelas, String nama_siswa, String nis, ArrayList<String> mapel, Database dbsisfo){
+    public static void addSiswa(String nama_kelas, String nama_siswa, String nis, ArrayList<String> mapel, Database dbsisfo){
         try {
             dbsisfo.connect() ;
             String sql = "INSERT INTO kelas VALUES ('"

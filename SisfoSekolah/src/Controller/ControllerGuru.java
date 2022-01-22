@@ -27,24 +27,8 @@ public class ControllerGuru extends MouseAdapter implements ActionListener {
         this.db = db;
         viewGuru = new guiGuru();
         viewGuru.addActionListener(this);
-        //viewGuru.addMouseAdapter(this);
-        //viewGuru.setDaftarMatkul(getMapel());
-        //combobox();
         viewGuru.setVisible(true);
     }
-    /*
-    public String[] getMapel() {
-        if (db.getListMapel().size() <= 0){
-            JOptionPane.showMessageDialog(null, "Mata pelajaran Kosong");
-        } else {
-            String[] listMapel = new String[db.getListMapel().size()];
-            for (int i = 0; i < listMapel.length; i++) {
-                listMapel[i] = db.getListMapel().get(i).getMataPelajaran();
-            }
-        }
-        return null;
-    }
-    */
 
     @Override
     public void actionPerformed(ActionEvent e) {
