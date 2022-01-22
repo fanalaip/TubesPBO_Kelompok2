@@ -331,7 +331,7 @@ public class guiGuru extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+// <editor-fold defaultstate="collapsed" desc="Generated Code"> 
     private void tfNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNISActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNISActionPerformed
@@ -384,16 +384,9 @@ public class guiGuru extends javax.swing.JFrame {
     private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCariActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
+    // </editor-fold> 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">   
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -410,18 +403,8 @@ public class guiGuru extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(guiGuru.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+    }// </editor-fold> 
     
-        //</editor-fold>
-    
-        //</editor-fold>
-    
-        //</editor-fold>
-    
-        /* Create and display the form */
-        
-        
-    }
     public JComboBox<String> getCbKelas() {
         return cbKelas;
     }
