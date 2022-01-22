@@ -40,15 +40,12 @@ public class admin {
         }
     }
     
-    public void updateKelas(String kelas, Database dbsisfo){
+    public void updateKelas(String kelas, String edit){
         try{
-            dbsisfo.connect();
-            String sql = "UPDATE kelas SET nama_kelas = '" + kelas +"' WHERE nama_kelas = '" + kelas +"' ";
-            dbsisfo.setRs(dbsisfo.getStmt().executeQuery(sql));
-            dbsisfo.disconnect();
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "UPDATE kelas SET nama_kelas = '" + edit +"' WHERE nama_kelas = '" + kelas +"' ";
+            stmt.executeUpdate(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
             Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
