@@ -10,7 +10,6 @@ package Controller;
 import GUI.guiAdmin;
 import Model.Database;
 import Model.Koneksi;
-import Model.admin;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
