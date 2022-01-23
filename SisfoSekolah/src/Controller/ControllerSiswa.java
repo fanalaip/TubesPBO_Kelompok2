@@ -9,6 +9,7 @@ package Controller;
 
 import GUI.guiSiswa;
 import Model.Koneksi;
+import Model.guru;
 import Model.kelas;
 import java.awt.List;
 import java.awt.event.ActionEvent;
@@ -47,9 +48,14 @@ public class ControllerSiswa implements ActionListener{
                             String NIS = viewSiswa.getNIS();
                             Display dis = new Display() ;
                             dis.DisplayNilai(viewSiswa.getjTableSiswa(), NIS) ;
+                            
                             kelas Class = dis.DisplayBio(NIS) ;
                             viewSiswa.getNama().setText(Class.getNama()); 
                             viewSiswa.getKelas().setText(Class.getNamaKelas()); 
+                            
+                            guru Teacher = dis.DisplayWakel(NIS) ;
+                            //viewSiswa.getNamaWakel().setText(Teacher.getNama()) ;
+                            viewSiswa.getKodeWakel().setText(Teacher.getKodeGuru()) ;
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());

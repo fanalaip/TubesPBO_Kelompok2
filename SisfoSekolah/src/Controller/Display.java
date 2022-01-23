@@ -8,6 +8,7 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Controller;
 
 import Model.Koneksi;
+import Model.guru;
 import Model.kelas;
 import java.sql.*;
 import javax.swing.*;
@@ -83,6 +84,25 @@ public class Display {
             e.printStackTrace();
         }
         return null ;
+    }
+    
+    public guru DisplayWakel (String nis) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            //Statement stmt2 = (Statement) kn.getKoneksi().createStatement();
+            String sql_1 = "SELECT DISTINCT kode_guru FROM kelas INNER JOIN nilai ON kelas.nis = nilai.nis WHERE nilai.nis = '" + nis +"'";
+            //String sql_2 = "SELECT DISTINCT nama_guru FROM guru WHERE kode_guru = '" +sql_1+"'";
+            ResultSet rs1 = stmt.executeQuery(sql_1);
+            //ResultSet rs2 = stmt.executeQuery(sql_2);
+            while (rs1.next()) {
+                guru Teacher = new guru(rs1.getString("nama_guru"), rs1.getString("kode_guru")) ;
+                return Teacher ;
+            }
+            return null ;
+        } catch (Exception e) {
+            e.printStackTrace() ;
+        }
+        return null;
     }
     
     public String DisplayWaliKelas(String kelas) {

@@ -44,6 +44,8 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabelWaliKelas = new javax.swing.JLabel();
+        jLabelKodeWakel = new javax.swing.JLabel();
+        jLabelNamaWakel = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
         jLabelNamaSiswa = new javax.swing.JLabel();
         jcbKelas = new javax.swing.JComboBox<>();
@@ -134,12 +136,14 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jScrollPane3.setViewportView(jTableSiswa);
 
-        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 480, 370));
+        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 480, 370));
         jInternalFrameNilai.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 159, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
 
         jLabelWaliKelas.setText("WALI KELAS      :");
         jInternalFrameNilai.getContentPane().add(jLabelWaliKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        jInternalFrameNilai.getContentPane().add(jLabelKodeWakel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 50, -1));
+        jInternalFrameNilai.getContentPane().add(jLabelNamaWakel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 20, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -159,7 +163,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
-        jcbKelas.setSelectedIndex(-1);
         jcbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbKelasActionPerformed(evt);
@@ -354,6 +357,14 @@ public class guiSiswa extends javax.swing.JFrame {
     public JLabel getKelas(){
         return jLabel6 ;
     }
+    
+    public JLabel getNamaWakel() {
+        return jLabelNamaWakel ;
+    }
+    
+    public JLabel getKodeWakel() {
+        return jLabelKodeWakel ;
+    }
         
     public void setNIS(){
         this.jTextFieldNIS = jTextFieldNIS;
@@ -402,8 +413,10 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelKelas;
+    private javax.swing.JLabel jLabelKodeWakel;
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
+    private javax.swing.JLabel jLabelNamaWakel;
     private javax.swing.JLabel jLabelWaliKelas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
