@@ -15,8 +15,11 @@ import Model.admin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
@@ -65,12 +68,12 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 }
             }
             else if (source.equals(viewAdmin.getBtnDelete())) {
-                //String kelas = viewAdmin.getTfEditKelas();
-                String kelas = viewAdmin.getKelas().getText();
+                String kelas = viewAdmin.getTfEditKelas();
+                //String kelas = viewAdmin.getKelas().getText();
                 if (kelas == null) {
                     JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                 }else{
-                    adminModel.deleteKelas(kelas);
+                    deleteKelas(kelas);
                     JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
                 }
             }else if (source.equals(viewAdmin.getBtnUpdate())){
@@ -79,7 +82,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 if (kelas == null || edit == null ) {
                     JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
                 }else {
-                    adminModel.updateKelas(kelas, edit);
+                    updateKelas(kelas, edit);
                     JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
                     viewAdmin.resetView();
                 }
@@ -100,6 +103,26 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             stmt.executeUpdate(sql);
         }catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
+    
+    public void deleteKelas(String kelas){
+        try{
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "DELETE FROM kelas WHERE nama_kelas = '" + kelas +"'";
+            stmt.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void updateKelas(String kelas, String edit){
+        try{
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "UPDATE kelas SET nama_kelas = '" + edit +"' WHERE nama_kelas = '" + kelas +"' ";
+            stmt.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
