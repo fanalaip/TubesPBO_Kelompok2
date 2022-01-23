@@ -54,6 +54,7 @@ public class ControllerSiswa implements ActionListener{
                             String NIS = viewSiswa.getNIS();
                             Display dis = new Display() ;
                             dis.DisplayNilai(viewSiswa.getjTableSiswa(), NIS) ;
+                            dis.DisplayBio(viewSiswa.getNama().getText(), viewSiswa.getKelas().getText(), NIS) ;
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
@@ -62,7 +63,6 @@ public class ControllerSiswa implements ActionListener{
                 }else if(source.equals(viewSiswa.getBtnPilih())){
                     Display dis = new Display();
                     dis.DisplaySiswa(viewSiswa.getDaftarSiswa(), viewSiswa.getChooseKelas());
-                    dis.DisplayBio(viewSiswa.getNama().getText(), viewSiswa.getKelas().getText()) ;
                 }
             } catch (Exception ef) {
                 JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");

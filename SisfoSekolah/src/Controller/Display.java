@@ -74,23 +74,20 @@ public class Display {
         }
     }
     
-    public boolean DisplayBio(String nama_siswa, String nama_kelas) {
+    public void DisplayBio(String nama_siswa, String nama_kelas, String nis) {
         try {
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "SELECT nama_siswa, nama_kelas FROM kelas ";
+            String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'";
             ResultSet rs = stmt.executeQuery(sql);
             if (rs.next()) {
                 if (nama_siswa.equals(rs.getString("nama_siswa")) && nama_kelas.equals(rs.getString("nama_kelas"))) {
                     nama_siswa = rs.getString("nama_siswa") ;
-                    nama_kelas = rs.getString(nama_kelas) ;
-                    return true;
+                    nama_kelas = rs.getString("nama_kelas") ;
                 }
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,e.getMessage());
-            return false;
         }
-        return false ;
     }
 }
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
