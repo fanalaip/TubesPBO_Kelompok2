@@ -109,7 +109,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             String sql = "DELETE FROM kelas WHERE nama_kelas = '" + kelas +"'";
             stmt.executeUpdate(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
     
@@ -119,7 +119,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             String sql = "UPDATE kelas SET nama_kelas = '" + edit +"' WHERE nama_kelas = '" + kelas +"' ";
             stmt.executeUpdate(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
 }
