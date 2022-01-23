@@ -429,14 +429,4 @@ public class guiAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
     // End of variables declaration//GEN-END:variables
-
-    public void addActionListener(ControllerAdmin e) {
-        btnBack.addActionListener(e);
-        btnAdd.addActionListener(e);
-        btnHapus.addActionListener(e);
-    }
-
-    public void addMouseAdapter(ControllerAdmin aThis) {
-        
-    }
 }
