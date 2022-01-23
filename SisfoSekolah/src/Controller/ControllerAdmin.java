@@ -23,13 +23,11 @@ import javax.swing.JOptionPane;
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private guiAdmin viewAdmin;
-    private admin adminModel;
     private Database db;
     Koneksi kn = new Koneksi() ;
 
     public ControllerAdmin(Database db) {
         this.viewAdmin = viewAdmin;
-        this.adminModel = adminModel;
         this.db = db;
         Display dis = new Display();
         
