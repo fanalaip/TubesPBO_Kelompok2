@@ -85,6 +85,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 }else {
                     adminModel.updateKelas(kelas, edit);
                     JOptionPane.showMessageDialog(null, "Nama kelas berhasil diubah");
+                    viewAdmin.resetView();
                 }
             }
         } catch (Exception ef) {

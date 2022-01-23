@@ -397,6 +397,7 @@ public class guiAdmin extends javax.swing.JFrame {
     public void resetView(){;
         tfNIS1.setText("");
         tfNama1.setText("");
+        tfEditKelas.setText("");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
