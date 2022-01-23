@@ -12,6 +12,7 @@ import Controller.Display;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
 
 public class guiAdmin extends javax.swing.JFrame {
@@ -366,6 +367,9 @@ public class guiAdmin extends javax.swing.JFrame {
     public JButton getBtnUpdate(){
         return btnUpdate;
     }
+    public JLabel getWaliKelas() {
+        return jLabelWali ;
+    }
     
     public void setListKelas(String[] jListKelas) {
         this.jListKelas.setListData(jListKelas);
@@ -373,6 +377,10 @@ public class guiAdmin extends javax.swing.JFrame {
     
     public String getSelectedKelas() {
         return jListKelas.getSelectedValue() ;
+    }
+    
+    public JLabel getKelas() {
+        return jLabelKelas ;
     }
     
     public void addActionListener(ActionListener e) {

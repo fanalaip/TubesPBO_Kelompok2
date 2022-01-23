@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 public class admin {
     Koneksi kn = new Koneksi() ;
-
+    /*
     public static void addSiswa(String nama_kelas, String nama_siswa, String nis, ArrayList<String> mapel, Database dbsisfo){
         try {
             dbsisfo.connect() ;
@@ -30,6 +30,7 @@ public class admin {
             ex.printStackTrace();
         }
     }
+    */
     public void deleteKelas(String kelas){
         try{
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
