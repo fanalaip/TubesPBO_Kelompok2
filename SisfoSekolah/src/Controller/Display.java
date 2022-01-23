@@ -87,5 +87,19 @@ public class Display {
             e.printStackTrace();
         }
     }
+    
+    public void DisplayWaliKelas(String kode_guru){
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE kode_guru = '" + kode_guru +"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                kode_guru = rs.getString("kode_guru");
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
