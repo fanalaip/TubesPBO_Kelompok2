@@ -9,11 +9,12 @@ package Model;
 
 import java.util.ArrayList;
 
-public class kelas {
+public class kelas extends siswa {
     
     private String nama_kelas;
 
-    public kelas(String nama_kelas) {
+    public kelas(String nama_kelas, String nama, String nis) {
+        super(nama, nis) ;
         this.nama_kelas = nama_kelas ;
     }
 

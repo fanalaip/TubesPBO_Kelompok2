@@ -408,7 +408,6 @@ public class guiSiswa extends javax.swing.JFrame {
         }
     }
     
-    
     public void setTabel(String nama_mapel, String aktivitas, String nilai, int j){
         jTableSiswa.setValueAt(nama_mapel, j, 1);
         jTableSiswa.setValueAt(aktivitas, j, 2);   

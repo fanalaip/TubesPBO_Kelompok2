@@ -12,6 +12,7 @@ package Controller;
 //import java.sql.SQLException;
 //import java.sql.Statement;
 import Model.Koneksi;
+import Model.kelas;
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -71,20 +72,20 @@ public class Display {
         }
     }
     
-    public void DisplayBio(String nama, String kelas, String nis) {
+    public kelas DisplayBio(String nis) {
         try {
-            DefaultListModel model = new DefaultListModel();
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
             String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                nama = rs.getString("nama_siswa");
-                kelas = rs.getString("nama_kelas");
+                kelas Class = new kelas(rs.getString("nama_kelas"), rs.getString("nama_siswa"), nis) ;
+                return Class ;
             }
-            
+            return null ;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null ;
     }
 }
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
