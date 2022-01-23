@@ -8,19 +8,16 @@ Anggota : Arpriansah Yonathan (1301194112)
 package GUI;
 
 import Controller.ControllerAdmin;
+import Controller.Display;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
-import java.util.ArrayList;
-import static java.util.Collections.list;
 import javax.swing.JButton;
-import javax.swing.event.ListSelectionEvent;
-import java.awt.List;
-import static java.util.Collections.list;
 
 public class guiAdmin extends javax.swing.JFrame {
-
+    
     public guiAdmin() {
         initComponents();
+        //dis.DisplayKelasAdmin(jListKelas, kelas);
     }
 
     @SuppressWarnings("unchecked")
@@ -83,11 +80,6 @@ public class guiAdmin extends javax.swing.JFrame {
 
         jLabelTambahKelas.setText("TAMBAH SISWA");
 
-        jListKelas.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "7A", "7B", "8A", "8B", "9A", "9B" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jListKelas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jListKelasMouseClicked(evt);
@@ -348,6 +340,9 @@ public class guiAdmin extends javax.swing.JFrame {
     public String getTfNIS() {
         return tfNIS1.getText();
     }
+    public void setKelas(String kelas){
+        jLabelKelas.setText(kelas);
+    }
     public String getTfEditKelas(){
         return tfEditKelas.getText();
     }
@@ -374,7 +369,7 @@ public class guiAdmin extends javax.swing.JFrame {
     public String getSelectedKelas() {
         return jListKelas.getSelectedValue() ;
     }
-  
+    
     public void addActionListener(ActionListener e) {
         btnAdd.addActionListener(e);
         btnHapus.addActionListener(e);
@@ -385,7 +380,6 @@ public class guiAdmin extends javax.swing.JFrame {
         jListKelas.addMouseListener(e);
     }
     
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
