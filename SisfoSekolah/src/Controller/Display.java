@@ -7,12 +7,15 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Controller;
 
+//import Model.Koneksi;
+//import java.sql.ResultSet;
+//import java.sql.SQLException;
+//import java.sql.Statement;
 import Model.Koneksi;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -69,6 +72,17 @@ public class Display {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+    
+    public boolean DisplayBio(String nama_siswa, String nama_kelas) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT nama_siswa, nama_kelas FROM kelas ";
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,e.getMessage());
+            return false;
+        }
+        return false ;
     }
 }
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
