@@ -7,18 +7,11 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package GUI;
 
-import Controller.ControllerSiswa;
-import java.awt.List;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import Model.Database;
-import Model.kelas;
-import javax.swing.JList;
-import javax.swing.event.ListSelectionEvent;
 import Controller.ControllerSiswa;
-import java.awt.event.ActionListener;
 
 public class guiSiswa extends javax.swing.JFrame {
     private ControllerSiswa controllerSiswa;
