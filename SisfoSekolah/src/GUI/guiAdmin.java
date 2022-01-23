@@ -351,7 +351,7 @@ public class guiAdmin extends javax.swing.JFrame {
         return tfEditKelas.getText();
     }
     public JButton getBtnAdd() {
-        return btnTambah;
+        return btnAdd;
     }
 
     public JButton getBtnDelete() {
@@ -391,6 +391,11 @@ public class guiAdmin extends javax.swing.JFrame {
 
     public void addMouseAdapter(MouseAdapter e) {
         jListKelas.addMouseListener(e);
+    }
+    
+    public void resetView(){;
+        tfNIS1.setText("");
+        tfNama1.setText("");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
