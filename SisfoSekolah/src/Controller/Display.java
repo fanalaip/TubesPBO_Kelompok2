@@ -78,6 +78,14 @@ public class Display {
         try {
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
             String sql = "SELECT nama_siswa, nama_kelas FROM kelas ";
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs.next()) {
+                if (nama_siswa.equals(rs.getString("nama_siswa")) && nama_kelas.equals(rs.getString("nama_kelas"))) {
+                    nama_siswa = rs.getString("nama_siswa") ;
+                    nama_kelas = rs.getString(nama_kelas) ;
+                    return true;
+                }
+            }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,e.getMessage());
             return false;

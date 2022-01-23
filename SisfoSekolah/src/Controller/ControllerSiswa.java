@@ -62,6 +62,7 @@ public class ControllerSiswa implements ActionListener{
                 }else if(source.equals(viewSiswa.getBtnPilih())){
                     Display dis = new Display();
                     dis.DisplaySiswa(viewSiswa.getDaftarSiswa(), viewSiswa.getChooseKelas());
+                    dis.DisplayBio(viewSiswa.getNama().getText(), viewSiswa.getKelas().getText()) ;
                 }
             } catch (Exception ef) {
                 JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
