@@ -13,10 +13,7 @@ package Controller;
 //import java.sql.Statement;
 import Model.Koneksi;
 import java.sql.*;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class Display {
@@ -74,19 +71,19 @@ public class Display {
         }
     }
     
-    public void DisplayBio(String nama_siswa, String nama_kelas, String nis) {
+    public void DisplayBio(String nama, String kelas, String nis) {
         try {
+            DefaultListModel model = new DefaultListModel();
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
             String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'";
             ResultSet rs = stmt.executeQuery(sql);
-            if (rs.next()) {
-                if (nama_siswa.equals(rs.getString("nama_siswa")) && nama_kelas.equals(rs.getString("nama_kelas"))) {
-                    nama_siswa = rs.getString("nama_siswa") ;
-                    nama_kelas = rs.getString("nama_kelas") ;
-                }
+            while (rs.next()) {
+                nama = rs.getString("nama_siswa");
+                kelas = rs.getString("nama_kelas");
             }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,e.getMessage());
+            
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
