@@ -57,14 +57,15 @@ public class Display {
         }   
     }
     
-    public void DisplayKelasAdmin(JList jListKelas, String nama_kelas){
+    public void DisplayKelasAdmin(JList jListKelas){
         try {
             DefaultListModel model = new DefaultListModel();
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
             String sql = "SELECT nama_kelas FROM kelas ";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
-                String nama_s = rs.getString("nama_kelas");
+                String nama_kelas = rs.getString("nama_kelas");
+                model.addElement(nama_kelas);
             }
             jListKelas.setModel(model);
         } catch (Exception ex) {

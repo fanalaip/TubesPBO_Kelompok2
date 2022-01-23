@@ -10,6 +10,7 @@ package GUI;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JList;
 import javax.swing.JTable;
 
 public class guiGuru extends javax.swing.JFrame {
@@ -445,8 +446,7 @@ public class guiGuru extends javax.swing.JFrame {
     }
     public JTable getjTableSiswa() {
         return jTableSiswa;
-    }
-    
+    }    
     public JButton getBtnCari(){
         return btnCari;
     }
