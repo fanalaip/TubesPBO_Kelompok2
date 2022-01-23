@@ -9,11 +9,13 @@ package Controller;
 
 import GUI.guiAdmin;
 import Model.Database;
+import Model.Koneksi;
 import Model.admin;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -21,15 +23,16 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private guiAdmin viewAdmin;
     private admin adminModel;
     private Database db;
+    Koneksi kn = new Koneksi() ;
 
     public ControllerAdmin(Database db) {
         this.viewAdmin = viewAdmin;
         this.adminModel = adminModel;
         this.db = db;
+        Display dis = new Display();
         
         viewAdmin = new guiAdmin();
         viewAdmin.addActionListener(this);
-        //viewAdmin.addMouseAdapter(this);
         
         viewAdmin.setVisible(true);
     }
@@ -46,9 +49,11 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     String kelas = viewAdmin.getSelectedKelas() ;
                     String nama = viewAdmin.getTfNama() ;
                     String nis = viewAdmin.getTfNIS() ;
+                    String kode_guru;
                     if (kelas==null || nama==null || nis==null){
                         JOptionPane.showMessageDialog(null, "Data harus diisi terlebih dahulu");
                     } else {
+                        addSiswa(kelas, kode_guru, nis, nama);
                         JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
                     }
                 } catch (Exception es) {
@@ -76,6 +81,20 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             }
         } catch (Exception ef) {
             JOptionPane.showMessageDialog(null, "Data kelas tidak berhasil di update");
+        }
+    }
+    
+    public void addSiswa(String nama_kelas, String kode_guru, String nis, String nama_siswa) {
+       try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "INSERT INTO kelas VALUES ('"
+                    +nama_kelas+"','"
+                    +kode_guru+"','"
+                    +nis+"','"
+                    +nama_siswa+"')";
+            stmt.executeUpdate(sql);
+        }catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 }

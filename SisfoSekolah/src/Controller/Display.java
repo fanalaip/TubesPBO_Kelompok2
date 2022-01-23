@@ -9,7 +9,10 @@ package Controller;
 
 import Model.Koneksi;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -53,25 +56,19 @@ public class Display {
         }   
     }
     
-    public void DisplayKelas(String nama, String kelas, String nis) {
+    public void DisplayKelasAdmin(JList jListKelas, String nama_kelas){
         try {
+            DefaultListModel model = new DefaultListModel();
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'";
-            stmt.executeUpdate(sql);
+            String sql = "SELECT nama_kelas FROM kelas ";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                String nama_s = rs.getString("nama_kelas");
+            }
+            jListKelas.setModel(model);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
-    
-    private void showActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        try{
-            ResultSet rs = stat.executeQuery("SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + nis +"'");
-            jLabel1.setText(rs.getString("name"));
-            jLabel12.setText(rs.getString("e_id"));
-        } catch(Exception e) {
-            System.out.print(e);
-        }
-    }   
 }
-
 //String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
