@@ -7,9 +7,7 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-import java.util.ArrayList;
-
-public class kelas extends siswa {
+public class kelas extends siswa{
     
     private String nama_kelas;
 
@@ -17,7 +15,6 @@ public class kelas extends siswa {
         super(nama, nis) ;
         this.nama_kelas = nama_kelas ;
     }
-
     public void setNamaKelas(String nama_kelas){
         this.nama_kelas = nama_kelas;
     }

@@ -8,7 +8,6 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Controller;
 
 import GUI.login;
-import Model.Database;
 import Model.Koneksi;
 import java.awt.event.*;
 import java.sql.ResultSet;
@@ -17,14 +16,12 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 public class Controller implements ActionListener{
     private login view;
-    private Database db;
     Koneksi kn = new Koneksi() ;
     
     public Controller() {
         view = new login();
         view.addActionListener(this);
         view.setVisible(true);
-        db = new Database();
     };
 
     @Override
@@ -48,13 +45,13 @@ public class Controller implements ActionListener{
                 if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
                     if (loginAs == "Siswa") {
                         view.dispose();
-                        new ControllerSiswa(db);
+                        new ControllerSiswa();
                     } else if (loginAs == "Guru") {
                         view.dispose();
-                        new ControllerGuru(db);
+                        new ControllerGuru();
                     } else if (loginAs == "Admin") {
                         view.dispose();
-                        new ControllerAdmin(db);
+                        new ControllerAdmin();
                     }
                 }
             }else {

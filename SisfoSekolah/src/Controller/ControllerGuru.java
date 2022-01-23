@@ -8,7 +8,6 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Controller;
 
 import GUI.guiGuru;
-import Model.Database;
 import Model.Koneksi;
 import Model.siswa;
 import java.awt.event.ActionEvent;
@@ -18,13 +17,11 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class ControllerGuru extends MouseAdapter implements ActionListener {
-    private guiGuru viewGuru;
-    private Database db;    
+    private guiGuru viewGuru;   
     private siswa student ;
     Koneksi kn = new Koneksi() ;
     
-    public ControllerGuru(Database db) {
-        this.db = db;
+    public ControllerGuru() {
         viewGuru = new guiGuru();
         viewGuru.addActionListener(this);
         viewGuru.setVisible(true);

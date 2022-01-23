@@ -8,7 +8,6 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Controller;
 
 import GUI.guiAdmin;
-import Model.Database;
 import Model.Koneksi;
 
 import java.awt.event.ActionEvent;
@@ -16,19 +15,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener {
     private guiAdmin viewAdmin;
-    private Database db;
     Koneksi kn = new Koneksi() ;
 
-    public ControllerAdmin(Database db) {
+    public ControllerAdmin() {
         this.viewAdmin = viewAdmin;
-        this.db = db;
         Display dis = new Display();
         
         viewAdmin = new guiAdmin();

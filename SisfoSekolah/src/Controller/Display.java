@@ -7,10 +7,6 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Controller;
 
-//import Model.Koneksi;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
 import Model.Koneksi;
 import Model.kelas;
 import java.sql.*;

@@ -278,8 +278,6 @@ public class guiAdmin extends javax.swing.JFrame {
 
     private void jListKelasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListKelasValueChanged
         // TODO add your handling code here:
-        //jLabelWali.setText(list.get(jListKelas.getSelectedIndex()).getItem(0));
-        //jLabelKelas.setText(list.get(jListKelas.getSelectedIndex()).getItem(1));
     }//GEN-LAST:event_jListKelasValueChanged
 
     private void tfNIS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIS2ActionPerformed
@@ -302,9 +300,6 @@ public class guiAdmin extends javax.swing.JFrame {
         jLabelWali.setText(dis.DisplayWaliKelas(jListKelas.getSelectedValue()));
     }//GEN-LAST:event_jListKelasMouseClicked
 
-    /*
-    Itu list harusnya arraylist buat nyimpen kelas 
-    */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

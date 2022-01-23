@@ -10,12 +10,10 @@ package GUI;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
-import Model.Database;
 import Controller.ControllerSiswa;
 
 public class guiSiswa extends javax.swing.JFrame {
     private ControllerSiswa controllerSiswa;
-    Database db;
     private String nama_siswa;
     
     public guiSiswa() {
@@ -35,11 +33,12 @@ public class guiSiswa extends javax.swing.JFrame {
         btnSearch = new javax.swing.JButton();
         btn_back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabelWaliKelas = new javax.swing.JLabel();
+        jLabelKelas = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableSiswa = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabelWaliKelas = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
         jLabelNamaSiswa = new javax.swing.JLabel();
         jcbKelas = new javax.swing.JComboBox<>();
@@ -82,8 +81,8 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabel1.setText("NAMA                :");
         jInternalFrameNilai.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 159, -1, -1));
 
-        jLabelWaliKelas.setText("KELAS                :");
-        jInternalFrameNilai.getContentPane().add(jLabelWaliKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
+        jLabelKelas.setText("KELAS                :");
+        jInternalFrameNilai.getContentPane().add(jLabelKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
 
         jTableSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -130,9 +129,12 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jScrollPane3.setViewportView(jTableSiswa);
 
-        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 480, 370));
+        jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 480, 370));
         jInternalFrameNilai.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 159, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
+
+        jLabelWaliKelas.setText("WALI KELAS      :");
+        jInternalFrameNilai.getContentPane().add(jLabelWaliKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -256,7 +258,7 @@ public class guiSiswa extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedPaneDaftarSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -361,7 +363,6 @@ public class guiSiswa extends javax.swing.JFrame {
         return btnPilih;
     }
     
-    
     public String getChooseKelas(){
         int i = jcbKelas.getSelectedIndex();
         return jcbKelas.getItemAt(i);
@@ -383,6 +384,7 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabelKelas;
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
     private javax.swing.JLabel jLabelWaliKelas;

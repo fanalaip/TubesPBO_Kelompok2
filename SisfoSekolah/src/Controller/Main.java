@@ -7,9 +7,6 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Controller;
 
-import GUI.login;
-
-
 public class Main {
 
     public static void main(String[] args) {

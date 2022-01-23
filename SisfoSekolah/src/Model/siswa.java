@@ -7,14 +7,13 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-public class siswa extends Identity {
+public class siswa extends Identity{
     private String nis;
     
     public siswa(String nama, String nis){
         super(nama);
         this.nis = nis;
     }   
-
     public void setNIS(String nis){
         this.nis = nis;
     }

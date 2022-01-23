@@ -175,7 +175,6 @@ public class login extends javax.swing.JFrame {
             userID.setSelectedIndex(0);
         }
     
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;

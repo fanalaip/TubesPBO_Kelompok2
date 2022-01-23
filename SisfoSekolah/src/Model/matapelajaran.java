@@ -7,10 +7,10 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package Model;
 
-public class matapelajaran {
+public class matapelajaran{
    private String nama_mapel;
    
-   public matapelajaran(String nama_mapel) {
+   public matapelajaran(String nama_mapel){
        this.nama_mapel = nama_mapel ;
    } 
    public void setMataPelajaran(String nama_mapel){

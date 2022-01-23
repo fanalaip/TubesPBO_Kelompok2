@@ -8,22 +8,16 @@ Anggota : Arpriansah Yonathan (1301194112)
 package Controller;
 
 import GUI.guiSiswa;
-import Model.Database;
 import Model.Koneksi;
 import Model.kelas;
 import java.awt.List;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
-import java.sql.Statement;
 
 public class ControllerSiswa implements ActionListener{
     private guiSiswa viewSiswa;           
-    Database db;
     private kelas kelas;  
     ArrayList<List> list = new ArrayList();
     private String nama_siswa;
@@ -31,13 +25,12 @@ public class ControllerSiswa implements ActionListener{
     
     Koneksi kn = new Koneksi() ;
     
-    public ControllerSiswa(Database db) {
+    public ControllerSiswa() {
         viewSiswa = new guiSiswa();
         viewSiswa.setVisible(true);
-        viewSiswa.addActionListener(this);
-        db = new Database();
-        this.db = db;       
+        viewSiswa.addActionListener(this);  
     }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
@@ -70,51 +63,6 @@ public class ControllerSiswa implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Data siswa tidak ditemukan");
             }
     }
-
-    /*
-    public void listSiswa(Database db, String nama_siswa){
-        try{
-            kelas.lihatSiswa(db, nama_siswa);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    */
-    
-    /*
-    public void kelasTujuh(JTable jtable, String nama_siswa){
-        try {
-            db.connect();
-            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '7A'";
-            db.setRs(db.getStmt().executeQuery(sql));
-            db.disconnect();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    
-    public void kelasDelapan(Database db, String nama_siswa){
-        try{
-            db.connect();
-            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '8A'";
-            db.setRs(db.getStmt().executeQuery(sql));
-            db.disconnect();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    
-    public void kelasSembilan(Database db, String nama_siswa){
-        try{
-            db.connect();
-            String sql = "SELECT nama_siswa FROM kelas WHERE  nama_kelas = '9A'";
-            db.setRs(db.getStmt().executeQuery(sql));
-            db.disconnect();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    */
 }
 
 
