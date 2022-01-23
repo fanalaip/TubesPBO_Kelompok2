@@ -88,5 +88,20 @@ public class Display {
         }
         return null ;
     }
+    
+    public String DisplayWaliKelas(String kelas) {
+        try {
+            Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT DISTINCT nama_guru FROM guru INNER JOIN kelas ON kelas.kode_guru = guru.kode_guru WHERE nama_kelas = '"+kelas+"'" ;
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String guru = rs.getString("nama_guru") ;
+                return guru ;
+            }
+            return null ;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null ;
+    }
 }
-//String sql = "SELECT nama_siswa, nama_kelas FROM kelas WHERE nis = '" + NIS +"'";
