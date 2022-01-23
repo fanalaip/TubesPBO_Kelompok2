@@ -319,7 +319,12 @@ public class guiSiswa extends javax.swing.JFrame {
             }
         });
     }
-    
+    public void setNama(String kelas){
+        jLabel5.setText(kelas);
+    }
+    public void setKelas(String kelas){
+        jLabel6.setText(kelas);
+    }
     public JButton getButtonBack(){
         return btn_back;
     }
