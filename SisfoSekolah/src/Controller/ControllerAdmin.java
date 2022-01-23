@@ -48,8 +48,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             else if (source.equals(viewAdmin.getBtnAdd())) {
                 try {
                     Display dis = new Display();
-                    //String kelas = viewAdmin.getSelectedKelas() ;
-                    String kelas = viewAdmin.getKelas().getText() ;
+                    String kelas = viewAdmin.getKelas().getText();
                     String kode_guru = viewAdmin.getWaliKelas().getText() ;
                     String nama = viewAdmin.getTfNama() ;
                     String nis = viewAdmin.getTfNIS() ;
@@ -70,7 +69,8 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                 }
             }
             else if (source.equals(viewAdmin.getBtnDelete())) {
-                String kelas = viewAdmin.getTfEditKelas();
+                //String kelas = viewAdmin.getTfEditKelas();
+                String kelas = viewAdmin.getKelas().getText();
                 if (kelas == null) {
                     JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                 }else{
@@ -78,7 +78,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Kelas berhasil dihapus");
                 }
             }else if (source.equals(viewAdmin.getBtnUpdate())){
-                String kelas = viewAdmin.getSelectedKelas() ;
+                String kelas = viewAdmin.getKelas().getText();
                 String edit = viewAdmin.getTfEditKelas();
                 if (kelas == null || edit == null ) {
                     JOptionPane.showMessageDialog(null, "Tidak ada yang diubah");
