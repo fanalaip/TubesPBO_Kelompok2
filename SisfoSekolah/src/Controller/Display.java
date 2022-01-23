@@ -60,7 +60,7 @@ public class Display {
         try {
             DefaultListModel model = new DefaultListModel();
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            String sql = "SELECT nama_kelas FROM kelas ";
+            String sql = "SELECT DISTINCT nama_kelas FROM kelas ";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 String nama_kelas = rs.getString("nama_kelas");
