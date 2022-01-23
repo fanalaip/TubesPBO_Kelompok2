@@ -52,7 +52,7 @@ public class Display {
             e.printStackTrace();
         }   
     }
-    
+        
     public void DisplayKelasAdmin(JList jListKelas){
         try {
             DefaultListModel model = new DefaultListModel();

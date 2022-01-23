@@ -11,13 +11,18 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import Controller.ControllerSiswa;
+import Model.Koneksi;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class guiSiswa extends javax.swing.JFrame {
     private ControllerSiswa controllerSiswa;
     private String nama_siswa;
-    
+    Koneksi kn = new Koneksi();
+     
     public guiSiswa() {
         initComponents();
+        DisplayCbKelas();
     }
 
     @SuppressWarnings("unchecked")
@@ -154,7 +159,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jLabelNamaSiswa.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNamaSiswa.setText("LIST NAMA SISWA");
 
-        jcbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "7B", "8A", "8B", "9A", "9B" }));
         jcbKelas.setSelectedIndex(-1);
         jcbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -370,6 +374,19 @@ public class guiSiswa extends javax.swing.JFrame {
     
     public void reset(){
         jcbKelas.setSelectedIndex(0);
+    }
+    
+    public void DisplayCbKelas(){
+       try{
+           Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT DISTINCT nama_kelas FROM kelas " ;
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                jcbKelas.addItem(rs.getString("nama_kelas"));
+            }
+       }catch(Exception e){
+            e.printStackTrace();
+       }   
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

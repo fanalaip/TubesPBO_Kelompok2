@@ -7,17 +7,21 @@ Anggota : Arpriansah Yonathan (1301194112)
  */
 package GUI;
 
+import Model.Koneksi;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JTable;
 
 public class guiGuru extends javax.swing.JFrame {
-
-
+    Koneksi kn = new Koneksi();
+    
     public guiGuru() {
         initComponents();
+        DisplayCbKelas();
     }
 
     @SuppressWarnings("unchecked")
@@ -240,7 +244,6 @@ public class guiGuru extends javax.swing.JFrame {
 
         jKelas1.setText("Kelas  :");
 
-        cbKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7A", "7B", "8A", "8B", "9A", "9B" }));
         cbKelas.setSelectedIndex(-1);
         cbKelas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -474,6 +477,19 @@ public class guiGuru extends javax.swing.JFrame {
         btnTambah.addActionListener(e);
         btnKembali.addActionListener(e);
         btnCari.addActionListener(e);
+    }
+    
+    public void DisplayCbKelas(){
+       try{
+           Statement stmt = (Statement) kn.getKoneksi().createStatement();
+            String sql = "SELECT DISTINCT nama_kelas FROM kelas " ;
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                cbKelas.addItem(rs.getString("nama_kelas"));
+            }
+       }catch(Exception e){
+            e.printStackTrace();
+       }   
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
