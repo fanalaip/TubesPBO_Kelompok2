@@ -60,7 +60,6 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
             }
             else if (source.equals(viewAdmin.getBtnDelete())) {
                 String kelas = viewAdmin.getTfEditKelas();
-                //String kelas = viewAdmin.getKelas().getText();
                 if (kelas == null) {
                     JOptionPane.showMessageDialog(null, "Tidak ada yang dihapus");
                 }else{
