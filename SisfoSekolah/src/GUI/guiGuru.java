@@ -467,6 +467,8 @@ public class guiGuru extends javax.swing.JFrame {
     public void resetView(){;
         tfNIS.setText("");
         tfNilai.setText("");
+        cbTask.setSelectedIndex(-1);
+        cbMapel.setSelectedIndex(-1);
     }
     public void addActionListener(ActionListener e){
         btnTambah.addActionListener(e);
