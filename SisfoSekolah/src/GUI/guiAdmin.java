@@ -386,6 +386,7 @@ public class guiAdmin extends javax.swing.JFrame {
     public void addActionListener(ActionListener e) {
         btnAdd.addActionListener(e);
         btnHapus.addActionListener(e);
+        btnUpdate.addActionListener(e);
         btnBack.addActionListener(e);
     }
 
