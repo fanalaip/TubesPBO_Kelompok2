@@ -35,6 +35,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener {
         viewAdmin.addActionListener(this);
         
         viewAdmin.setVisible(true);
+        dis.DisplayKelasAdmin(viewAdmin.getListKelas());
     }
     @Override
     public void actionPerformed(ActionEvent e) {

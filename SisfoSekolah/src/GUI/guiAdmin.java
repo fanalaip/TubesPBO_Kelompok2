@@ -12,6 +12,7 @@ import Controller.Display;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
+import javax.swing.JList;
 
 public class guiAdmin extends javax.swing.JFrame {
     
@@ -357,7 +358,9 @@ public class guiAdmin extends javax.swing.JFrame {
     public JButton getBtnBack() {
         return btnBack;
     }
-    
+    public JList getListKelas(){
+        return jListKelas;
+    }
     public JButton getBtnUpdate(){
         return btnUpdate;
     }
