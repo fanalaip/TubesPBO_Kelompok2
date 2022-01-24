@@ -43,7 +43,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabelWaliKelas = new javax.swing.JLabel();
         jLabelKodeWakel = new javax.swing.JLabel();
         jLabelNamaWakel = new javax.swing.JLabel();
         jInternalFrameDaftarSiswa = new javax.swing.JInternalFrame();
@@ -139,9 +138,6 @@ public class guiSiswa extends javax.swing.JFrame {
         jInternalFrameNilai.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 480, 370));
         jInternalFrameNilai.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 159, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 188, -1, -1));
-
-        jLabelWaliKelas.setText("WALI KELAS      :");
-        jInternalFrameNilai.getContentPane().add(jLabelWaliKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
         jInternalFrameNilai.getContentPane().add(jLabelKodeWakel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 50, -1));
         jInternalFrameNilai.getContentPane().add(jLabelNamaWakel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 20, -1));
 
@@ -417,7 +413,6 @@ public class guiSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNIS;
     private javax.swing.JLabel jLabelNamaSiswa;
     private javax.swing.JLabel jLabelNamaWakel;
-    private javax.swing.JLabel jLabelWaliKelas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
