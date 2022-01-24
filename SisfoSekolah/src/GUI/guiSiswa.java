@@ -441,3 +441,5 @@ public class guiSiswa extends javax.swing.JFrame {
         jTableSiswa.setValueAt(nilai, j, 3);   
     }
 }
+
+//:v
