@@ -108,7 +108,6 @@ public class Display {
     public String DisplayWaliKelas(String kelas) {
         try {
             Statement stmt = (Statement) kn.getKoneksi().createStatement();
-            //String sql = "SELECT DISTINCT nama_guru FROM guru INNER JOIN kelas ON kelas.kode_guru = guru.kode_guru WHERE nama_kelas = '"+kelas+"'" ;
             String sql = "SELECT DISTINCT kode_guru FROM kelas WHERE nama_kelas = '"+kelas+"'" ;
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {

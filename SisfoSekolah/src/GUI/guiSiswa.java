@@ -442,4 +442,3 @@ public class guiSiswa extends javax.swing.JFrame {
     }
 }
 
-//:v
