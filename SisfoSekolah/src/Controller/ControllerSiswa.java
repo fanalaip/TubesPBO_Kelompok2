@@ -54,7 +54,6 @@ public class ControllerSiswa implements ActionListener{
                             viewSiswa.getKelas().setText(Class.getNamaKelas()); 
                             
                             guru Teacher = dis.DisplayWakel(NIS) ;
-                            //viewSiswa.getNamaWakel().setText(Teacher.getNama()) ;
                             viewSiswa.getKodeWakel().setText(Teacher.getKodeGuru()) ;
                         }
                     } catch (Exception es) {
