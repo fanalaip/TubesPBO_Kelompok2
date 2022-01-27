@@ -52,9 +52,6 @@ public class ControllerSiswa implements ActionListener{
                             kelas Class = dis.DisplayBio(NIS) ;
                             viewSiswa.getNama().setText(Class.getNama()); 
                             viewSiswa.getKelas().setText(Class.getNamaKelas()); 
-                            
-                            guru Teacher = dis.DisplayWakel(NIS) ;
-                            viewSiswa.getKodeWakel().setText(Teacher.getKodeGuru()) ;
                         }
                     } catch (Exception es) {
                         System.out.println("Error 404 "+ es.getMessage());
